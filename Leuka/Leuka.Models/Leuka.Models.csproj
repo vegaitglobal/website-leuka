@@ -413,6 +413,9 @@
     <Compile Include="Extensions\PublishedContentPropertyExtensions.cs" />
     <Compile Include="Extensions\PublishedElementPropertyExtensions.cs" />
     <Compile Include="Extensions\SeoExtensions.cs" />
+    <Compile Include="Generated\Accordion.generated.cs" />
+    <Compile Include="Generated\Article.generated.cs" />
+    <Compile Include="Generated\Blogs.generated.cs" />
     <Compile Include="Generated\Error404.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>

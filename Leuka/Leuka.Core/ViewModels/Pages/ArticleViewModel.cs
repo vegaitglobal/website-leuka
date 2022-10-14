@@ -3,9 +3,9 @@ using Leuka.Models.Generated;
 
 namespace Leuka.Core.ViewModels.Pages
 {
-    public class BlogViewModel : PageViewModel
+    public class ArticleViewModel : PageViewModel
     {
-        public BlogViewModel(IPageContext<Blog> context) : base(context)
+        public ArticleViewModel(IPageContext<Article> context) : base(context)
         {
         }
     }
