@@ -438,6 +438,7 @@
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Generated\IPage.cs" />
+    <Compile Include="Generated\MediumTextBlock.generated.cs" />
     <Compile Include="Generated\ModelsBuilder.cs">
       <Generator>UmbracoModelsBuilder</Generator>
     </Compile>
@@ -450,6 +451,7 @@
     <Compile Include="Generated\SiteSettings.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Generated\SplitBlock.generated.cs" />
     <Compile Include="MediaTypes\IMedia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

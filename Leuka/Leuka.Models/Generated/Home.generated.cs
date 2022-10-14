@@ -46,6 +46,20 @@ namespace Leuka.Models.Generated
 		// properties
 
 		///<summary>
+		/// MediumTextBlock
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("mediumText")]
+		public IEnumerable<MediumTextBlock> MediumText => this.Value<IEnumerable<MediumTextBlock>>("mediumText");
+
+		///<summary>
+		/// SplitBlock
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("splitBlock")]
+		public IEnumerable<SplitBlock> SplitBlock => this.Value<IEnumerable<SplitBlock>>("splitBlock");
+
+		///<summary>
 		/// Copyright Text: The site copyright text.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
