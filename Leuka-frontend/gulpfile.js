@@ -19,4 +19,10 @@ gulp.task("css", () =>
     .pipe(dest("./dist"))
 );
 
+gulp.task("watch", () => {
+  gulp.watch("partials/*.html", gulp.series("pug"));
+  gulp.watch("src/*.pug", gulp.series("pug"));
+  gulp.watch("partials/*.css", gulp.series("css"));
+});
+
 gulp.task("clean", () => del("./dist"));
