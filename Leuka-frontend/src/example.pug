@@ -1,3 +1,8 @@
-block content
-  include ../partials/header.html
-  include ../partials/footer.html
+html
+  head
+    link(rel="stylesheet", href="index.css")
+
+  body
+    block content
+      include ../partials/header/header.html
+      include ../partials/footer/footer.html
