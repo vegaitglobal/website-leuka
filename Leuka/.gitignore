@@ -75,6 +75,5 @@ dist
 
 #html
 html/*.html
-
-/Leuka/Leuka.Web/ConnectionStrings.config
+/Leuka.Web/ConnectionStrings.config
 
