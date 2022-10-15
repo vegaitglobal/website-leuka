@@ -3,6 +3,7 @@ using Umbraco.Web;
 using Leuka.Core.Extensions;
 using Leuka.Core.ViewModels.Shared;
 using Leuka.Models.Generated;
+using System.Linq;
 
 namespace Leuka.Core.ViewModels.Partials.Layout
 {

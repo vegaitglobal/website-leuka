@@ -312,7 +312,11 @@
     <Compile Include="Contexts\PageContext.cs" />
     <Compile Include="Contexts\SeoContext.cs" />
     <Compile Include="Contexts\SiteContext.cs" />
+    <Compile Include="Controllers\RenderMvc\AboutUsController.cs" />
     <Compile Include="Controllers\RenderMvc\BasePageController.cs" />
+    <Compile Include="Controllers\RenderMvc\HowToHelpController.cs" />
+    <Compile Include="Controllers\RenderMvc\JoinUsController.cs" />
+    <Compile Include="Controllers\RenderMvc\ContactController.cs" />
     <Compile Include="Controllers\RenderMvc\BlogsController.cs" />
     <Compile Include="Controllers\RenderMvc\ArticleController.cs" />
     <Compile Include="Controllers\RenderMvc\Error404Controller.cs" />
@@ -344,6 +348,10 @@
     <Compile Include="UmbracoDictionary.cs" />
     <Compile Include="ViewEngines\PartialViewEngine.cs" />
     <Compile Include="ViewModels\IContentViewModel.cs" />
+    <Compile Include="ViewModels\Pages\AboutUsViewModel.cs" />
+    <Compile Include="ViewModels\Pages\HowToHelpViewModel.cs" />
+    <Compile Include="ViewModels\Pages\JoinUsViewModel.cs" />
+    <Compile Include="ViewModels\Pages\ContactViewModel.cs" />
     <Compile Include="ViewModels\Pages\BlogsViewModel.cs" />
     <Compile Include="ViewModels\Pages\ArticleViewModel.cs" />
     <Compile Include="ViewModels\Pages\ContactViewModel.cs" />
@@ -362,6 +370,8 @@
     <Compile Include="ViewModels\Partials\Listing\SearchResultsItemViewModel.cs" />
     <Compile Include="ViewModels\Shared\AlternateLinkViewModel.cs" />
     <Compile Include="ViewModels\Shared\ImageViewModel.cs" />
+    <Compile Include="ViewModels\Shared\QuoteViewModel.cs" />
+    <Compile Include="ViewModels\Shared\SponsorsViewModel.cs" />
     <Compile Include="ViewModels\Shared\SplitBlockViewModel.cs" />
     <Compile Include="ViewModels\Shared\MediumTextBlockViewModel.cs" />
     <Compile Include="ViewModels\Shared\LinkViewModel.cs" />
@@ -372,7 +382,7 @@
       <Name>Leuka.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\Leuka.Models\Leuka.Models.csproj">
-      <Project>{5f883fb4-7390-4a64-9f89-12597a61eda2}</Project>
+      <Project>{5F883FB4-7390-4A64-9F89-12597A61EDA2}</Project>
       <Name>Leuka.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\Leuka.Search\Leuka.Search.csproj">
