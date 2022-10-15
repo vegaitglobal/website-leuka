@@ -20,9 +20,9 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Leuka.Models.Generated
 {
-	/// <summary>BlogInArticle</summary>
+	/// <summary>Blog in article</summary>
 	[PublishedModel("blogInArticle")]
-	public partial class BlogInArticle : PublishedContentModel
+	public partial class BlogInArticle : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -39,28 +39,35 @@ namespace Leuka.Models.Generated
 #pragma warning restore 0109
 
 		// ctor
-		public BlogInArticle(IPublishedContent content)
+		public BlogInArticle(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Blog text
+		/// Blog category
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("blogText")]
-		public string BlogText => this.Value<string>("blogText");
+		[ImplementPropertyType("blogCategory")]
+		public string BlogCategory => this.Value<string>("blogCategory");
 
 		///<summary>
-		/// Blog type: Da li je blog spada u kategoriju: saveti, novosti, mediji o nama....
+		/// Blog description
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("blogType")]
-		public string BlogType => this.Value<string>("blogType");
+		[ImplementPropertyType("blogDescription")]
+		public string BlogDescription => this.Value<string>("blogDescription");
 
 		///<summary>
-		/// Title: Blog title
+		/// Blog image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("blogImage")]
+		public Image BlogImage => this.Value<Image>("blogImage");
+
+		///<summary>
+		/// Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("title")]

@@ -46,6 +46,13 @@ namespace Leuka.Models.Generated
 		// properties
 
 		///<summary>
+		/// Blog in article
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("blogInArticle")]
+		public IEnumerable<BlogInArticle> BlogInArticle => this.Value<IEnumerable<BlogInArticle>>("blogInArticle");
+
+		///<summary>
 		/// REUSABLE
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
@@ -58,6 +65,13 @@ namespace Leuka.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("table")]
 		public IEnumerable<Accordion> Table => this.Value<IEnumerable<Accordion>>("table");
+
+		///<summary>
+		/// TopicDetails
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("topicDetails")]
+		public IEnumerable<TopicDetails> TopicDetails => this.Value<IEnumerable<TopicDetails>>("topicDetails");
 
 		///<summary>
 		/// Copyright Text: The site copyright text.

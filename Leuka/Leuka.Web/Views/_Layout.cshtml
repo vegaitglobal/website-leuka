@@ -8,15 +8,17 @@
 
 <html>
 <head>
-	<meta name="viewport" content="width=device-width" />
-	@{
-		Html.RenderAction<LayoutController>(c => nameof(c.MetaTags), new { viewModel = Model.MetaTags });
-		Html.RenderAction<LayoutController>(c => nameof(c.OpenGraph), new { viewModel = Model.OpenGraph });
-	}
-	@if (!string.IsNullOrWhiteSpace(Model.CookieScript))
-	{
-		@Html.Raw(Model.CookieScript)
-	}
+    <meta name="viewport" content="width=device-width" />
+    @{
+        Html.RenderAction<LayoutController>(c => nameof(c.MetaTags), new { viewModel = Model.MetaTags });
+        Html.RenderAction<LayoutController>(c => nameof(c.OpenGraph), new { viewModel = Model.OpenGraph });
+    }
+    @if (!string.IsNullOrWhiteSpace(Model.CookieScript))
+    {
+        @Html.Raw(Model.CookieScript)
+    }
+
+    <link href="~/assets/styles/index.css" rel="stylesheet"/>
 </head>
 <body>
 @{
