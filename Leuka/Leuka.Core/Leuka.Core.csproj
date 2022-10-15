@@ -341,6 +341,7 @@
     <Compile Include="Handlers\DomainRootRouteHandler.cs" />
     <Compile Include="Handlers\Error404RouteHandler.cs" />
     <Compile Include="HttpHandlers\RobotsHandler.cs" />
+    <Compile Include="ViewModels\Shared\BreadcrumbsViewModel.cs" />
     <Compile Include="Models\EmailSettings.cs" />
     <Compile Include="Models\IPagination.cs" />
     <Compile Include="Models\IReadOnlyPagedCollection.cs" />
@@ -373,9 +374,12 @@
     <Compile Include="ViewModels\Partials\Listing\PaginationViewModel.cs" />
     <Compile Include="ViewModels\Partials\Listing\SearchResultsItemViewModel.cs" />
     <Compile Include="ViewModels\Shared\AlternateLinkViewModel.cs" />
+    <Compile Include="ViewModels\Shared\AuthorDetailsViewModel.cs" />
     <Compile Include="ViewModels\Shared\ArticlePreviewViewModel.cs" />
     <Compile Include="ViewModels\Shared\BlogCarouselViewModel.cs" />
     <Compile Include="ViewModels\Shared\ButtonViewModel.cs" />
+    <Compile Include="ViewModels\Shared\ContactusViewModel.cs" />
+    <Compile Include="ViewModels\Shared\PreContactField.cs" />
     <Compile Include="ViewModels\Shared\SeparatorViewModel.cs" />
     <Compile Include="ViewModels\Shared\ThankyouPopupViewModel.cs" />
     <Compile Include="ViewModels\Shared\GalleryRowViewModel.cs" />
@@ -387,6 +391,7 @@
     <Compile Include="ViewModels\Shared\SponsorsViewModel.cs" />
     <Compile Include="ViewModels\Shared\SplitBlockViewModel.cs" />
     <Compile Include="ViewModels\Shared\TitleDescriptionAndButtonViewModel.cs" />
+    <Compile Include="ViewModels\Shared\AppPromotionViewModel.cs" />
     <Compile Include="ViewModels\Shared\TopicDetailsViewModel.cs" />
     <Compile Include="ViewModels\Shared\LinkViewModel.cs" />
   </ItemGroup>

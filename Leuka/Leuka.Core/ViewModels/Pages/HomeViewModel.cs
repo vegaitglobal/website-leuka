@@ -61,6 +61,13 @@ namespace Leuka.Core.ViewModels.Pages
                 var blogCarouselModels = blogCarousel.Select(x => new BlogCarouselViewModel(x));
                 Components.AddRange(blogCarouselModels);
             }
+
+            var appPromotion = context.Page.AppPromotion;
+            if (appPromotion != null)
+            {
+                var appPromotionModels = appPromotion.Select(x => new AppPromotionViewModel(x));
+                Components.AddRange(appPromotionModels);
+            }
         }
 
         public List<IContentViewModel> Components { get; set; }
