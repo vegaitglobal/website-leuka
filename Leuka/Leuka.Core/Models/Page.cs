@@ -27,7 +27,7 @@ namespace Leuka.Core.Models
 		private string GetPageUrl()
 		{
 			NameValueCollection queryString = _currentUri.ParseQueryString();
-			queryString[Constants.RequestParameters.Page] = Index.ToString();
+			queryString[Common.Constants.RequestParameters.Page] = Index.ToString();
 
 			return $"{_currentUri.AbsolutePath}?{queryString}";
 		}
