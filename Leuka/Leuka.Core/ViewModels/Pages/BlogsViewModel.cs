@@ -1,4 +1,7 @@
-﻿namespace Leuka.Core.ViewModels.Pages
+﻿using Leuka.Core.Contexts;
+using Leuka.Models.Generated;
+
+namespace Leuka.Core.ViewModels.Pages
 {
     public class BlogsViewModel : PageViewModel
     {
