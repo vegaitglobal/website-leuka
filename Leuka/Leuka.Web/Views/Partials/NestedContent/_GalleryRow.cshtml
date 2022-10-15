@@ -1,0 +1,16 @@
+﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.GalleryRowViewModel>
+@{
+    var images = Model.Images;
+}
+
+<div class="gallery-row">
+    @for (int i = 1; i <= 3; i++)
+    {
+        if (Model.Images.Count >= i && Model.Images[i-1] != null)
+        {
+            <div class="image-wrapper">
+                <img src="@Model.Images[i-1].UrlAbsolute" alt="Image 1" />
+            </div>
+        }
+    }
+</div>
