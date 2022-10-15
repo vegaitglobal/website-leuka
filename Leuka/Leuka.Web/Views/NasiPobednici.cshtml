@@ -1,3 +1,11 @@
 ﻿@inherits UmbracoViewPage<NasiPobedniciViewModel>
 @using ContentModels = Leuka.Models.Generated;
 <h2>@Model.Title</h2>
+
+@if (Model.Components != null)
+{
+    foreach (var component in Model.Components)
+    {
+        Html.RenderPartial(component.PartialViewPath, component);
+    }
+}
