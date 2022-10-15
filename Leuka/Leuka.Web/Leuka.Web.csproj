@@ -504,6 +504,8 @@
     <Content Include="Views\Contact.cshtml" />
     <Content Include="Views\JoinUs.cshtml" />
     <Content Include="Views\HowToHelp.cshtml" />
+    <Content Include="Views\AboutUs.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_DonatePopup.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

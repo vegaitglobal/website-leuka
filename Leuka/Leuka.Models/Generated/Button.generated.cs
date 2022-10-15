@@ -20,50 +20,57 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Leuka.Models.Generated
 {
-	/// <summary>Sponsors</summary>
-	[PublishedModel("sponsors")]
-	public partial class Sponsors : PublishedElementModel
+	/// <summary>Button</summary>
+	[PublishedModel("button")]
+	public partial class Button : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "sponsors";
+		public new const string ModelTypeAlias = "button";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Sponsors, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Button, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public Sponsors(IPublishedElement content)
+		public Button(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Description: Description of the sponsors section
+		/// Button Color
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("description")]
-		public string Description => this.Value<string>("description");
+		[ImplementPropertyType("buttonColor")]
+		public string ButtonColor => this.Value<string>("buttonColor");
 
 		///<summary>
-		/// Sponsors logos: Logos of sponsors of the organization
+		/// Button style
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("sponsorsLogos")]
-		public IEnumerable<Umbraco.Core.Models.MediaWithCrops> SponsorsLogos => this.Value<IEnumerable<Umbraco.Core.Models.MediaWithCrops>>("sponsorsLogos");
+		[ImplementPropertyType("buttonStyle")]
+		public string ButtonStyle => this.Value<string>("buttonStyle");
 
 		///<summary>
-		/// Title: Title of the sponsors section
+		/// Link
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("title")]
-		public string Title => this.Value<string>("title");
+		[ImplementPropertyType("link")]
+		public Umbraco.Web.Models.Link Link => this.Value<Umbraco.Web.Models.Link>("link");
+
+		///<summary>
+		/// Text: Button text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("text")]
+		public string Text => this.Value<string>("text");
 	}
 }

@@ -2,3 +2,10 @@
 <h2>@Model.OpenGraph.Title</h2>
 <p>@Model.OpenGraph.Description</p>
 <a href="">@Model.HomePageLinkDescription</a>
+
+<div class="donate-popup">
+    @if (Model.DonatePopupViewModel != null)
+    {
+        Html.RenderPartial(Model.DonatePopupViewModel.PartialViewPath, Model.DonatePopupViewModel);
+    }
+</div>

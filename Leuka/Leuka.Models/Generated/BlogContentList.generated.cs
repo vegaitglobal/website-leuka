@@ -20,47 +20,54 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Leuka.Models.Generated
 {
-	/// <summary>Sponsors</summary>
-	[PublishedModel("sponsors")]
-	public partial class Sponsors : PublishedElementModel
+	/// <summary>Blog content</summary>
+	[PublishedModel("blogContentList")]
+	public partial class BlogContentList : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "sponsors";
+		public new const string ModelTypeAlias = "blogContentList";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Sponsors, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<BlogContentList, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public Sponsors(IPublishedElement content)
+		public BlogContentList(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Description: Description of the sponsors section
+		/// Blog category
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("description")]
-		public string Description => this.Value<string>("description");
+		[ImplementPropertyType("blogCategory")]
+		public string BlogCategory => this.Value<string>("blogCategory");
 
 		///<summary>
-		/// Sponsors logos: Logos of sponsors of the organization
+		/// Blog description
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("sponsorsLogos")]
-		public IEnumerable<Umbraco.Core.Models.MediaWithCrops> SponsorsLogos => this.Value<IEnumerable<Umbraco.Core.Models.MediaWithCrops>>("sponsorsLogos");
+		[ImplementPropertyType("blogDescription")]
+		public string BlogDescription => this.Value<string>("blogDescription");
 
 		///<summary>
-		/// Title: Title of the sponsors section
+		/// Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("image")]
+		public Image Image => this.Value<Image>("image");
+
+		///<summary>
+		/// Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("title")]

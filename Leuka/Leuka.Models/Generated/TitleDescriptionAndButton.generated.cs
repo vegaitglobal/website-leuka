@@ -20,47 +20,47 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Leuka.Models.Generated
 {
-	/// <summary>Sponsors</summary>
-	[PublishedModel("sponsors")]
-	public partial class Sponsors : PublishedElementModel
+	/// <summary>TitleDescriptionAndButton</summary>
+	[PublishedModel("titleDescriptionAndButton")]
+	public partial class TitleDescriptionAndButton : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "sponsors";
+		public new const string ModelTypeAlias = "titleDescriptionAndButton";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Sponsors, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<TitleDescriptionAndButton, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public Sponsors(IPublishedElement content)
+		public TitleDescriptionAndButton(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Description: Description of the sponsors section
+		/// Button
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("button")]
+		public IEnumerable<Button> Button => this.Value<IEnumerable<Button>>("button");
+
+		///<summary>
+		/// Description
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("description")]
 		public string Description => this.Value<string>("description");
 
 		///<summary>
-		/// Sponsors logos: Logos of sponsors of the organization
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("sponsorsLogos")]
-		public IEnumerable<Umbraco.Core.Models.MediaWithCrops> SponsorsLogos => this.Value<IEnumerable<Umbraco.Core.Models.MediaWithCrops>>("sponsorsLogos");
-
-		///<summary>
-		/// Title: Title of the sponsors section
+		/// Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("title")]
