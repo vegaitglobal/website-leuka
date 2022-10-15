@@ -1,6 +1,7 @@
 ﻿using Leuka.Models.Generated;
 using System.Collections.Generic;
 using System.Linq;
+using static Leuka.Core.Constants;
 
 namespace Leuka.Core.ViewModels.Shared
 {
@@ -22,7 +23,9 @@ namespace Leuka.Core.ViewModels.Shared
             }
 
             Alignment = splitBlock.Alignment;
-            BackgroundColor = splitBlock.BackgroundColor;
+            ComponentClass = splitBlock.BackgroundColor == Colors.Blue
+                ? "bg-lighblue"
+                : string.Empty;
         }
 
         public string Title { get; }
@@ -32,7 +35,7 @@ namespace Leuka.Core.ViewModels.Shared
         public SeparatorViewModel Separator { get; }
         public IEnumerable<ButtonViewModel> Buttons { get; }
         public string Alignment { get; }
-        public string BackgroundColor { get; }
+        public string ComponentClass { get; }
 
         public string PartialViewPath => "~/Views/Partials/NestedContent/_SplitBlock.cshtml";
     }
