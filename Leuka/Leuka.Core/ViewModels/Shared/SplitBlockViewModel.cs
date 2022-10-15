@@ -20,6 +20,9 @@ namespace Leuka.Core.ViewModels.Shared
             {
                 Separator = new SeparatorViewModel(separator);
             }
+
+            Alignment = splitBlock.Alignment;
+            BackgroundColor = splitBlock.BackgroundColor;
         }
 
         public string Title { get; }
@@ -28,6 +31,8 @@ namespace Leuka.Core.ViewModels.Shared
         public ImageViewModel Image { get; }
         public SeparatorViewModel Separator { get; }
         public IEnumerable<ButtonViewModel> Buttons { get; }
+        public string Alignment { get; }
+        public string BackgroundColor { get; }
 
         public string PartialViewPath => "~/Views/Partials/NestedContent/_SplitBlock.cshtml";
     }
