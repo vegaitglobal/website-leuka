@@ -32,3 +32,19 @@
         Html.RenderPartial(AboutUsViewModel.PopupPartialViewPath, popup);
     }
 }
+
+@if (Model.Buttons.Any())
+{
+    foreach (var button in @Model.Buttons)
+    {
+        Html.RenderPartial(AboutUsViewModel.ButtonPartialViewPath, button);
+    }
+}
+
+@if (Model.ThankYouPopups.Any())
+{
+    foreach (var popup in @Model.ThankYouPopups)
+    {
+        Html.RenderPartial(AboutUsViewModel.ThankYouPopupPartialViewPath, popup);
+    }
+}

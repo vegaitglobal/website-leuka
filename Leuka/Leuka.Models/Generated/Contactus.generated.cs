@@ -20,50 +20,36 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Leuka.Models.Generated
 {
-	/// <summary>ImageButton</summary>
-	[PublishedModel("imageButton")]
-	public partial class ImageButton : PublishedElementModel
+	/// <summary>ContactUs</summary>
+	[PublishedModel("contactus")]
+	public partial class Contactus : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "imageButton";
+		public new const string ModelTypeAlias = "contactus";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ImageButton, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Contactus, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public ImageButton(IPublishedElement content)
+		public Contactus(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// BackgroundImage
+		/// ContactToggle
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("backgroundImage")]
-		public Image BackgroundImage => this.Value<Image>("backgroundImage");
-
-		///<summary>
-		/// LinkUrl
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("linkUrl")]
-		public Umbraco.Web.Models.Link LinkUrl => this.Value<Umbraco.Web.Models.Link>("linkUrl");
-
-		///<summary>
-		/// Title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("title")]
-		public string Title => this.Value<string>("title");
+		[ImplementPropertyType("ContactToggle")]
+		public bool ContactToggle => this.Value<bool>("ContactToggle");
 	}
 }

@@ -46,6 +46,20 @@ namespace Leuka.Models.Generated
 		// properties
 
 		///<summary>
+		/// Alignment: Represents an alignment of the image in this component
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("alignment")]
+		public string Alignment => this.Value<string>("alignment");
+
+		///<summary>
+		/// Background color
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("backgroundColor")]
+		public string BackgroundColor => this.Value<string>("backgroundColor");
+
+		///<summary>
 		/// Button: Button
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
@@ -65,6 +79,13 @@ namespace Leuka.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("image")]
 		public Image Image => this.Value<Image>("image");
+
+		///<summary>
+		/// Separator
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("separator")]
+		public IEnumerable<Separator> Separator => this.Value<IEnumerable<Separator>>("separator");
 
 		///<summary>
 		/// Tag

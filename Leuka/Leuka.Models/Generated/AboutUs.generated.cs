@@ -46,6 +46,13 @@ namespace Leuka.Models.Generated
 		// properties
 
 		///<summary>
+		/// Button
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("button")]
+		public IEnumerable<Button> Button => this.Value<IEnumerable<Button>>("button");
+
+		///<summary>
 		/// Description
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
@@ -79,6 +86,13 @@ namespace Leuka.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("textList")]
 		public IEnumerable<string> TextList => this.Value<IEnumerable<string>>("textList");
+
+		///<summary>
+		/// Thank you popup
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("thankYouPopup")]
+		public IEnumerable<ThankyouPopup> ThankYouPopup => this.Value<IEnumerable<ThankyouPopup>>("thankYouPopup");
 
 		///<summary>
 		/// Title

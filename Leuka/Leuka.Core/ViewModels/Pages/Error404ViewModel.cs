@@ -21,7 +21,7 @@ namespace Leuka.Core.ViewModels.Pages
 			var thankyouPopup = context.Page.Thankyoupopup.FirstOrDefault();
 			if (thankyouPopup != null)
 			{
-				Components.Add(new ThankyouPopupViewModel(thankyouPopup));
+				Components.Add(new ThankYouPopupViewModel(thankyouPopup));
 			}
 		}
 		public string HomePageLinkDescription { get; set; }
