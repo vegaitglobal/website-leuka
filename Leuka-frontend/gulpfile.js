@@ -47,7 +47,7 @@ gulp.task("reload", (done) => {
 gulp.task("watch", () => {
   browserSync.init({
     server: {
-      baseDir: ".",
+      baseDir: "dist/",
     },
   });
 
