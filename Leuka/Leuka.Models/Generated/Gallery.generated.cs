@@ -51,5 +51,12 @@ namespace Leuka.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("images")]
 		public IEnumerable<Umbraco.Core.Models.MediaWithCrops> Images => this.Value<IEnumerable<Umbraco.Core.Models.MediaWithCrops>>("images");
+
+		///<summary>
+		/// Separator
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("separator")]
+		public IEnumerable<Separator> Separator => this.Value<IEnumerable<Separator>>("separator");
 	}
 }
