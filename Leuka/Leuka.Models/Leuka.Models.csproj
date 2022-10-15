@@ -413,6 +413,9 @@
     <Compile Include="Extensions\PublishedContentPropertyExtensions.cs" />
     <Compile Include="Extensions\PublishedElementPropertyExtensions.cs" />
     <Compile Include="Extensions\SeoExtensions.cs" />
+    <Compile Include="Generated\Accordion.generated.cs" />
+    <Compile Include="Generated\Article.generated.cs" />
+    <Compile Include="Generated\Blogs.generated.cs" />
     <Compile Include="Generated\Error404.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
@@ -438,6 +441,7 @@
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Generated\IPage.cs" />
+    <Compile Include="Generated\MediumTextBlock.generated.cs" />
     <Compile Include="Generated\ModelsBuilder.cs">
       <Generator>UmbracoModelsBuilder</Generator>
     </Compile>
@@ -450,6 +454,7 @@
     <Compile Include="Generated\SiteSettings.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Generated\SplitBlock.generated.cs" />
     <Compile Include="MediaTypes\IMedia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

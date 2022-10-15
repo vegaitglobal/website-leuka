@@ -20,44 +20,44 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Leuka.Models.Generated
 {
-	/// <summary>Home</summary>
-	[PublishedModel("home")]
-	public partial class Home : PublishedContentModel, IFooter, IHeader, IPage, ISiteSettings
+	/// <summary>Article</summary>
+	[PublishedModel("article")]
+	public partial class Article : PublishedContentModel, IFooter, IHeader, IPage
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "home";
+		public new const string ModelTypeAlias = "article";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Home, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Article, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public Home(IPublishedContent content)
+		public Article(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// MediumTextBlock
+		/// REUSABLE
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("mediumText")]
-		public IEnumerable<MediumTextBlock> MediumText => this.Value<IEnumerable<MediumTextBlock>>("mediumText");
+		[ImplementPropertyType("rEUSABLE")]
+		public IEnumerable<IPublishedContent> REusable => this.Value<IEnumerable<IPublishedContent>>("rEUSABLE");
 
 		///<summary>
-		/// SplitBlock
+		/// Table
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("splitBlock")]
-		public IEnumerable<SplitBlock> SplitBlock => this.Value<IEnumerable<SplitBlock>>("splitBlock");
+		[ImplementPropertyType("table")]
+		public IEnumerable<Accordion> Table => this.Value<IEnumerable<Accordion>>("table");
 
 		///<summary>
 		/// Copyright Text: The site copyright text.
@@ -212,61 +212,5 @@ namespace Leuka.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("umbracoUrlName")]
 		public string UmbracoUrlName => Page.GetUmbracoUrlName(this);
-
-		///<summary>
-		/// Canonical Domain: The site canonical domain.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("canonicalDomain")]
-		public string CanonicalDomain => SiteSettings.GetCanonicalDomain(this);
-
-		///<summary>
-		/// Cookie Script
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("cookieScript")]
-		public string CookieScript => SiteSettings.GetCookieScript(this);
-
-		///<summary>
-		/// Google Analytics Script Code
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("googleAnalyticsScriptCode")]
-		public string GoogleAnalyticsScriptCode => SiteSettings.GetGoogleAnalyticsScriptCode(this);
-
-		///<summary>
-		/// Google Tag Manager Non-Script Code
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("googleTagManagerNonScriptCode")]
-		public string GoogleTagManagerNonScriptCode => SiteSettings.GetGoogleTagManagerNonScriptCode(this);
-
-		///<summary>
-		/// Google Tag Manager Script Code
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("googleTagManagerScriptCode")]
-		public string GoogleTagManagerScriptCode => SiteSettings.GetGoogleTagManagerScriptCode(this);
-
-		///<summary>
-		/// Hide All Pages From Search Engines: This will create robots meta tag with "noindex,nofollow" value. Note: this should be unchecked on the live site.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("hideAllPagesFromSearchEngines")]
-		public bool HideAllPagesFromSearchEngines => SiteSettings.GetHideAllPagesFromSearchEngines(this);
-
-		///<summary>
-		/// Robots: Content that will be served when Robots.txt is requested.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("robots")]
-		public string Robots => SiteSettings.GetRobots(this);
-
-		///<summary>
-		/// Site Name: The site name.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("siteName")]
-		public string SiteName => SiteSettings.GetSiteName(this);
 	}
 }
