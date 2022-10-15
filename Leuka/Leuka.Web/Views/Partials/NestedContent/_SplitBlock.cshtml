@@ -1,8 +1,13 @@
 ﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.SplitBlockViewModel>
 
+@if (Model.Separator != null)
+{
+    Html.RenderPartial(Model.Separator.PartialViewPath, Model.Separator);
+}
+
 <h2>@Model.Title</h2>
 
-    @foreach (var button in Model.Buttons)
-    {
-        Html.RenderPartial(button.PartialViewPath, button);
-    }
+@foreach (var button in Model.Buttons)
+{
+    Html.RenderPartial(button.PartialViewPath, button);
+}
