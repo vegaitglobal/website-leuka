@@ -305,6 +305,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Attributes\ExternalRedirectAttribute.cs" />
     <Compile Include="Caching\CacheHelper.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="Components\ApplicationConfigurationComponent.cs" />
     <Compile Include="Composers\SearchComposer.cs" />
     <Compile Include="Contexts\IPageContext.cs" />

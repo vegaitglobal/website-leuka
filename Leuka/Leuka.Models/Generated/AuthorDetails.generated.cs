@@ -53,11 +53,11 @@ namespace Leuka.Models.Generated
 		public string Description => this.Value<string>("description");
 
 		///<summary>
-		/// Facebook URL
+		/// Facebook
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("facebookURL")]
-		public Umbraco.Web.Models.Link FacebookUrl => this.Value<Umbraco.Web.Models.Link>("facebookURL");
+		[ImplementPropertyType("facebook")]
+		public Umbraco.Web.Models.Link Facebook => this.Value<Umbraco.Web.Models.Link>("facebook");
 
 		///<summary>
 		/// Full Name
@@ -67,11 +67,11 @@ namespace Leuka.Models.Generated
 		public string FullName => this.Value<string>("fullName");
 
 		///<summary>
-		/// Google+ URL
+		/// Google+
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("googleURL")]
-		public Umbraco.Web.Models.Link GoogleUrl => this.Value<Umbraco.Web.Models.Link>("googleURL");
+		[ImplementPropertyType("google")]
+		public Umbraco.Web.Models.Link Google => this.Value<Umbraco.Web.Models.Link>("google");
 
 		///<summary>
 		/// Image
@@ -88,17 +88,17 @@ namespace Leuka.Models.Generated
 		public DateTime PublishDate => this.Value<DateTime>("publishDate");
 
 		///<summary>
-		/// Twitter URL
+		/// Twitter
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("twitterURL")]
-		public Umbraco.Web.Models.Link TwitterUrl => this.Value<Umbraco.Web.Models.Link>("twitterURL");
+		[ImplementPropertyType("twitter")]
+		public Umbraco.Web.Models.Link Twitter => this.Value<Umbraco.Web.Models.Link>("twitter");
 
 		///<summary>
-		/// WhatsApp Info
+		/// WhatsApp
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("whatsAppInfo")]
-		public string WhatsAppInfo => this.Value<string>("whatsAppInfo");
+		[ImplementPropertyType("whatsApp")]
+		public Umbraco.Web.Models.Link WhatsApp => this.Value<Umbraco.Web.Models.Link>("whatsApp");
 	}
 }
