@@ -13,7 +13,7 @@ namespace Leuka.Core.ViewModels.Partials.Layout
 		{
 			if (header == null) throw new ArgumentNullException(nameof(header));
 
-			Logo = header.Logo.FirstOrDefault().ToViewModel();
+			Logo = header.Logo.ToViewModel();
 			LogoUrl = header.AncestorOrSelf<Home>().Url();
 		}
 

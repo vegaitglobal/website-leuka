@@ -418,6 +418,7 @@
     <Compile Include="Generated\Accordion.generated.cs" />
     <Compile Include="Generated\Article.generated.cs" />
     <Compile Include="Generated\Blogs.generated.cs" />
+    <Compile Include="Generated\Contact.generated.cs" />
     <Compile Include="Generated\Error404.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
@@ -438,15 +439,18 @@
     <Compile Include="Generated\Home.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Generated\HowToHelp.generated.cs" />
     <Compile Include="Generated\Image.cs" />
     <Compile Include="Generated\Image.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Generated\IPage.cs" />
+    <Compile Include="Generated\JoinUs.generated.cs" />
     <Compile Include="Generated\MediumTextBlock.generated.cs" />
     <Compile Include="Generated\ModelsBuilder.cs">
       <Generator>UmbracoModelsBuilder</Generator>
     </Compile>
+    <Compile Include="Generated\NasiPobednici.generated.cs" />
     <Compile Include="Generated\Page.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
@@ -459,6 +463,10 @@
     </Compile>
     <Compile Include="Generated\SplitBlock.generated.cs" />
     <Compile Include="Generated\Sponsors.generated.cs" />
+    <Compile Include="Generated\UmbracoMediaArticle.generated.cs" />
+    <Compile Include="Generated\UmbracoMediaAudio.generated.cs" />
+    <Compile Include="Generated\UmbracoMediaVectorGraphics.generated.cs" />
+    <Compile Include="Generated\UmbracoMediaVideo.generated.cs" />
     <Compile Include="MediaTypes\IMedia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

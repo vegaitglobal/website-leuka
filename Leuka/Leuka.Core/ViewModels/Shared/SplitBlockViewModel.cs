@@ -10,7 +10,7 @@ namespace Leuka.Core.ViewModels.Shared
 			Title = splitBlock.Title;
 			Description = splitBlock.Description;
 			Tag = splitBlock.Tag;
-			Image = new ImageViewModel(splitBlock.Image.FirstOrDefault());
+			Image = new ImageViewModel(splitBlock.Image);
 		}
 		public string Title { get; }
 		public string Description { get; }

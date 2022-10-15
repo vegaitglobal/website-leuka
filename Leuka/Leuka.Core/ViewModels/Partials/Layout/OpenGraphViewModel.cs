@@ -20,7 +20,7 @@ namespace Leuka.Core.ViewModels.Partials.Layout
 			Title = GetTitle(context.Page);
 			Description = GetDescription(context.Page);
 			//TODO if Open Graph Image is null use banner image
-			Image = context.Page.OpenGraphImage.FirstOrDefault().ToViewModel();
+			Image = context.Page.OpenGraphImage.ToViewModel();
 			CanonicalUrl = seo.GetCanonicalUrl(context.SiteSettings.CanonicalDomain);
 			Locale = context.Page.GetCultureFromDomains();
 			SiteName = context.SiteSettings.SiteName;
