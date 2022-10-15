@@ -33,12 +33,11 @@ namespace Leuka.Core.ViewModels.Pages
                 Components.AddRange(quotesModels);
             }
 
-
-            var sponsors = context.Page.Sponsors;
-            if (sponsors != null)
+            var donations = context.Page.Donations;
+            if (donations != null)
             {
-                var sponsorsModels = sponsors.Select(x => new SponsorsViewModel(x));
-                Components.AddRange(sponsorsModels);
+                var donationsModels = donations.Select(x => new SplitBlockViewModel(x));
+                Components.AddRange(donationsModels);
             }
 
             var gallery = context.Page.Gallery;
@@ -47,6 +46,14 @@ namespace Leuka.Core.ViewModels.Pages
                 var galleryModels = gallery.Select(x => new GalleryViewModel(x));
                 Components.AddRange(galleryModels);
             }
+
+            var sponsors = context.Page.Sponsors;
+            if (sponsors != null)
+            {
+                var sponsorsModels = sponsors.Select(x => new SponsorsViewModel(x));
+                Components.AddRange(sponsorsModels);
+            }
+
         }
 
         public List<IContentViewModel> Components { get; set; }

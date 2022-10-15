@@ -53,11 +53,11 @@ namespace Leuka.Models.Generated
 		public string Description => this.Value<string>("description");
 
 		///<summary>
-		/// Facebook
+		/// Facebook URL
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("facebook")]
-		public Umbraco.Web.Models.Link Facebook => this.Value<Umbraco.Web.Models.Link>("facebook");
+		[ImplementPropertyType("facebookURL")]
+		public Umbraco.Web.Models.Link FacebookUrl => this.Value<Umbraco.Web.Models.Link>("facebookURL");
 
 		///<summary>
 		/// Full Name
@@ -67,11 +67,11 @@ namespace Leuka.Models.Generated
 		public string FullName => this.Value<string>("fullName");
 
 		///<summary>
-		/// Google+
+		/// Google+ URL
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("google")]
-		public Umbraco.Web.Models.Link Google => this.Value<Umbraco.Web.Models.Link>("google");
+		[ImplementPropertyType("googleURL")]
+		public Umbraco.Web.Models.Link GoogleUrl => this.Value<Umbraco.Web.Models.Link>("googleURL");
 
 		///<summary>
 		/// Image
@@ -88,17 +88,17 @@ namespace Leuka.Models.Generated
 		public DateTime PublishDate => this.Value<DateTime>("publishDate");
 
 		///<summary>
-		/// Twitter
+		/// Twitter URL
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("twitter")]
-		public Umbraco.Web.Models.Link Twitter => this.Value<Umbraco.Web.Models.Link>("twitter");
+		[ImplementPropertyType("twitterURL")]
+		public Umbraco.Web.Models.Link TwitterUrl => this.Value<Umbraco.Web.Models.Link>("twitterURL");
 
 		///<summary>
-		/// WhatsApp
+		/// WhatsApp Info
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("whatsApp")]
-		public Umbraco.Web.Models.Link WhatsApp => this.Value<Umbraco.Web.Models.Link>("whatsApp");
+		[ImplementPropertyType("whatsAppInfo")]
+		public string WhatsAppInfo => this.Value<string>("whatsAppInfo");
 	}
 }
