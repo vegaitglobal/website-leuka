@@ -369,6 +369,7 @@
     <Compile Include="ViewModels\Partials\Listing\PaginationViewModel.cs" />
     <Compile Include="ViewModels\Partials\Listing\SearchResultsItemViewModel.cs" />
     <Compile Include="ViewModels\Shared\AlternateLinkViewModel.cs" />
+    <Compile Include="ViewModels\Shared\ThankyouPopupViewModel.cs" />
     <Compile Include="ViewModels\Shared\GalleryViewModel.cs" />
     <Compile Include="ViewModels\Shared\ImageViewModel.cs" />
     <Compile Include="ViewModels\Shared\DonatePopupViewModel.cs" />

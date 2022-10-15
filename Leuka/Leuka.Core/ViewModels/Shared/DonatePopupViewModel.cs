@@ -12,6 +12,7 @@ namespace Leuka.Core.ViewModels.Shared
             ValueString = donatePopup.ValueString;
             CompanyString = donatePopup.CompanyString;
             EmailString = donatePopup.EmailString;
+            Footnote = donatePopup.Footnote;
         }
         public string Title { get; }
         public string Description { get; }
@@ -19,6 +20,7 @@ namespace Leuka.Core.ViewModels.Shared
         public string ValueString { get; }
         public string CompanyString { get; }
         public string EmailString { get; }
+        public string Footnote { get; }
 
         public string PartialViewPath => "~/Views/Partials/NestedContent/_DonatePopup.cshtml";
     }

@@ -467,6 +467,7 @@
     </Compile>
     <Compile Include="Generated\SplitBlock.generated.cs" />
     <Compile Include="Generated\Sponsors.generated.cs" />
+    <Compile Include="Generated\ThankyouPopup.generated.cs" />
     <Compile Include="Generated\TitleDescriptionAndButton.generated.cs" />
     <Compile Include="Generated\TopicDetails.generated.cs" />
     <Compile Include="Generated\UmbracoMediaArticle.generated.cs" />

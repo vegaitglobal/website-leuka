@@ -509,6 +509,7 @@
     <Content Include="Views\NasiPobednici.cshtml" />
     <Content Include="Views\AboutUs.cshtml" />
     <Content Include="Views\Partials\NestedContent\_DonatePopup.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_ThankyouPopup.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
