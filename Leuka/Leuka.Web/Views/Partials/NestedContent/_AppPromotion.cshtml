@@ -1,7 +1,11 @@
 ﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.AppPromotionViewModel>
 
-<section class="app-promo-container"
-         style="background-image: url(@Model.BackgroudImage.UrlAbsolute)">
+@if (Model.Separator != null)
+{
+    Html.RenderPartial(Model.Separator.PartialViewPath, Model.Separator);
+}
+
+<section class="app-promo-container page-content-block">
     <div class="content-wrapper">
         <div class="image-wrapper">
             <!-- mobile -->

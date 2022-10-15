@@ -70,9 +70,13 @@
 
 .workbench {
     display: flex;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
-    background-color: #DBE7FC;
     justify-content: center;
     align-items: center;
+}
+
+.page-content-block {
+    padding-top: 60px;
+    padding-bottom: 60px;
 }

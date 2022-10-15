@@ -1,7 +1,24 @@
 ﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.QuoteViewModel>
 
-<h2>@Model.Name</h2>
-<h2>@Model.JobTitle</h2>
-<img src="@Model.Image.Url"/>
-<h5>@Model.Text</h5>
-
+@if (Model.Separator != null)
+{
+    Html.RenderPartial(Model.Separator.PartialViewPath, Model.Separator);
+}
+<div class="quotes-wrapper">
+    <div class="columns">
+        <div class="column-left">
+            <div class="image-wrapper">
+                <img src="@Model.Image.Url" class="round-image" />
+            </div>
+            <div class="column-person-info-right">
+                <label class="name-text">@Model.Name</label> <br />
+                <label class="position-text">@Model.JobTitle</span></label>
+            </div>
+        </div>
+        <div class="column-right">
+            <span>
+                @Model.Text
+            </span>
+        </div>
+    </div>
+</div>

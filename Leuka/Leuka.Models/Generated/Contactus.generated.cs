@@ -46,10 +46,17 @@ namespace Leuka.Models.Generated
 		// properties
 
 		///<summary>
-		/// Title
+		/// Background color: Background color of contact form. If not set background color will be blue
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("title")]
-		public bool Title => this.Value<bool>("title");
+		[ImplementPropertyType("backgroundColor")]
+		public string BackgroundColor => this.Value<string>("backgroundColor");
+
+		///<summary>
+		/// ContactToggle
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("ContactToggle")]
+		public bool ContactToggle => this.Value<bool>("ContactToggle");
 	}
 }
