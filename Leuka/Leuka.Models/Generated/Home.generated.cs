@@ -53,6 +53,13 @@ namespace Leuka.Models.Generated
 		public IEnumerable<AppPromotion> AppPromotion => this.Value<IEnumerable<AppPromotion>>("appPromotion");
 
 		///<summary>
+		/// Donations: Information component about donations
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("donations")]
+		public IEnumerable<SplitBlock> Donations => this.Value<IEnumerable<SplitBlock>>("donations");
+
+		///<summary>
 		/// Gallery
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]

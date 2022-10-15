@@ -46,10 +46,10 @@ namespace Leuka.Models.Generated
 		// properties
 
 		///<summary>
-		/// Title
+		/// ContactToggle
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("title")]
-		public bool Title => this.Value<bool>("title");
+		[ImplementPropertyType("ContactToggle")]
+		public bool ContactToggle => this.Value<bool>("ContactToggle");
 	}
 }

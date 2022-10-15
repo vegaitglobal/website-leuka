@@ -385,7 +385,7 @@
     <Compile Include="ViewModels\Shared\SponsorsViewModel.cs" />
     <Compile Include="ViewModels\Shared\SplitBlockViewModel.cs" />
     <Compile Include="ViewModels\Shared\TitleDescriptionAndButtonViewModel.cs" />
-    <Compile Include="ViewModels\Shared\AppPromotion.cs" />
+    <Compile Include="ViewModels\Shared\AppPromotionViewModel.cs" />
     <Compile Include="ViewModels\Shared\TopicDetailsViewModel.cs" />
     <Compile Include="ViewModels\Shared\LinkViewModel.cs" />
   </ItemGroup>
