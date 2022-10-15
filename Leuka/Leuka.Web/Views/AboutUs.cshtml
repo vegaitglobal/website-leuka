@@ -1,0 +1,50 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<AboutUsViewModel>
+
+<h1>@Model.Title</h1>
+
+<p>@Model.Description</p>
+
+@if (Model.Image != null)
+{
+    <img src="@Model.Image.Url" alt=""/>
+}
+
+
+@if (Model.TextList.Any())
+{
+    <ul>
+    @foreach (var text in Model.TextList)
+    {
+        <li>@text</li>
+    }
+    </ul>
+}
+
+@if (Model.Paragraph != null)
+{
+    @Model.Paragraph
+}
+
+@if (Model.DonatePopups.Any())
+{
+    foreach (var popup in @Model.DonatePopups)
+    {
+        Html.RenderPartial(AboutUsViewModel.PopupPartialViewPath, popup);
+    }
+}
+
+@if (Model.Buttons.Any())
+{
+    foreach (var button in @Model.Buttons)
+    {
+        Html.RenderPartial(AboutUsViewModel.ButtonPartialViewPath, button);
+    }
+}
+
+@if (Model.ThankYouPopups.Any())
+{
+    foreach (var popup in @Model.ThankYouPopups)
+    {
+        Html.RenderPartial(AboutUsViewModel.ThankYouPopupPartialViewPath, popup);
+    }
+}

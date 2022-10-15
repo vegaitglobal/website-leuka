@@ -1,7 +1,7 @@
-﻿using System.Net;
-using System.Web.Mvc;
-using Leuka.Core.ViewModels.Pages;
+﻿using Leuka.Core.ViewModels.Pages;
 using Leuka.Models.Generated;
+using System.Net;
+using System.Web.Mvc;
 
 namespace Leuka.Core.Controllers.RenderMvc
 {
@@ -9,7 +9,7 @@ namespace Leuka.Core.Controllers.RenderMvc
 	{
 		public ActionResult Error404(Error404 model)
 		{
-			Response.StatusCode = (int) HttpStatusCode.NotFound;
+			Response.StatusCode = (int)HttpStatusCode.NotFound;
 			Response.Status = "404 not found";
 			Response.TrySkipIisCustomErrors = true;
 
