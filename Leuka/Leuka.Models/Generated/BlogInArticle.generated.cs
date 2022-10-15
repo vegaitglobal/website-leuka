@@ -20,49 +20,50 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Leuka.Models.Generated
 {
-	// Mixin Content Type with alias "mediumTextBlock"
-	/// <summary>MediumTextBlock</summary>
-	public partial interface IMediumTextBlock : IPublishedElement
-	{
-		/// <summary>Text</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		string Text { get; }
-	}
-
-	/// <summary>MediumTextBlock</summary>
-	[PublishedModel("mediumTextBlock")]
-	public partial class MediumTextBlock : PublishedElementModel, IMediumTextBlock
+	/// <summary>BlogInArticle</summary>
+	[PublishedModel("blogInArticle")]
+	public partial class BlogInArticle : PublishedContentModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "mediumTextBlock";
+		public new const string ModelTypeAlias = "blogInArticle";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<MediumTextBlock, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<BlogInArticle, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public MediumTextBlock(IPublishedElement content)
+		public BlogInArticle(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Text
+		/// Blog text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("text")]
-		public string Text => GetText(this);
+		[ImplementPropertyType("blogText")]
+		public string BlogText => this.Value<string>("blogText");
 
-		/// <summary>Static getter for Text</summary>
+		///<summary>
+		/// Blog type: Da li je blog spada u kategoriju: saveti, novosti, mediji o nama....
+		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static string GetText(IMediumTextBlock that) => that.Value<string>("text");
+		[ImplementPropertyType("blogType")]
+		public string BlogType => this.Value<string>("blogType");
+
+		///<summary>
+		/// Title: Blog title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("title")]
+		public string Title => this.Value<string>("title");
 	}
 }
