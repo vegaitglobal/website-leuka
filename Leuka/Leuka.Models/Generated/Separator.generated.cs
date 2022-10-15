@@ -20,43 +20,36 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Leuka.Models.Generated
 {
-	/// <summary>Gallery</summary>
-	[PublishedModel("gallery")]
-	public partial class Gallery : PublishedElementModel
+	/// <summary>Separator</summary>
+	[PublishedModel("separator")]
+	public partial class Separator : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "gallery";
+		public new const string ModelTypeAlias = "separator";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Gallery, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Separator, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public Gallery(IPublishedElement content)
+		public Separator(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Images: Gallery images
+		/// Variant
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("images")]
-		public IEnumerable<Umbraco.Core.Models.MediaWithCrops> Images => this.Value<IEnumerable<Umbraco.Core.Models.MediaWithCrops>>("images");
-
-		///<summary>
-		/// Separator
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("separator")]
-		public IEnumerable<Separator> Separator => this.Value<IEnumerable<Separator>>("separator");
+		[ImplementPropertyType("variant")]
+		public string Variant => this.Value<string>("variant");
 	}
 }

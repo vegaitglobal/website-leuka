@@ -373,6 +373,7 @@
     <Compile Include="ViewModels\Partials\Listing\SearchResultsItemViewModel.cs" />
     <Compile Include="ViewModels\Shared\AlternateLinkViewModel.cs" />
     <Compile Include="ViewModels\Shared\ButtonViewModel.cs" />
+    <Compile Include="ViewModels\Shared\SeparatorViewModel.cs" />
     <Compile Include="ViewModels\Shared\ThankyouPopupViewModel.cs" />
     <Compile Include="ViewModels\Shared\GalleryRowViewModel.cs" />
     <Compile Include="ViewModels\Shared\GalleryViewModel.cs" />

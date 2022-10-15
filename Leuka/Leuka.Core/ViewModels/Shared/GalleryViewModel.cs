@@ -16,10 +16,15 @@ namespace Leuka.Core.ViewModels.Shared
                      .Select(x => new GalleryRowViewModel(x.ToList()))
                      .ToList();
 
-            //NumberOfImages = Images.Count;
+            var separator = gallery.Separator.FirstOrDefault();
+
+            if(separator != null)
+            {
+                Separator = new SeparatorViewModel(separator);
+            }
         }
 
-        public int NumberOfImages { get; }
+        public SeparatorViewModel Separator { get; }
 
         public List<GalleryRowViewModel> GalleryRows { get; }
 
