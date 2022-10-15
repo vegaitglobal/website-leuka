@@ -485,6 +485,7 @@
     <Content Include="config\ClientDependency.config" />
     <Content Include="config\BackOfficeTours\getting-started.json" />
     <Content Include="App_Plugins\ModelsBuilder\package.manifest" />
+    <Content Include="ConnectionStrings.config" />
     <None Include="packages.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
     <Content Include="Views\Partials\Grid\Editors\Rte.cshtml" />
@@ -499,6 +500,7 @@
     <Content Include="Views\Partials\NestedContent\_SplitBlock.cshtml" />
     <Content Include="Views\Article.cshtml" />
     <Content Include="Views\Blogs.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_Quote.cshtml" />
     <Content Include="Views\Contact.cshtml" />
     <Content Include="Views\JoinUs.cshtml" />
     <None Include="Web.Debug.config">
