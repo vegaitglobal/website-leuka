@@ -16,56 +16,63 @@
         </a>
       </div>
     </div>
+    @if (@Model.NavigationLinks != null && @Model.NavigationLinks.Any())
+    {
+        <div class="footer-links-wrapper">
+            <div class="footer-title-wrapper">
+                <img class="footer-polygon" src="~/assets/images/Polygon.svg"/>
+                <h6 class="footer-links-title">LINKOVI</h6>
+            </div>
+             @foreach (var link in @Model.NavigationLinks)
+            {
+                <a href="@link.Url" class="footer-links">@link.Content</a>
+            }
+        </div>
+    }
 
-    <div class="footer-links-wrapper">
-      <div class="footer-title-wrapper">
-        <img class="footer-polygon" src="~/assets/images/Polygon.svg" />
-        <h6 class="footer-links-title">LINKOVI</h6>
-      </div>
-      <a href="#" class="footer-links">O nama</a>
-      <a href="#" class="footer-links">Blog</a>
-      <a href="#" class="footer-links">Naši pobednici</a>
-      <a href="#" class="footer-links">Kako pomoći?</a>
-      <a href="#" class="footer-links">Kontakt</a>
-    </div>
+    @if (@Model.MediaLinks != null && @Model.MediaLinks.Any())
+    {
+        <div class="footer-links-wrapper">
+            <div class="footer-title-wrapper">
+                <img class="footer-polygon" src="../assets/svgs/Polygon.svg" />
+                <h6 class="footer-links-title">MEDIJI O NAMA</h6>
+            </div>
+            @foreach (var link in @Model.MediaLinks)
+            {
+                <a href="@link.Url" class="footer-links">@link.Content</a>
+            }
+        </div>
+    }
+    
+      <div class="footer-links-wrapper">
+          <div class="footer-title-wrapper">
+              <img class="footer-polygon" src="../assets/svgs/Polygon.svg" />
+              <h6 class="footer-links-title">KONTAKT</h6>
+          </div>
+          <a href="mailto:@{@Model.ContactEmail}?subject=your title&body=TThe message" class="footer-links">
+              Email:
+              @Model.ContactEmail
+          </a>
 
-    <div class="footer-links-wrapper">
-      <div class="footer-title-wrapper">
-        <img class="footer-polygon" src="~/assets/images/Polygon.svg" />
-        <h6 class="footer-links-title">MEDIJI O NAMA</h6>
+          <div class="footer-title-wrapper">
+              <img class="footer-polygon" src="../assets/svgs/Polygon.svg" />
+              <h6 class="footer-links-title">ZAPRATITE NAS</h6>
+          </div>
+          <div>
+              <a href="@Model.Facebook.Link" class="footer-links">
+                  <img class="footer-social-logo" src="~/assets/images/Facebook.svg" />
+              </a>
+              <a href="@Model.Twitter.Link" class="footer-links">
+                  <img class="footer-social-logo" src="~/assets/Images/Twitter.svg" />
+              </a>
+              <a href="@Model.Instagram.Link" class="footer-links">
+                  <img class="footer-social-logo" src="~/assets/Images/Instagram.svg" />
+              </a>
+          </div>
+          <div class="footer-copyright">
+              ©@Model.CopyrightText
+          </div>
       </div>
-      <a href="#" class="footer-links">„Leuka“ u Užicu: Trombociti neophodni obolelima od akutne leukemije</a>
-      <a href="#" class="footer-links">UG ”Leuka”: Dobrota leči </a>
-      <a href="#" class="footer-links">„Leuka“ u Užicu: Trombociti neophodni obolelima</a>
-    </div>
-
-    <div class="footer-links-wrapper">
-      <div class="footer-title-wrapper">
-        <img class="footer-polygon" src="~/assets/images/Polygon.svg" />
-        <h6 class="footer-links-title">KONTAKT</h6>
-      </div>
-      <a href="mailto:leuka@email.com?subject=your title&body=TThe message" class="footer-links">Email:
-        leuka@email.com</a>
-
-      <div class="footer-title-wrapper">
-        <img class="footer-polygon" src="~/assets/images/Polygon.svg" />
-        <h6 class="footer-links-title">ZAPRATITE NAS</h6>
-      </div>
-      <div>
-        <a href="#" class="footer-links">
-          <img class="footer-social-logo" src="~/assets/images/Facebook.svg" />
-        </a>
-        <a href="#" class="footer-links">
-          <img class="footer-social-logo" src="~/assets/images/Twitter.svg" />
-        </a>
-        <a class="footer-links" href="#">
-          <img class="footer-social-logo" src="~/assets/images/Instagram.svg" />
-        </a>
-      </div>
-      <div class="footer-copyright">
-        ©2022 Leuka
-      </div>
-    </div>
   </div>
 </footer>
 
