@@ -3,29 +3,37 @@ const pug = require("gulp-pug");
 const concat = require("gulp-concat");
 const sass = require("gulp-sass")(require("sass"));
 const del = require("del");
+const image = require("gulp-image");
 const browserSync = require("browser-sync").create();
 
 const { src, dest } = gulp;
 
 gulp.task("build", (done) => {
-  gulp.series(
-    "clean",
-    "scss",
-    "pug"
-  )(() => {
-    browserSync.reload();
-    done();
-  });
+  gulp.series("clean-all", "scss", "image", "pug", "reload")(done);
 });
 
 gulp.task("pug", () => src("./src/*.pug").pipe(pug()).pipe(dest("./dist")));
 
 gulp.task("scss", () =>
-  src([ "./assets/styles/index.scss", "./partials/**/*.scss"])
+  src(["./assets/styles/index.scss", "./partials/**/*.scss"])
     .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
     .pipe(concat("index.css"))
     .pipe(gulp.dest("./dist"))
 );
+
+gulp.task("image", function (done) {
+  gulp
+    .src("./assets/images/*")
+    .pipe(image())
+    .pipe(gulp.dest("./dist/images"))
+    .on("end", done)
+    .on("end", browserSync.reload);
+});
+
+gulp.task("reload", (done) => {
+  browserSync.reload();
+  done();
+});
 
 gulp.task("watch", () => {
   browserSync.init({
@@ -40,10 +48,14 @@ gulp.task("watch", () => {
       "partials/**/*.scss",
       "partials/**/*.html",
       "src/*.pug",
-      "assets/styles/*.scss"
+      "assets/styles/*.scss",
     ],
-    gulp.series("build")
+    gulp.series(["clean", "scss", "pug", "reload"])
   );
+
+  gulp.watch("./assets/images/*", gulp.series(["clean-img", "image", "reload"]));
 });
 
-gulp.task("clean", () => del("./dist/*"));
+gulp.task("clean-all", () => del("dist/*"));
+gulp.task("clean-img", () => del("dist/images/**"));
+gulp.task("clean", () => del(["dist/*", "!dist/images/**"]));

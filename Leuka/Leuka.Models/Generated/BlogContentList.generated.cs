@@ -60,6 +60,20 @@ namespace Leuka.Models.Generated
 		public string BlogDescription => this.Value<string>("blogDescription");
 
 		///<summary>
+		/// Blog top news (izdvajamo)
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("blogTopNewsIzdvajamo")]
+		public bool BlogTopNewsIzdvajamo => this.Value<bool>("blogTopNewsIzdvajamo");
+
+		///<summary>
+		/// Full blog description
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("fullBlogDescription")]
+		public string FullBlogDescription => this.Value<string>("fullBlogDescription");
+
+		///<summary>
 		/// Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]

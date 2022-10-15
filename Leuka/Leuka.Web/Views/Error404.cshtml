@@ -1,11 +1,12 @@
 ﻿@inherits UmbracoViewPage<Error404ViewModel>
-<h2>@Model.OpenGraph.Title</h2>
-<p>@Model.OpenGraph.Description</p>
-<a href="">@Model.HomePageLinkDescription</a>
+<div class="error404-page">
+    <h2>@Model.OpenGraph.Title</h2>
+    <p>@Model.OpenGraph.Description</p>
 
-<div class="donate-popup">
-    @if (Model.DonatePopupViewModel != null)
+    <a href="/">@Model.HomePageLinkDescription</a>
+
+    @foreach (var component in Model.Components)
     {
-        Html.RenderPartial(Model.DonatePopupViewModel.PartialViewPath, Model.DonatePopupViewModel);
+        Html.RenderPartial(component.PartialViewPath, component);
     }
 </div>

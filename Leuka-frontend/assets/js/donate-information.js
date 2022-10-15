@@ -33,7 +33,7 @@ window.onclick = function (event) {
 
 const onDonate = () => {
   const endpoint = `http://leuka.local/donate`;
-  debugger
+
   const donor = document.getElementById("donor").value;
   const amount = document.getElementById("amount").value;
   const company = document.getElementById("company").value;

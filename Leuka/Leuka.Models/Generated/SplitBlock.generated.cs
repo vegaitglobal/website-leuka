@@ -67,6 +67,13 @@ namespace Leuka.Models.Generated
 		public Image Image => this.Value<Image>("image");
 
 		///<summary>
+		/// Separator
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("separator")]
+		public IEnumerable<Separator> Separator => this.Value<IEnumerable<Separator>>("separator");
+
+		///<summary>
 		/// Tag
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]

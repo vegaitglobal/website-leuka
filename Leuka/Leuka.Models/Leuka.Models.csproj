@@ -462,11 +462,13 @@
     <Compile Include="Generated\SearchResults.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Generated\Separator.generated.cs" />
     <Compile Include="Generated\SiteSettings.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Generated\SplitBlock.generated.cs" />
     <Compile Include="Generated\Sponsors.generated.cs" />
+    <Compile Include="Generated\ThankyouPopup.generated.cs" />
     <Compile Include="Generated\TopicDetails.generated.cs" />
     <Compile Include="Generated\Sponsors.generated.cs" />
     <Compile Include="Generated\TitleDescriptionAndButton.generated.cs" />

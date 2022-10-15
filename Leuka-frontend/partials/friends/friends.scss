@@ -1,0 +1,62 @@
+@import "../../assets/styles/colors.scss";
+
+.friends {
+	padding: 20px 10px;
+	background-color: #DAEDF8;
+}
+
+.friends-title {
+	text-align: center;
+	margin: 28px 0 18px;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 103.6%;
+	letter-spacing: -0.025em;
+	color: $color-blue;
+}
+
+.friends-description {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 136%;
+	text-align: center;
+	letter-spacing: -0.02em;
+	color: #2B3363;
+}
+
+.partners-list {
+	margin: 22px 32px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px 20px;
+
+	@media (max-width: 670px) {
+		margin: 16px 0;
+		gap: 10px;
+	}
+
+	@media (max-width: 670px) {
+		gap: 0px;
+	}
+}
+
+.partner-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1 0 22%;
+
+	img {
+		max-width: 280px;
+
+		@media (max-width: 670px) {
+			max-width: 210px;
+		}
+
+		@media (max-width: 450px) {
+			max-width: 150px;
+		}
+	}
+}

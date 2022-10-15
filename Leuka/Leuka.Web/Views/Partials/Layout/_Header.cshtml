@@ -1,1 +1,46 @@
-﻿
+﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Partials.Layout.HeaderViewModel>
+
+<header class="header" id="header">
+    <div class="header-wrapper" id="header-wrapper">
+        <a class="images" href="/">
+            <img src="@Model.Logo.Url" alt="Leuka" />
+        </a>
+        <button class="hamburger-icon" id="hamburger-icon" onclick="mobileHamburgerMenu()">
+            <img src="../assets/images/hamburger.svg" id="hamburger-icon-img" />
+        </button>
+        <div class="hamburger">
+            <div class="header-buttons">
+                @if (@Model.NavigationLinks != null && @Model.NavigationLinks.Any())
+                {
+                    foreach (var link in @Model.NavigationLinks)
+                    {
+                        <a href="@link.Url" class="nav-item">@link.Content</a>
+                        <hr class="horisontal-line">
+                    }
+                }
+                @if (Model.DonationButton != null && !string.IsNullOrEmpty(Model.DonationButton.Text))
+                {
+                    <button class="donate-button">@Model.DonationButton.Text</button>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="vector-scale">
+        <img src="../assets/images/Vector-header.svg" class="img-vector" />
+        <img src="../assets/images/Vector-header-2.svg" class="img-vector-second" />
+    </div>
+</header>
+<script>
+    function mobileHamburgerMenu() {
+        var header = document.getElementById("header")
+        if (!header.classList.contains('header-open')) {
+            header.classList.add('header-open')
+            document.getElementById('hamburger-icon-img').src = '../assets/images/hamburger-x.svg'
+            document.getElementById('hamburger-icon-img').style.marginLeft = '2.2em';
+        } else {
+            header.classList.remove('header-open')
+            document.getElementById('hamburger-icon-img').src = '../assets/images/hamburger.svg'
+        }
+    }
+</script>

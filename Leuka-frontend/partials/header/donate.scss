@@ -95,11 +95,10 @@
 }
 
 .donate-submit-button {
-  margin-left: 47px;
-  margin-right: 47px;
-  margin-top: 20px;
-  color: $color-blue;
-  background-color: $color-white;
+  margin: 20px 47px 0;
+  color: $color-blue !important;
+  background-color: $color-white !important;
+  width: 584px !important;
 }
 
 .donate-bottom-text {
@@ -156,7 +155,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    width: 277px;
+    width: 277px !important;
   }
 
   .donate-bottom-text {

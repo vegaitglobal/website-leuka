@@ -1,5 +1,7 @@
 ﻿using Leuka.Core.Contexts;
+using Leuka.Core.ViewModels.Shared;
 using Leuka.Models.Generated;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Leuka.Core.ViewModels.Pages
@@ -8,12 +10,21 @@ namespace Leuka.Core.ViewModels.Pages
 	{
 		public Error404ViewModel(IPageContext<Error404> context) : base(context)
 		{
+			Components = new List<IContentViewModel>();
+
 			HomePageLinkDescription = context.Page.HomePageLinkDescription;
-			DonatePopup = context.Page.DonatePopup.FirstOrDefault();
-			DonatePopupViewModel = new Shared.DonatePopupViewModel(DonatePopup);
+			var donatePopup = context.Page.DonatePopup.FirstOrDefault();
+			if (donatePopup != null)
+			{
+				Components.Add(new DonatePopupViewModel(donatePopup));
+			}
+			var thankyouPopup = context.Page.Thankyoupopup.FirstOrDefault();
+			if (thankyouPopup != null)
+			{
+				Components.Add(new ThankYouPopupViewModel(thankyouPopup));
+			}
 		}
 		public string HomePageLinkDescription { get; set; }
-		public DonatePopup DonatePopup { get; set; }
-		public ViewModels.Shared.DonatePopupViewModel DonatePopupViewModel { get; set; }
+		public List<IContentViewModel> Components { get; set; }
 	}
 }

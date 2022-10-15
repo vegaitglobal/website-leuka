@@ -22,7 +22,7 @@ namespace Leuka.Models.Generated
 {
 	/// <summary>AboutUs</summary>
 	[PublishedModel("aboutUs")]
-	public partial class AboutUs : PublishedContentModel, IFooter, IHeader, IMediumTextBlock, IPage, ISiteSettings
+	public partial class AboutUs : PublishedContentModel, IFooter, IHeader, IPage, ISiteSettings
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -46,11 +46,25 @@ namespace Leuka.Models.Generated
 		// properties
 
 		///<summary>
+		/// Button
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("button")]
+		public IEnumerable<Button> Button => this.Value<IEnumerable<Button>>("button");
+
+		///<summary>
 		/// Description
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("description")]
-		public string Description => this.Value<string>("description");
+		public IHtmlString Description => this.Value<IHtmlString>("description");
+
+		///<summary>
+		/// Donate
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("donate")]
+		public IEnumerable<DonatePopup> Donate => this.Value<IEnumerable<DonatePopup>>("donate");
 
 		///<summary>
 		/// Image
@@ -60,11 +74,25 @@ namespace Leuka.Models.Generated
 		public Image Image => this.Value<Image>("image");
 
 		///<summary>
+		/// Paragraph
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("richContent")]
+		public IHtmlString RichContent => this.Value<IHtmlString>("richContent");
+
+		///<summary>
 		/// Text List
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("textList")]
 		public IEnumerable<string> TextList => this.Value<IEnumerable<string>>("textList");
+
+		///<summary>
+		/// Thank you popup
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("thankYouPopup")]
+		public IEnumerable<ThankyouPopup> ThankYouPopup => this.Value<IEnumerable<ThankyouPopup>>("thankYouPopup");
 
 		///<summary>
 		/// Title
@@ -74,6 +102,20 @@ namespace Leuka.Models.Generated
 		public string Title => this.Value<string>("title");
 
 		///<summary>
+		/// App Store URL
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("appStoreURL")]
+		public Umbraco.Web.Models.Link AppStoreUrl => Footer.GetAppStoreUrl(this);
+
+		///<summary>
+		/// Contact Email
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("contactEmail")]
+		public string ContactEmail => Footer.GetContactEmail(this);
+
+		///<summary>
 		/// Copyright Text: The site copyright text.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
@@ -81,18 +123,74 @@ namespace Leuka.Models.Generated
 		public string CopyrightText => Footer.GetCopyrightText(this);
 
 		///<summary>
+		/// Facebook URL
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("facebookURL")]
+		public Umbraco.Web.Models.Link FacebookUrl => Footer.GetFacebookUrl(this);
+
+		///<summary>
+		/// FooterLinks
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("footerLinks")]
+		public IEnumerable<Umbraco.Web.Models.Link> FooterLinks => Footer.GetFooterLinks(this);
+
+		///<summary>
+		/// Footer Logo
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("footerLogo")]
+		public Image FooterLogo => Footer.GetFooterLogo(this);
+
+		///<summary>
+		/// Instagram URL
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("instagramURL")]
+		public Umbraco.Web.Models.Link InstagramUrl => Footer.GetInstagramUrl(this);
+
+		///<summary>
+		/// MediaLinks
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("mediaLinks")]
+		public IEnumerable<Umbraco.Web.Models.Link> MediaLinks => Footer.GetMediaLinks(this);
+
+		///<summary>
+		/// Play Store URL
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("playStoreURL")]
+		public Umbraco.Web.Models.Link PlayStoreUrl => Footer.GetPlayStoreUrl(this);
+
+		///<summary>
+		/// Twitter URL
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("twitterURL")]
+		public Umbraco.Web.Models.Link TwitterUrl => Footer.GetTwitterUrl(this);
+
+		///<summary>
+		/// Donation Button
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("donationButton")]
+		public IEnumerable<Button> DonationButton => Header.GetDonationButton(this);
+
+		///<summary>
+		/// Links
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("links")]
+		public IEnumerable<Umbraco.Web.Models.Link> Links => Header.GetLinks(this);
+
+		///<summary>
 		/// Logo: The site logo image.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("logo")]
 		public Image Logo => Header.GetLogo(this);
-
-		///<summary>
-		/// Text
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("text")]
-		public string Text => MediumTextBlock.GetText(this);
 
 		///<summary>
 		/// Alternate Languages: Language codes (en-US, en-GB etc).

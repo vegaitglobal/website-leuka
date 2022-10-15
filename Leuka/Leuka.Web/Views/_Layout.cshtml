@@ -1,32 +1,36 @@
 ﻿@inherits UmbracoViewPage<PageViewModel>
 
 @{
-	Layout = null;
+    Layout = null;
 }
 
 <!DOCTYPE html>
 
 <html>
 <head>
-	<meta name="viewport" content="width=device-width" />
-	@{
-		Html.RenderAction<LayoutController>(c => nameof(c.MetaTags), new { viewModel = Model.MetaTags });
-		Html.RenderAction<LayoutController>(c => nameof(c.OpenGraph), new { viewModel = Model.OpenGraph });
-	}
-	@if (!string.IsNullOrWhiteSpace(Model.CookieScript))
-	{
-		@Html.Raw(Model.CookieScript)
-	}
+    <meta name="viewport" content="width=device-width" />
+    @{
+        Html.RenderAction<LayoutController>(c => nameof(c.MetaTags), new { viewModel = Model.MetaTags });
+        Html.RenderAction<LayoutController>(c => nameof(c.OpenGraph), new { viewModel = Model.OpenGraph });
+    }
+    @if (!string.IsNullOrWhiteSpace(Model.CookieScript))
+    {
+        @Html.Raw(Model.CookieScript)
+    }
+
+    <link href="~/assets/styles/index.css" type="text/css" rel="stylesheet" />
 </head>
-<body>
-@{
-	Html.RenderAction<LayoutController>(c => nameof(c.Header), new { viewModel = Model.Header });
-}
-<div>
-	@RenderBody()
-</div>
-@{
-	Html.RenderAction<LayoutController>(c => nameof(c.Footer), new { viewModel = Model.Footer });
-}
+<body style="display:block;float:left;width:100%;height:100%;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    @{
+        Html.RenderAction<LayoutController>(c => nameof(c.Header), new { viewModel = Model.Header });
+    }
+    <div>
+        @RenderBody()
+    </div>
+    @{
+        Html.RenderAction<LayoutController>(c => nameof(c.Footer), new { viewModel = Model.Footer });
+    }
 </body>
 </html>
