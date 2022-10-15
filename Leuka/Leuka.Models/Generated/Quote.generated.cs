@@ -72,5 +72,12 @@ namespace Leuka.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("quoteText")]
 		public string QuoteText => this.Value<string>("quoteText");
+
+		///<summary>
+		/// Separator
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("separator")]
+		public IEnumerable<Separator> Separator => this.Value<IEnumerable<Separator>>("separator");
 	}
 }
