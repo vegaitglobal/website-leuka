@@ -20,58 +20,51 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Leuka.Models.Generated
 {
-	/// <summary>DonatePopup</summary>
-	[PublishedModel("donatePopup")]
-	public partial class DonatePopup : PublishedElementModel
+	/// <summary>Blog content</summary>
+	[PublishedModel("blogContentList")]
+	public partial class BlogContentList : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "donatePopup";
+		public new const string ModelTypeAlias = "blogContentList";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<DonatePopup, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<BlogContentList, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public DonatePopup(IPublishedElement content)
+		public BlogContentList(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// CompanyString
+		/// Blog category
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("companyString")]
-		public string CompanyString => this.Value<string>("companyString");
+		[ImplementPropertyType("blogCategory")]
+		public string BlogCategory => this.Value<string>("blogCategory");
 
 		///<summary>
-		/// Description
+		/// Blog description
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("description")]
-		public string Description => this.Value<string>("description");
+		[ImplementPropertyType("blogDescription")]
+		public string BlogDescription => this.Value<string>("blogDescription");
 
 		///<summary>
-		/// DonatorString
+		/// Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("donatorString")]
-		public string DonatorString => this.Value<string>("donatorString");
-
-		///<summary>
-		/// EmailString
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("emailString")]
-		public string EmailString => this.Value<string>("emailString");
+		[ImplementPropertyType("image")]
+		public Image Image => this.Value<Image>("image");
 
 		///<summary>
 		/// Title
@@ -79,12 +72,5 @@ namespace Leuka.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("title")]
 		public string Title => this.Value<string>("title");
-
-		///<summary>
-		/// ValueString
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("valueString")]
-		public string ValueString => this.Value<string>("valueString");
 	}
 }

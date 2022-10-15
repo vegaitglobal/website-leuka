@@ -1,4 +1,8 @@
 ﻿@inherits UmbracoViewPage<BlogsViewModel>
+@using Leuka.Core.ViewModels
 @using ContentModels = Leuka.Models.Generated;
 
-<h2>@Model.Title</h2>
+@foreach (IContentViewModel component in Model.Components)
+{
+    Html.RenderPartial(component.PartialViewPath, component);
+}

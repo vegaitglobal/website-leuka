@@ -451,6 +451,7 @@
     <Content Include="CustomError400.aspx" />
     <Content Include="CustomError500.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Views\Partials\NestedContent\_BlogList.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
