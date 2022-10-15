@@ -20,43 +20,36 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Leuka.Models.Generated
 {
-	/// <summary>Blog Carousel</summary>
-	[PublishedModel("blogCarousel")]
-	public partial class BlogCarousel : PublishedElementModel
+	/// <summary>Block Grid</summary>
+	[PublishedModel("blockGrid")]
+	public partial class BlockGrid : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "blogCarousel";
+		public new const string ModelTypeAlias = "blockGrid";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<BlogCarousel, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<BlockGrid, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public BlogCarousel(IPublishedElement content)
+		public BlockGrid(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Blogs Pages
+		/// Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("blogsPages")]
-		public IEnumerable<Umbraco.Web.Models.Link> BlogsPages => this.Value<IEnumerable<Umbraco.Web.Models.Link>>("blogsPages");
-
-		///<summary>
-		/// Number of displayed previews: Represents number of previews that will be displayed in carousel. If not set, all blog previews will be displayed
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("numberOfDisplayedPreviews")]
-		public int NumberOfDisplayedPreviews => this.Value<int>("numberOfDisplayedPreviews");
+		[ImplementPropertyType("title")]
+		public string Title => this.Value<string>("title");
 	}
 }

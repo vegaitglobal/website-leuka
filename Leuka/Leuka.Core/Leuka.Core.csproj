@@ -375,6 +375,8 @@
     <Compile Include="ViewModels\Partials\Listing\SearchResultsItemViewModel.cs" />
     <Compile Include="ViewModels\Shared\AlternateLinkViewModel.cs" />
     <Compile Include="ViewModels\Shared\AuthorDetailsViewModel.cs" />
+    <Compile Include="ViewModels\Shared\ArticlePreviewViewModel.cs" />
+    <Compile Include="ViewModels\Shared\BlogCarouselViewModel.cs" />
     <Compile Include="ViewModels\Shared\ButtonViewModel.cs" />
     <Compile Include="ViewModels\Shared\ContactusViewModel.cs" />
     <Compile Include="ViewModels\Shared\PreContactField.cs" />
