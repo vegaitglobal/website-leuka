@@ -33,6 +33,14 @@ namespace Leuka.Core.ViewModels.Pages
                 Components.AddRange(quotesModels);
             }
 
+
+            var sponsors = context.Page.Sponsors;
+            if (sponsors != null)
+            {
+                var sponsorsModels = sponsors.Select(x => new SponsorsViewModel(x));
+                Components.AddRange(sponsorsModels);
+            }
+
         }
 
         public List<IContentViewModel> Components { get; set; }

@@ -1,0 +1,10 @@
+﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.SponsorsViewModel>
+
+<h2>@Model.Title</h2>
+<h4>@Model.Description</h4>
+
+@foreach (var image in Model.Images)
+{
+    <img src="@image.Url" />
+}
+
