@@ -5,50 +5,143 @@
     <div class="header-wrapper" id="header-wrapper">
         <div class="images">
             <img src="../assets/images/logo-transparent-1.svg" />
-            <img src="../assets/images/logo-transparent-2.png" alt="Leuka"/>
+            <img src="../assets/images/logo-transparent-2.png" alt="Leuka" />
         </div>
         <button class="hamburger-icon" id="hamburger-icon" onclick="myFunction()">
-            <img src="../assets/images/hamburger.svg" id="hamburger-icon-img"/>
+            <img src="../assets/images/hamburger.svg" id="hamburger-icon-img" />
         </button>
         <div class="hamburger">
             <div class="header-buttons">
-                    <a href="#" class="nav-item">O nama</a>
-                    <hr class="horisontal-line">
-                    <a href="#" class="nav-item">Kako pomoći?</a>
-                    <hr class="horisontal-line">
-                    <a href="#" class="nav-item">Naši pobednici</a>
-                    <hr class="horisontal-line">
-                    <a href="#" class="nav-item">Blog</a>
-                    <hr class="horisontal-line">
-                    <a href="#" class="nav-item">Pridruži nam se</a>
-                    <hr class="horisontal-line">
-                    <a href="#" class="nav-item">Kontakt</a>
-                    <hr class="horisontal-line">
-                <button class="donate-button">Doniraj!</button>
+                <a href="#" class="nav-item">O nama</a>
+                <hr class="horisontal-line">
+                <a href="#" class="nav-item">Kako pomoći?</a>
+                <hr class="horisontal-line">
+                <a href="#" class="nav-item">Naši pobednici</a>
+                <hr class="horisontal-line">
+                <a href="#" class="nav-item">Blog</a>
+                <hr class="horisontal-line">
+                <a href="#" class="nav-item">Pridruži nam se</a>
+                <hr class="horisontal-line">
+                <a href="#" class="nav-item">Kontakt</a>
+                <hr class="horisontal-line">
+                <button id="donate-modal-button" class="donate-button">Doniraj!</button>
             </div>
         </div>
         <div class="media-icons">
-            <a href="#"><img src="../assets/images/Facebook-header.svg"/></a>
-            <a href="#"><img src="../assets/images/Twitter-header.svg"/></a>
-            <a href="#"><img src="../assets/images/Instagram-header.svg"/></a>
+            <a href="#"><img src="../assets/images/Facebook-header.svg" /></a>
+            <a href="#"><img src="../assets/images/Twitter-header.svg" /></a>
+            <a href="#"><img src="../assets/images/Instagram-header.svg" /></a>
         </div>
     </div>
-    
+
     <div class="vector-scale">
-        <img src="../assets/images/Vector-header.svg" class="img-vector"/>
-        <img src="../assets/images/Vector-header-2.svg" class="img-vector-second"/>
+        <img src="../assets/images/Vector-header.svg" class="img-vector" />
+        <img src="../assets/images/Vector-header-2.svg" class="img-vector-second" />
     </div>
+
+    <div id="donate-modal" class="modal">
+        <div class="modal-content">
+            <div class="donate-background">
+                <div class="donate-wrapper">
+                    <img id="donate-modal-close" class="close" src="../assets/svgs/Close.svg" />
+                    <img class="donate-halo-icon" src="../assets/svgs/Halo.svg" alt="Halo" />
+                    <h6 class="donate-title">Leuka - doniraj sredstva</h6>
+                    <p class="donate-subtitle">Lorem ipsum dolor sit amet something else</p>
+                    <form class="donate-form">
+                        <div class="donate-form-row">
+                            <div class="donate-form-cell">
+                                <label class="donate-form-label">UPLATILAC*</label>
+                                <input id="donor" class="donate-form-input" placeholder="Vaše Ime i Prezime" />
+                            </div>
+                            <div class="donate-form-cell">
+                                <label class="donate-form-label">IZNOS*</label>
+                                <input id="amount" class="donate-form-input" placeholder="Iznos Uplate" />
+                            </div>
+                        </div>
+
+                        <div class="donate-form-row">
+                            <div class="donate-form-cell">
+                                <label class="donate-form-label">KOMPANIJA</label>
+                                <input id="company" class="donate-form-input" placeholder="Naziv Kompanije" />
+                            </div>
+                            <div class="donate-form-cell">
+                                <label class="donate-form-label">EMAIL*</label>
+                                <input id="email" class="donate-form-input" placeholder="Vaš Email" />
+                            </div>
+                        </div>
+                        <button id="donate-submit-button" class="button donate-submit-button" type="submit">Prikaži detalje za uplatu</button>
+                    </form>
+
+                    <p class="donate-bottom-text">
+                        *Akcija obuhvata izložbu radova pacijentkinje, nastalih za vreme transplantacije matičnih
+                        ćelija,
+                        koncerte i tribinu.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="donate-information-modal" class="modal">
+        <div class="modal-content">
+            <div class="donate-information-background">
+                <div class="donate-information-wrapper">
+                    <img id="donate-information-close" class="close" src="../assets/svgs/Close.svg" />
+                    <img class="donate-information-halo-icon" src="../assets/svgs/Halo.svg" alt="Halo" />
+                    <h6 class="donate-information-title">Hvala na donaciji!</h6>
+                    <p class="donate-information-subtitle">Podaci za uplatu Leuka organizaciji su:</p>
+
+                    <div class="donate-informations-wrapper">
+                        <div class="donate-information-row">
+                            <div class="donate-information-cell">
+                                <label class="donate-information-label">ORGANIZACIJA</label>
+                            </div>
+                            <div class="donate-information-cell">
+                                <p class="donate-information-value">Leuka</p>
+                            </div>
+                        </div>
+
+                        <div class="donate-information-row">
+                            <div class="donate-information-cell">
+                                <label class="donate-information-label">ZIRO-RAČUN</label>
+                            </div>
+                            <div class="donate-information-cell">
+                                <p class="donate-information-value">17-8379435686452-54</p>
+                            </div>
+                        </div>
+
+                        <div class="donate-information-row">
+                            <div class="donate-information-cell">
+                                <label class="donate-information-label">POZIV NA BROJ</label>
+                            </div>
+                            <div class="donate-information-cell">
+
+                                <p class="donate-information-value">97</p>
+                            </div>
+                        </div>
+
+                        <div class="donate-information-row">
+                            <div class="donate-information-cell">
+                                <label class="donate-information-label">MATICNI BROJ</label>
+                            </div>
+                            <div class="donate-information-cell">
+                                <p class="donate-information-value">876778564367</p>
+                            </div>
+                        </div>
+                        <button id="donate-information-close-button" class="button donate-information-button"
+                            type="button">Ok, hvala</button>
+
+                        <p class="donate-information-bottom-text">
+                            *Akcija obuhvata izložbu radova pacijentkinje, nastalih za vreme transplantacije matičnih
+                            ćelija
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/donate-information.js"></script>
+    <script src="../assets/js/donate.js"></script>
+    <script src="../assets/js/header.js"></script>
+
 </header>
-<script>
-    function myFunction() {
-        var header =  document.getElementById("header")
-        if ( !header.classList.contains('header-open') ) {
-             header.classList.add('header-open')
-             document.getElementById('hamburger-icon-img').src = '../assets/images/hamburger-x.svg'
-             document.getElementById('hamburger-icon-img').style.marginLeft = '2.2em';
-        } else {
-            header.classList.remove('header-open')
-            document.getElementById('hamburger-icon-img').src = '../assets/images/hamburger.svg'
-        }
-    }
-</script>
