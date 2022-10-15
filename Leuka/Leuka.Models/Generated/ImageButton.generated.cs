@@ -20,65 +20,44 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Leuka.Models.Generated
 {
-	/// <summary>Blog content</summary>
-	[PublishedModel("blogContentList")]
-	public partial class BlogContentList : PublishedElementModel
+	/// <summary>ImageButton</summary>
+	[PublishedModel("imageButton")]
+	public partial class ImageButton : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "blogContentList";
+		public new const string ModelTypeAlias = "imageButton";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<BlogContentList, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ImageButton, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public BlogContentList(IPublishedElement content)
+		public ImageButton(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Blog category
+		/// BackgroundImage
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("blogCategory")]
-		public string BlogCategory => this.Value<string>("blogCategory");
+		[ImplementPropertyType("backgroundImage")]
+		public Image BackgroundImage => this.Value<Image>("backgroundImage");
 
 		///<summary>
-		/// Blog description
+		/// LinkUrl
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("blogDescription")]
-		public string BlogDescription => this.Value<string>("blogDescription");
-
-		///<summary>
-		/// Blog top news (izdvajamo)
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("blogTopNewsIzdvajamo")]
-		public bool BlogTopNewsIzdvajamo => this.Value<bool>("blogTopNewsIzdvajamo");
-
-		///<summary>
-		/// Full blog description
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("fullBlogDescription")]
-		public string FullBlogDescription => this.Value<string>("fullBlogDescription");
-
-		///<summary>
-		/// Image
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("image")]
-		public Image Image => this.Value<Image>("image");
+		[ImplementPropertyType("linkUrl")]
+		public Umbraco.Web.Models.Link LinkUrl => this.Value<Umbraco.Web.Models.Link>("linkUrl");
 
 		///<summary>
 		/// Title
