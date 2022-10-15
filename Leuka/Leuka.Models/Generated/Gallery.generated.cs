@@ -20,49 +20,36 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Leuka.Models.Generated
 {
-	// Mixin Content Type with alias "mediumTextBlock"
-	/// <summary>MediumTextBlock</summary>
-	public partial interface IMediumTextBlock : IPublishedElement
-	{
-		/// <summary>Text</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		string Text { get; }
-	}
-
-	/// <summary>MediumTextBlock</summary>
-	[PublishedModel("mediumTextBlock")]
-	public partial class MediumTextBlock : PublishedElementModel, IMediumTextBlock
+	/// <summary>Gallery</summary>
+	[PublishedModel("gallery")]
+	public partial class Gallery : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "mediumTextBlock";
+		public new const string ModelTypeAlias = "gallery";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<MediumTextBlock, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Gallery, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public MediumTextBlock(IPublishedElement content)
+		public Gallery(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Text
+		/// Images: Gallery images
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("text")]
-		public string Text => GetText(this);
-
-		/// <summary>Static getter for Text</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static string GetText(IMediumTextBlock that) => that.Value<string>("text");
+		[ImplementPropertyType("images")]
+		public IEnumerable<Umbraco.Core.Models.MediaWithCrops> Images => this.Value<IEnumerable<Umbraco.Core.Models.MediaWithCrops>>("images");
 	}
 }

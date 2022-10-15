@@ -41,6 +41,12 @@ namespace Leuka.Core.ViewModels.Pages
                 Components.AddRange(sponsorsModels);
             }
 
+            var gallery = context.Page.Gallery;
+            if (gallery != null)
+            {
+                var galleryModels = gallery.Select(x => new GalleryViewModel(x));
+                Components.AddRange(galleryModels);
+            }
         }
 
         public List<IContentViewModel> Components { get; set; }
