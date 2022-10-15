@@ -16,6 +16,7 @@ namespace Leuka.Core.ViewModels.Pages
             Image = context.Page.Image;
             TextList = context.Page.TextList;
             Paragraph = context.Page.RichContent;
+            Buttons = context.Page.Button.Select(btn => new ButtonViewModel(btn));
             DonatePopups = context.Page.Donate.Select(popup => new DonatePopupViewModel(popup));
         }
         
@@ -25,7 +26,9 @@ namespace Leuka.Core.ViewModels.Pages
         public IEnumerable<string> TextList { get; }
         
         public IHtmlString Paragraph { get; }
+        public IEnumerable<ButtonViewModel> Buttons { get; }
         public IEnumerable<DonatePopupViewModel> DonatePopups { get; }
         public static string PopupPartialViewPath => "~/Views/Partials/NestedContent/_DonatePopup.cshtml";
+        public static string ButtonPartialViewPath => "~/Views/Partials/NestedContent/_Button.cshtml";
     }
 }
