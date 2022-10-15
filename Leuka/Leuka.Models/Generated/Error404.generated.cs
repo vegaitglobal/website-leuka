@@ -60,11 +60,32 @@ namespace Leuka.Models.Generated
 		public string HomePageLinkDescription => this.Value<string>("homePageLinkDescription");
 
 		///<summary>
+		/// Thankyoupopup
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("thankyoupopup")]
+		public IEnumerable<ThankyouPopup> Thankyoupopup => this.Value<IEnumerable<ThankyouPopup>>("thankyoupopup");
+
+		///<summary>
 		/// Copyright Text: The site copyright text.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("copyrightText")]
 		public string CopyrightText => Footer.GetCopyrightText(this);
+
+		///<summary>
+		/// Donation Button
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("donationButton")]
+		public IEnumerable<Button> DonationButton => Header.GetDonationButton(this);
+
+		///<summary>
+		/// Links
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("links")]
+		public IEnumerable<Umbraco.Web.Models.Link> Links => Header.GetLinks(this);
 
 		///<summary>
 		/// Logo: The site logo image.
