@@ -67,10 +67,10 @@ namespace Leuka.Models.Generated
 		public Umbraco.Web.Models.Link Link => this.Value<Umbraco.Web.Models.Link>("link");
 
 		///<summary>
-		/// Text: Button text
+		/// Link title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("text")]
-		public string Text => this.Value<string>("text");
+		[ImplementPropertyType("linkTitle")]
+		public string LinkTitle => this.Value<string>("linkTitle");
 	}
 }

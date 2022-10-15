@@ -1,7 +1,4 @@
-﻿using Leuka.Core.Contexts;
-using Leuka.Models.Generated;
-
-namespace Leuka.Core.ViewModels.Pages
+﻿namespace Leuka.Core.ViewModels.Pages
 {
     public class BlogsViewModel : PageViewModel
     {
@@ -9,7 +6,7 @@ namespace Leuka.Core.ViewModels.Pages
 
         public BlogsViewModel(IPageContext<Blogs> context) : base(context)
         {
-            //Title = context.Page.Title;
+
         }
     }
 }

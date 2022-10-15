@@ -1,0 +1,47 @@
+@import "../../assets/styles/breakpoints.scss";
+
+.curved-line {
+    width: 100%;
+    position: absolute;
+
+    .start-color {
+        stop-color: #45A4DC;
+    }
+
+    .stop-color {
+        stop-color: #E23F72;
+    }
+
+    &-orange-light {
+        .start-color {
+            stop-color: #DB3328;
+        }
+
+        .stop-color {
+            stop-color: #FED4BC;
+        }
+    }
+
+    &-orange {
+        @extend .curved-line-orange-light;
+
+        @include phone {
+            left: 0% !important;
+        }
+    }
+
+    &-pink {
+        .start-color {
+            stop-color: #E23F72;
+        }
+
+        .stop-color {
+            stop-color: #DAEDF8;
+        }
+    }
+
+    @include phone {
+        transform: scale(3.2);
+        left: 40%;
+    }
+}
