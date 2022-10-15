@@ -12,7 +12,6 @@ namespace Leuka.Core.ViewModels.Pages
             : base(context)
         {
             Components = new List<IContentViewModel>();
-
             AddBlogContent(context);
         }
 

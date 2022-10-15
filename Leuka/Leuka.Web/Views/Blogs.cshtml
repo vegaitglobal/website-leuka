@@ -2,6 +2,11 @@
 @using Leuka.Core.ViewModels
 @using ContentModels = Leuka.Models.Generated;
 
+@if (Model.Components is null)
+{
+    return;
+}
+
 @foreach (IContentViewModel component in Model.Components)
 {
     Html.RenderPartial(component.PartialViewPath, component);
