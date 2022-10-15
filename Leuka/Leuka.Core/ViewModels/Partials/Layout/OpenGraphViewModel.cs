@@ -6,6 +6,7 @@ using Leuka.Core.ViewModels.Shared;
 using Leuka.Models.DocumentTypes;
 using Leuka.Models.Extensions;
 using Leuka.Models.Generated;
+using System.Linq;
 
 namespace Leuka.Core.ViewModels.Partials.Layout
 {

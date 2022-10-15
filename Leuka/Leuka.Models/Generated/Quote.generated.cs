@@ -20,57 +20,57 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Leuka.Models.Generated
 {
-	/// <summary>TestPage</summary>
-	[PublishedModel("testPage")]
-	public partial class TestPage : PublishedContentModel
+	/// <summary>Quote</summary>
+	[PublishedModel("quote")]
+	public partial class Quote : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "testPage";
+		public new const string ModelTypeAlias = "quote";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<TestPage, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Quote, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public TestPage(IPublishedContent content)
+		public Quote(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Body text: Main text of the page
+		/// Image: Image of the person quoting
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("bodyText")]
-		public IHtmlString BodyText => this.Value<IHtmlString>("bodyText");
+		[ImplementPropertyType("image")]
+		public Image Image => this.Value<Image>("image");
 
 		///<summary>
-		/// Footer Text: Copyright notice for the footer.
+		/// Job title: Job title of the person quoting
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("footerText")]
-		public string FooterText => this.Value<string>("footerText");
+		[ImplementPropertyType("jobTitle")]
+		public string JobTitle => this.Value<string>("jobTitle");
 
 		///<summary>
-		/// Page Title: The main title of the page
+		/// Quotator name: Name of the person quoting
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("pageTitle")]
-		public string PageTitle => this.Value<string>("pageTitle");
+		[ImplementPropertyType("quotatorName")]
+		public string QuotatorName => this.Value<string>("quotatorName");
 
 		///<summary>
-		/// TestAccordion
+		/// Quote text: Quote text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("testAccordion")]
-		public IEnumerable<Accordion> TestAccordion => this.Value<IEnumerable<Accordion>>("testAccordion");
+		[ImplementPropertyType("quoteText")]
+		public string QuoteText => this.Value<string>("quoteText");
 	}
 }

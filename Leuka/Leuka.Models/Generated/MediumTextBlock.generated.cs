@@ -20,9 +20,18 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Leuka.Models.Generated
 {
+	// Mixin Content Type with alias "mediumTextBlock"
+	/// <summary>MediumTextBlock</summary>
+	public partial interface IMediumTextBlock : IPublishedElement
+	{
+		/// <summary>Text</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		string Text { get; }
+	}
+
 	/// <summary>MediumTextBlock</summary>
 	[PublishedModel("mediumTextBlock")]
-	public partial class MediumTextBlock : PublishedElementModel
+	public partial class MediumTextBlock : PublishedElementModel, IMediumTextBlock
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -50,6 +59,10 @@ namespace Leuka.Models.Generated
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("text")]
-		public string Text => this.Value<string>("text");
+		public string Text => GetText(this);
+
+		/// <summary>Static getter for Text</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static string GetText(IMediumTextBlock that) => that.Value<string>("text");
 	}
 }
