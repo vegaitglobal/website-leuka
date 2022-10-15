@@ -48,9 +48,29 @@ namespace Leuka.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		bool HideAllPagesFromSearchEngines { get; }
 
+		/// <summary>Port</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		string Port { get; }
+
+		/// <summary>Receiver Email Address</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		string ReceiverEmailAddress { get; }
+
 		/// <summary>Robots</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		string Robots { get; }
+
+		/// <summary>Sender Email Address</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		string SenderEmailAddress { get; }
+
+		/// <summary>Sender Email Password</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		string SenderEmailPassword { get; }
+
+		/// <summary>Server Address</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		string ServerAddress { get; }
 
 		/// <summary>Site Name</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
@@ -149,6 +169,28 @@ namespace Leuka.Models.Generated
 		public static bool GetHideAllPagesFromSearchEngines(ISiteSettings that) => that.Value<bool>("hideAllPagesFromSearchEngines");
 
 		///<summary>
+		/// Port
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("port")]
+		public string Port => GetPort(this);
+
+		/// <summary>Static getter for Port</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static string GetPort(ISiteSettings that) => that.Value<string>("port");
+
+		///<summary>
+		/// Receiver Email Address
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("receiverEmailAddress")]
+		public string ReceiverEmailAddress => GetReceiverEmailAddress(this);
+
+		/// <summary>Static getter for Receiver Email Address</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static string GetReceiverEmailAddress(ISiteSettings that) => that.Value<string>("receiverEmailAddress");
+
+		///<summary>
 		/// Robots: Content that will be served when Robots.txt is requested.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
@@ -158,6 +200,39 @@ namespace Leuka.Models.Generated
 		/// <summary>Static getter for Robots</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public static string GetRobots(ISiteSettings that) => that.Value<string>("robots");
+
+		///<summary>
+		/// Sender Email Address
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("senderEmailAddress")]
+		public string SenderEmailAddress => GetSenderEmailAddress(this);
+
+		/// <summary>Static getter for Sender Email Address</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static string GetSenderEmailAddress(ISiteSettings that) => that.Value<string>("senderEmailAddress");
+
+		///<summary>
+		/// Sender Email Password
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("senderEmailPassword")]
+		public string SenderEmailPassword => GetSenderEmailPassword(this);
+
+		/// <summary>Static getter for Sender Email Password</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static string GetSenderEmailPassword(ISiteSettings that) => that.Value<string>("senderEmailPassword");
+
+		///<summary>
+		/// Server Address
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("serverAddress")]
+		public string ServerAddress => GetServerAddress(this);
+
+		/// <summary>Static getter for Server Address</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static string GetServerAddress(ISiteSettings that) => that.Value<string>("serverAddress");
 
 		///<summary>
 		/// Site Name: The site name.
