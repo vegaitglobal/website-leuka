@@ -1,60 +1,59 @@
 @import "../../assets/styles/index.scss";
 
 .blog-topic-card {
-    max-width: 380px;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  font-family: $text-font;
+  color: $color-blue;
+  margin: 0 30px;
+
+  img {
+    margin: 0;
+  }
+
+  .tags {
+    height: 25px;
     display: flex;
-    flex-direction: column;
-    text-align: start;
-    font-family: $text-font;
-    color: $color-blue;
+    margin-top: 20px;
 
-    img {
-        margin: 0;
+    .tag {
+      display: flex;
+      align-items: center;
+
+      .tag-dot {
+        display: inline;
+        width: 6px;
+        height: 6px;
+        margin-right: 5px;
+        background-color: $color-light-blue;
+        border-radius: 50%;
+      }
     }
+  }
 
-    .tags {
-        height: 25px;
-        display: flex;
-        margin-top: 20px;
+  .blog-title {
+    margin-top: 10px;
+    font-size: 1.37em;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -0.025em;
+  }
 
-        .tag {
-            display: flex;
-            align-items: center;
+  .blog-desc {
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.02em;
+    margin: 10px 0;
+  }
 
-            .tag-dot {
-                display: inline;
-                width: 6px;
-                height: 6px;
-                margin-right: 5px;
-                background-color: $color-light-blue;
-                border-radius: 50%;
-            }
-        }
-    }
-
-    .blog-title {
-        margin-top: 10px;
-        font-size: 1.37em;
-        font-weight: 600;
-        line-height: 28px;
-        letter-spacing: -0.025em;
-
-    }
-
-    .blog-desc {
-        font-weight: 400;
-        line-height: 22px;
-        letter-spacing: -0.02em;
-        margin: 10px 0;
-    }
-
-    .read-more {
-        margin-top: 10px;
-        font-size: 1.125em;
-        font-weight: 600;
-        line-height: 29px;
-        letter-spacing: -0.025em;
-        text-align: left;
-
-    }
+  .read-more {
+    margin-top: 10px;
+    font-size: 1.125em;
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: -0.025em;
+    text-align: left;
+  }
 }
