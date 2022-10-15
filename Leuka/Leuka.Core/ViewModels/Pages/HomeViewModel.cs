@@ -25,6 +25,14 @@ namespace Leuka.Core.ViewModels.Pages
                 var splitBlocksModels = splitBlocks.Select(x => new SplitBlockViewModel(x));
                 Components.AddRange(splitBlocksModels);
             }
+
+            var quotes = context.Page.Quote;
+            if (quotes != null)
+            {
+                var quotesModels = quotes.Select(x => new QuoteViewModel(x));
+                Components.AddRange(quotesModels);
+            }
+
         }
 
         public List<IContentViewModel> Components { get; set; }

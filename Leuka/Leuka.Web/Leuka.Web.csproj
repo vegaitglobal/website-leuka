@@ -499,6 +499,7 @@
     <Content Include="Views\Partials\NestedContent\_SplitBlock.cshtml" />
     <Content Include="Views\Article.cshtml" />
     <Content Include="Views\Blogs.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_Quote.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
