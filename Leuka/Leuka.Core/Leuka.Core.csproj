@@ -314,6 +314,7 @@
     <Compile Include="Contexts\SiteContext.cs" />
     <Compile Include="Controllers\RenderMvc\AboutUsController.cs" />
     <Compile Include="Controllers\RenderMvc\BasePageController.cs" />
+    <Compile Include="Controllers\RenderMvc\HowToHelpController.cs" />
     <Compile Include="Controllers\RenderMvc\JoinUsController.cs" />
     <Compile Include="Controllers\RenderMvc\ContactController.cs" />
     <Compile Include="Controllers\RenderMvc\BlogsController.cs" />
@@ -347,6 +348,7 @@
     <Compile Include="ViewEngines\PartialViewEngine.cs" />
     <Compile Include="ViewModels\IContentViewModel.cs" />
     <Compile Include="ViewModels\Pages\AboutUsViewModel.cs" />
+    <Compile Include="ViewModels\Pages\HowToHelpViewModel.cs" />
     <Compile Include="ViewModels\Pages\JoinUsViewModel.cs" />
     <Compile Include="ViewModels\Pages\ContactViewModel.cs" />
     <Compile Include="ViewModels\Pages\BlogsViewModel.cs" />
