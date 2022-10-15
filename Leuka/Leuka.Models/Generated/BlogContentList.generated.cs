@@ -20,44 +20,44 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Leuka.Models.Generated
 {
-	/// <summary>SplitBlock</summary>
-	[PublishedModel("splitBlock")]
-	public partial class SplitBlock : PublishedElementModel
+	/// <summary>Blog content</summary>
+	[PublishedModel("blogContentList")]
+	public partial class BlogContentList : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "splitBlock";
+		public new const string ModelTypeAlias = "blogContentList";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<SplitBlock, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<BlogContentList, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public SplitBlock(IPublishedElement content)
+		public BlogContentList(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Button: Button
+		/// Blog category
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("button")]
-		public IEnumerable<Button> Button => this.Value<IEnumerable<Button>>("button");
+		[ImplementPropertyType("blogCategory")]
+		public string BlogCategory => this.Value<string>("blogCategory");
 
 		///<summary>
-		/// Description
+		/// Blog description
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("description")]
-		public string Description => this.Value<string>("description");
+		[ImplementPropertyType("blogDescription")]
+		public string BlogDescription => this.Value<string>("blogDescription");
 
 		///<summary>
 		/// Image
@@ -65,13 +65,6 @@ namespace Leuka.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("image")]
 		public Image Image => this.Value<Image>("image");
-
-		///<summary>
-		/// Tag
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("tag")]
-		public string Tag => this.Value<string>("tag");
 
 		///<summary>
 		/// Title

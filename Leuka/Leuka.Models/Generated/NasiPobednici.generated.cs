@@ -53,6 +53,13 @@ namespace Leuka.Models.Generated
 		public string Title => this.Value<string>("title");
 
 		///<summary>
+		/// TitleDescriptionAndButton
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("titleDescriptionAndButton")]
+		public IEnumerable<TitleDescriptionAndButton> TitleDescriptionAndButton => this.Value<IEnumerable<TitleDescriptionAndButton>>("titleDescriptionAndButton");
+
+		///<summary>
 		/// Copyright Text: The site copyright text.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]

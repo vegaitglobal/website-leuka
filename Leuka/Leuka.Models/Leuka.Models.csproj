@@ -417,7 +417,9 @@
     <Compile Include="Generated\AboutUs.generated.cs" />
     <Compile Include="Generated\Accordion.generated.cs" />
     <Compile Include="Generated\Article.generated.cs" />
+    <Compile Include="Generated\BlogContentList.generated.cs" />
     <Compile Include="Generated\Blogs.generated.cs" />
+    <Compile Include="Generated\Button.generated.cs" />
     <Compile Include="Generated\Contact.generated.cs" />
     <Compile Include="Generated\DonatePopup.generated.cs" />
     <Compile Include="Generated\Error404.generated.cs">
@@ -465,6 +467,9 @@
     </Compile>
     <Compile Include="Generated\SplitBlock.generated.cs" />
     <Compile Include="Generated\Sponsors.generated.cs" />
+    <Compile Include="Generated\TopicDetails.generated.cs" />
+    <Compile Include="Generated\Sponsors.generated.cs" />
+    <Compile Include="Generated\TitleDescriptionAndButton.generated.cs" />
     <Compile Include="Generated\TopicDetails.generated.cs" />
     <Compile Include="Generated\UmbracoMediaArticle.generated.cs" />
     <Compile Include="Generated\UmbracoMediaAudio.generated.cs" />

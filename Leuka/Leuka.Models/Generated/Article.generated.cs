@@ -60,6 +60,13 @@ namespace Leuka.Models.Generated
 		public IEnumerable<Accordion> Table => this.Value<IEnumerable<Accordion>>("table");
 
 		///<summary>
+		/// TopicDetails
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("topicDetails")]
+		public IEnumerable<TopicDetails> TopicDetails => this.Value<IEnumerable<TopicDetails>>("topicDetails");
+
+		///<summary>
 		/// Copyright Text: The site copyright text.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
