@@ -1,0 +1,58 @@
+.homepage-header {
+  font-family: Poppins;
+  background-color: #03178f;
+  padding: 26px 36px;
+  color: #fff;
+  position: relative;
+  height: 530px;
+
+  .container {
+    width: 90%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    h1 {
+      font-size: 54px;
+    }
+
+    p {
+      margin-top: 18px;
+      font-size: 20px;
+    }
+
+    .heading-button {
+      margin: 30px 0;
+      background-color: #e23f72;
+      color: #fff;
+      font-size: 20px;
+      padding: 15px 28px;
+      border: none;
+      border-radius: 50px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .homepage-header {
+    padding: 52px 36px;
+    height: 430px;
+
+    .container {
+      width: 850px;
+      margin: auto;
+
+      h1 {
+        font-size: 60px;
+      }
+
+      .description {
+        width: 500px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
