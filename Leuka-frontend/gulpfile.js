@@ -5,8 +5,7 @@ const sass = require("gulp-sass")(require("sass"));
 const del = require("del");
 const image = require("gulp-image");
 const browserSync = require("browser-sync").create();
-const cleanCSS = require('gulp-clean-css');
-
+const cleanCSS = require("gulp-clean-css");
 
 const { src, dest } = gulp;
 
@@ -21,7 +20,11 @@ gulp.task("scss", () =>
     .src(["./assets/styles/index.scss", "./partials/**/*.scss"])
     .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
     .pipe(concat("index.css"))
-    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(
+      cleanCSS({
+        level: { 1: { specialComments: 0 }, 2: { removeDuplicateRules: true } },
+      })
+    )
     .pipe(gulp.dest("./dist"))
 );
 
