@@ -457,6 +457,7 @@
     <Content Include="CustomError500.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Views\Partials\NestedContent\_ContactUs.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_Subscriptions.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

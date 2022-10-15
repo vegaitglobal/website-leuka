@@ -6,7 +6,10 @@ namespace Leuka.Core.ViewModels.Shared
     {
         public ContactusViewModel(Contactus contactus)
         {
+            Enabled = contactus.ContactToggle;
         }
+
+        public bool Enabled { get; set; }
 
         public string PartialViewPath => "~/Views/Partials/NestedContent/_ContactUs.cshtml";
     }

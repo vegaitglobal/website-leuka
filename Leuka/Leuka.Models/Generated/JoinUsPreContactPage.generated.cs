@@ -20,51 +20,30 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Leuka.Models.Generated
 {
-	/// <summary>AppPromotion</summary>
-	[PublishedModel("appPromotion")]
-	public partial class AppPromotion : PublishedElementModel
+	/// <summary>JoinUsPreContactPage</summary>
+	[PublishedModel("joinUsPreContactPage")]
+	public partial class JoinUsPreContactPage : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "appPromotion";
+		public new const string ModelTypeAlias = "joinUsPreContactPage";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<AppPromotion, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<JoinUsPreContactPage, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public AppPromotion(IPublishedElement content)
+		public JoinUsPreContactPage(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
-
-		///<summary>
-		/// AndroidAppLink
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("androidAppLink")]
-		public Umbraco.Web.Models.Link AndroidAppLink => this.Value<Umbraco.Web.Models.Link>("androidAppLink");
-
-		///<summary>
-		/// AppleAppLink
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("appleAppLink")]
-		public Umbraco.Web.Models.Link AppleAppLink => this.Value<Umbraco.Web.Models.Link>("appleAppLink");
-
-		///<summary>
-		/// BackgroundImage
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("backgroundImage")]
-		public Image BackgroundImage => this.Value<Image>("backgroundImage");
 
 		///<summary>
 		/// Description
@@ -74,11 +53,46 @@ namespace Leuka.Models.Generated
 		public string Description => this.Value<string>("description");
 
 		///<summary>
-		/// Separator
+		/// FirstFieldDescription
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("separator")]
-		public IEnumerable<Separator> Separator => this.Value<IEnumerable<Separator>>("separator");
+		[ImplementPropertyType("firstFieldDescription")]
+		public string FirstFieldDescription => this.Value<string>("firstFieldDescription");
+
+		///<summary>
+		/// FirstFieldTitle
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("firstFieldTitle")]
+		public string FirstFieldTitle => this.Value<string>("firstFieldTitle");
+
+		///<summary>
+		/// SecondFieldDescription
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("secondFieldDescription")]
+		public string SecondFieldDescription => this.Value<string>("secondFieldDescription");
+
+		///<summary>
+		/// SecondFieldTitle
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("secondFieldTitle")]
+		public string SecondFieldTitle => this.Value<string>("secondFieldTitle");
+
+		///<summary>
+		/// ThirdFieldTitle
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("thirdFieldTitle")]
+		public string ThirdFieldTitle => this.Value<string>("thirdFieldTitle");
+
+		///<summary>
+		/// ThridFieldDescription
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("thridFieldDescription")]
+		public string ThridFieldDescription => this.Value<string>("thridFieldDescription");
 
 		///<summary>
 		/// Title

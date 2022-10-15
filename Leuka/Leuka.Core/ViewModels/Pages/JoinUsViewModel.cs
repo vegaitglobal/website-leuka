@@ -14,10 +14,24 @@ namespace Leuka.Core.ViewModels.Pages
             Components = new List<IContentViewModel>();
 
             AddGallery(context);
+            AddBeforeContactUsBlock(context);
             AddContactUs(context);
         }
 
         public List<IContentViewModel> Components { get; set; }
+
+        private void AddBeforeContactUsBlock(IPageContext<JoinUs> context)
+        {
+            IEnumerable<JoinUsPreContactPage> preContactField = context.Page.PreContactField;
+
+            if (preContactField == null)
+            {
+                return;
+            }
+
+            IEnumerable<PreContactFieldViewModel> contactusViewModels = preContactField.Select(x => new PreContactFieldViewModel(x));
+            Components.AddRange(contactusViewModels);
+        }
 
         private void AddContactUs(IPageContext<JoinUs> context)
         {

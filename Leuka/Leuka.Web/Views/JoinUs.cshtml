@@ -1,6 +1,20 @@
-﻿@inherits UmbracoViewPage<JoinUsViewModel>
+﻿@using Leuka.Core.ViewModels
+@using Leuka.Core.ViewModels.Shared
+@inherits UmbracoViewPage<JoinUsViewModel>
 
-@foreach (var component in Model.Components)
+@foreach (IContentViewModel component in Model.Components)
 {
-    Html.RenderPartial(component.PartialViewPath, component);
+    if (component.GetType() == typeof(ContactusViewModel))
+    {
+        var contactusViewModel = component as ContactusViewModel;
+
+        if (contactusViewModel != null && contactusViewModel.Enabled)
+        {
+            Html.RenderPartial(component.PartialViewPath, component);
+        }
+    }
+    else
+    {
+        Html.RenderPartial(component.PartialViewPath, component);
+    }
 }
