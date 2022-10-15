@@ -413,6 +413,7 @@
     <Compile Include="Extensions\PublishedContentPropertyExtensions.cs" />
     <Compile Include="Extensions\PublishedElementPropertyExtensions.cs" />
     <Compile Include="Extensions\SeoExtensions.cs" />
+    <Compile Include="Generated\AboutUs.cs" />
     <Compile Include="Generated\AboutUs.generated.cs" />
     <Compile Include="Generated\Accordion.generated.cs" />
     <Compile Include="Generated\Article.generated.cs" />
