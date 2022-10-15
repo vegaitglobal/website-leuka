@@ -454,6 +454,7 @@
     <Compile Include="Generated\ModelsBuilder.cs">
       <Generator>UmbracoModelsBuilder</Generator>
     </Compile>
+    <Compile Include="Generated\NasiPobednici.generated.cs" />
     <Compile Include="Generated\Page.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>

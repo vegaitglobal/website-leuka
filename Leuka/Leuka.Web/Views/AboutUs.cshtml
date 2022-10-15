@@ -6,11 +6,11 @@
 
 @if (Model.Image != null)
 {
-    <img src="@Model.Image.Url" />
+    <img src="@Model.Image.Url" alt=""/>
 }
 
 
-@if (Model.TextList.Count() > 0)
+@if (Model.TextList.Any())
 {
     <ul>
     @foreach (var text in Model.TextList)
@@ -23,4 +23,12 @@
 @if (Model.Paragraph != null)
 {
     @Model.Paragraph
+}
+
+@if (Model.DonatePopups.Any())
+{
+    foreach (var popup in @Model.DonatePopups)
+    {
+        Html.RenderPartial(AboutUsViewModel.PopupPartialViewPath, popup);
+    }
 }

@@ -46,11 +46,18 @@ namespace Leuka.Models.Generated
 		// properties
 
 		///<summary>
-		/// CompanyString
+		/// Amount
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("companyString")]
-		public string CompanyString => this.Value<string>("companyString");
+		[ImplementPropertyType("amount")]
+		public string Amount => this.Value<string>("amount");
+
+		///<summary>
+		/// Company Name
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("companyName")]
+		public string CompanyName => this.Value<string>("companyName");
 
 		///<summary>
 		/// Description
@@ -60,18 +67,18 @@ namespace Leuka.Models.Generated
 		public string Description => this.Value<string>("description");
 
 		///<summary>
-		/// DonatorString
+		/// Donor
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("donatorString")]
-		public string DonatorString => this.Value<string>("donatorString");
+		[ImplementPropertyType("donor")]
+		public string Donor => this.Value<string>("donor");
 
 		///<summary>
-		/// EmailString
+		/// Email
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("emailString")]
-		public string EmailString => this.Value<string>("emailString");
+		[ImplementPropertyType("email")]
+		public string Email => this.Value<string>("email");
 
 		///<summary>
 		/// Footnote
@@ -86,12 +93,5 @@ namespace Leuka.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("title")]
 		public string Title => this.Value<string>("title");
-
-		///<summary>
-		/// ValueString
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("valueString")]
-		public string ValueString => this.Value<string>("valueString");
 	}
 }
