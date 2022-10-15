@@ -423,6 +423,7 @@
     <Compile Include="Generated\Blogs.generated.cs" />
     <Compile Include="Generated\Button.generated.cs" />
     <Compile Include="Generated\Contact.generated.cs" />
+    <Compile Include="Generated\Contactus.generated.cs" />
     <Compile Include="Generated\DonatePopup.generated.cs" />
     <Compile Include="Generated\Error404.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>

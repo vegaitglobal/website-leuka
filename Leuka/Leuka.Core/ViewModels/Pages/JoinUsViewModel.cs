@@ -13,6 +13,27 @@ namespace Leuka.Core.ViewModels.Pages
         {
             Components = new List<IContentViewModel>();
 
+            AddGallery(context);
+            AddContactUs(context);
+        }
+
+        public List<IContentViewModel> Components { get; set; }
+
+        private void AddContactUs(IPageContext<JoinUs> context)
+        {
+            IEnumerable<Contactus> contactUs = context.Page.ContactUs;
+
+            if (contactUs == null)
+            {
+                return;
+            }
+
+            IEnumerable<ContactusViewModel> contactusViewModels = contactUs.Select(x => new ContactusViewModel(x));
+            Components.AddRange(contactusViewModels);
+        }
+
+        private void AddGallery(IPageContext<JoinUs> context)
+        {
             IEnumerable<Gallery> gallery = context.Page.Gallery;
 
             if (gallery == null)
@@ -23,7 +44,5 @@ namespace Leuka.Core.ViewModels.Pages
             IEnumerable<GalleryViewModel> galleryModels = gallery.Select(x => new GalleryViewModel(x));
             Components.AddRange(galleryModels);
         }
-
-        public List<IContentViewModel> Components { get; set; }
     }
 }
