@@ -64,7 +64,7 @@ namespace Leuka.Models.Generated
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("logo")]
-		public IEnumerable<Image> Logo => Header.GetLogo(this);
+		public Image Logo => Header.GetLogo(this);
 
 		///<summary>
 		/// Alternate Languages: Language codes (en-US, en-GB etc).
@@ -127,7 +127,7 @@ namespace Leuka.Models.Generated
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("openGraphImage")]
-		public IEnumerable<Image> OpenGraphImage => Page.GetOpenGraphImage(this);
+		public Image OpenGraphImage => Page.GetOpenGraphImage(this);
 
 		///<summary>
 		/// Title

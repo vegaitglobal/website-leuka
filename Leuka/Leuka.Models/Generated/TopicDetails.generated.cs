@@ -44,5 +44,12 @@ namespace Leuka.Models.Generated
 		{ }
 
 		// properties
+
+		///<summary>
+		/// TopicContent
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("topicContent")]
+		public IHtmlString TopicContent => this.Value<IHtmlString>("topicContent");
 	}
 }

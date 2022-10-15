@@ -113,7 +113,7 @@ namespace Leuka.Models.Generated
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("openGraphImage")]
-		public IEnumerable<Image> OpenGraphImage => Page.GetOpenGraphImage(this);
+		public Image OpenGraphImage => Page.GetOpenGraphImage(this);
 
 		///<summary>
 		/// Title

@@ -20,57 +20,71 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Leuka.Models.Generated
 {
-	/// <summary>Quote</summary>
-	[PublishedModel("quote")]
-	public partial class Quote : PublishedElementModel
+	/// <summary>DonatePopup</summary>
+	[PublishedModel("donatePopup")]
+	public partial class DonatePopup : PublishedContentModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "quote";
+		public new const string ModelTypeAlias = "donatePopup";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Quote, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<DonatePopup, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public Quote(IPublishedElement content)
+		public DonatePopup(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Image: Image of the person quoting
+		/// CompanyString
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("image")]
-		public Image Image => this.Value<Image>("image");
+		[ImplementPropertyType("companyString")]
+		public string CompanyString => this.Value<string>("companyString");
 
 		///<summary>
-		/// Job title: Job title of the person quoting
+		/// Description
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("jobTitle")]
-		public string JobTitle => this.Value<string>("jobTitle");
+		[ImplementPropertyType("description")]
+		public string Description => this.Value<string>("description");
 
 		///<summary>
-		/// Quotator name: Name of the person quoting
+		/// DonatorString
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("quotatorName")]
-		public string QuotatorName => this.Value<string>("quotatorName");
+		[ImplementPropertyType("donatorString")]
+		public string DonatorString => this.Value<string>("donatorString");
 
 		///<summary>
-		/// Quote text: Quote text
+		/// EmailString
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("quoteText")]
-		public string QuoteText => this.Value<string>("quoteText");
+		[ImplementPropertyType("emailString")]
+		public string EmailString => this.Value<string>("emailString");
+
+		///<summary>
+		/// Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("title")]
+		public string Title => this.Value<string>("title");
+
+		///<summary>
+		/// ValueString
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("valueString")]
+		public string ValueString => this.Value<string>("valueString");
 	}
 }

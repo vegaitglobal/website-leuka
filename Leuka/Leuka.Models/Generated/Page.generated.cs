@@ -58,7 +58,7 @@ namespace Leuka.Models.Generated
 
 		/// <summary>Image</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		IEnumerable<Image> OpenGraphImage { get; }
+		Image OpenGraphImage { get; }
 
 		/// <summary>Title</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
@@ -223,11 +223,11 @@ namespace Leuka.Models.Generated
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("openGraphImage")]
-		public IEnumerable<Image> OpenGraphImage => GetOpenGraphImage(this);
+		public Image OpenGraphImage => GetOpenGraphImage(this);
 
 		/// <summary>Static getter for Image</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IEnumerable<Image> GetOpenGraphImage(IPage that) => that.Value<IEnumerable<Image>>("openGraphImage");
+		public static Image GetOpenGraphImage(IPage that) => that.Value<Image>("openGraphImage");
 
 		///<summary>
 		/// Title

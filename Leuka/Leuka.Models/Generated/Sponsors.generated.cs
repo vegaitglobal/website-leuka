@@ -57,7 +57,7 @@ namespace Leuka.Models.Generated
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("sponsorsLogos")]
-		public IEnumerable<Image> SponsorsLogos => this.Value<IEnumerable<Image>>("sponsorsLogos");
+		public Image SponsorsLogos => this.Value<Image>("sponsorsLogos");
 
 		///<summary>
 		/// Title: Title of the sponsors section

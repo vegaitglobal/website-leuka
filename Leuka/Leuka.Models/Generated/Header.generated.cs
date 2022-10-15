@@ -26,7 +26,7 @@ namespace Leuka.Models.Generated
 	{
 		/// <summary>Logo</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		IEnumerable<Image> Logo { get; }
+		Image Logo { get; }
 	}
 
 	/// <summary>Header</summary>
@@ -59,10 +59,10 @@ namespace Leuka.Models.Generated
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("logo")]
-		public IEnumerable<Image> Logo => GetLogo(this);
+		public Image Logo => GetLogo(this);
 
 		/// <summary>Static getter for Logo</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IEnumerable<Image> GetLogo(IHeader that) => that.Value<IEnumerable<Image>>("logo");
+		public static Image GetLogo(IHeader that) => that.Value<Image>("logo");
 	}
 }
