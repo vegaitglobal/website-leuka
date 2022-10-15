@@ -17,11 +17,12 @@ namespace Leuka.Core.ViewModels.Partials.Layout
 			Logo = header.Logo.ToViewModel();
 			LogoUrl = header.AncestorOrSelf<Home>().Url();
             NavigationLinks = header.Links.Select(link => new LinkViewModel(link));
+			DonationButton = new ButtonViewModel(header.DonationButton.FirstOrDefault());
         }
 
 		public ImageViewModel Logo { get; }
 		public string LogoUrl { get; }
         public IEnumerable<LinkViewModel> NavigationLinks { get; }
-		//TODO: Button Doniraj
+		public ButtonViewModel DonationButton { get; }
     }
 }

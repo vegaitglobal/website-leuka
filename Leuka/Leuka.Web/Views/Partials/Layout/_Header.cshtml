@@ -18,8 +18,10 @@
                         <hr class="horisontal-line">
                     }
                 }
-
-                <button class="donate-button">Doniraj! treba popraviti</button>
+                @if (Model.DonationButton != null && !string.IsNullOrEmpty(Model.DonationButton.Text))
+                {
+                    <button class="donate-button">@Model.DonationButton.Text</button>
+                }
             </div>
         </div>
     </div>
