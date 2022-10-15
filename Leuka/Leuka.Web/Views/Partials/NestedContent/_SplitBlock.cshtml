@@ -2,3 +2,7 @@
 
 <h2>@Model.Title</h2>
 
+@foreach (var button in Model.Buttons)
+{
+    Html.RenderPartial(button.PartialViewPath, button);
+}

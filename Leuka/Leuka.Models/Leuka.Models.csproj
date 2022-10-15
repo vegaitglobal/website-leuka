@@ -418,6 +418,7 @@
     <Compile Include="Generated\Accordion.generated.cs" />
     <Compile Include="Generated\Article.generated.cs" />
     <Compile Include="Generated\Blogs.generated.cs" />
+    <Compile Include="Generated\Button.generated.cs" />
     <Compile Include="Generated\Contact.generated.cs" />
     <Compile Include="Generated\DonatePopup.generated.cs" />
     <Compile Include="Generated\Error404.generated.cs">
@@ -452,7 +453,6 @@
     <Compile Include="Generated\ModelsBuilder.cs">
       <Generator>UmbracoModelsBuilder</Generator>
     </Compile>
-    <Compile Include="Generated\NasiPobednici.generated.cs" />
     <Compile Include="Generated\Page.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>

@@ -74,6 +74,13 @@ namespace Leuka.Models.Generated
 		public string EmailString => this.Value<string>("emailString");
 
 		///<summary>
+		/// Footnote
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("footnote")]
+		public string Footnote => this.Value<string>("footnote");
+
+		///<summary>
 		/// Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]

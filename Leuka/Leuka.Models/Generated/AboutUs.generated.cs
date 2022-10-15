@@ -46,11 +46,18 @@ namespace Leuka.Models.Generated
 		// properties
 
 		///<summary>
+		/// Button
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("button")]
+		public IEnumerable<Button> Button => this.Value<IEnumerable<Button>>("button");
+
+		///<summary>
 		/// Description
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("description")]
-		public string Description => this.Value<string>("description");
+		public IHtmlString Description => this.Value<IHtmlString>("description");
 
 		///<summary>
 		/// Image
@@ -58,6 +65,20 @@ namespace Leuka.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("image")]
 		public Image Image => this.Value<Image>("image");
+
+		///<summary>
+		/// Paragraph
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("richContent")]
+		public IHtmlString RichContent => this.Value<IHtmlString>("richContent");
+
+		///<summary>
+		/// Text List
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("textList")]
+		public IEnumerable<string> TextList => this.Value<IEnumerable<string>>("textList");
 
 		///<summary>
 		/// Title

@@ -20,26 +20,26 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Leuka.Models.Generated
 {
-	/// <summary>Blog in article</summary>
-	[PublishedModel("blogInArticle")]
-	public partial class BlogInArticle : PublishedElementModel
+	/// <summary>Blog content</summary>
+	[PublishedModel("blogContentList")]
+	public partial class BlogContentList : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "blogInArticle";
+		public new const string ModelTypeAlias = "blogContentList";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<BlogInArticle, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<BlogContentList, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public BlogInArticle(IPublishedElement content)
+		public BlogContentList(IPublishedElement content)
 			: base(content)
 		{ }
 
@@ -60,11 +60,18 @@ namespace Leuka.Models.Generated
 		public string BlogDescription => this.Value<string>("blogDescription");
 
 		///<summary>
-		/// Blog image
+		/// Blog top news (izdvajamo)
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("blogImage")]
-		public Image BlogImage => this.Value<Image>("blogImage");
+		[ImplementPropertyType("blogTopNewsIzdvajamo")]
+		public bool BlogTopNewsIzdvajamo => this.Value<bool>("blogTopNewsIzdvajamo");
+
+		///<summary>
+		/// Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("image")]
+		public Image Image => this.Value<Image>("image");
 
 		///<summary>
 		/// Title
