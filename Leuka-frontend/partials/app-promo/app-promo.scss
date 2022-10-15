@@ -1,0 +1,84 @@
+.app-promo-container {
+	background: linear-gradient(270deg, #FBBC04 -7.33%, #E23F72 102.36%);
+    background-image: url("https://www.solidbackgrounds.com/images/2560x1600/2560x1600-dark-gray-solid-color-background.jpg");
+}
+
+.content-wrapper {
+	display: flex;
+	justify-content: center;
+	margin: auto auto;
+	padding: 28px;
+	gap: 190px;
+
+	@media (max-width: 1050px) {
+		justify-content: space-around;
+		gap: 0;
+	}
+
+	@media (max-width: 850px) {
+		display: block;
+
+	}
+
+}
+
+.image-wrapper {
+	width: 350px;
+	max-width: 350px;
+	height: auto;
+	display: flex;
+	flex-wrap: nowrap;
+	position: relative;
+
+	svg {
+		height: 470px;
+		bottom: 0;
+
+		&:nth-child(2) {
+			position: absolute;
+			right: 28px;
+			bottom: 0;
+			height: 282px;
+		}
+	}
+
+	@media (max-width: 850px) {
+		margin: auto;
+		margin-bottom: 40px;
+	}
+
+}
+
+.app-promo-action {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 420px;
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 95%;
+	letter-spacing: -0.025em;
+	color: #FFFFFF;
+
+	@media (max-width: 850px) {
+		margin: auto;
+	}
+}
+
+
+.app-promo-description {
+	max-width: 75%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 128.5%;
+	letter-spacing: -0.02em;
+	color: #FFFFFF;
+}
+
+.buttons-container {
+	display: flex;
+	margin-top: 25px;
+	gap: 10px
+}
