@@ -46,18 +46,11 @@ namespace Leuka.Models.Generated
 		// properties
 
 		///<summary>
-		/// BankAccountSubtitle
+		/// Account
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("bankAccountSubtitle")]
-		public string BankAccountSubtitle => this.Value<string>("bankAccountSubtitle");
-
-		///<summary>
-		/// BankAccountValue
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("bankAccountValue")]
-		public string BankAccountValue => this.Value<string>("bankAccountValue");
+		[ImplementPropertyType("account")]
+		public string Account => this.Value<string>("account");
 
 		///<summary>
 		/// ButtonDescription
@@ -67,27 +60,6 @@ namespace Leuka.Models.Generated
 		public string ButtonDescription => this.Value<string>("buttonDescription");
 
 		///<summary>
-		/// CallNumberSubtitle
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("callNumberSubtitle")]
-		public string CallNumberSubtitle => this.Value<string>("callNumberSubtitle");
-
-		///<summary>
-		/// CallNumberValue
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("callNumberValue")]
-		public string CallNumberValue => this.Value<string>("callNumberValue");
-
-		///<summary>
-		/// Description
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("description")]
-		public string Description => this.Value<string>("description");
-
-		///<summary>
 		/// Footnote
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
@@ -95,32 +67,32 @@ namespace Leuka.Models.Generated
 		public string Footnote => this.Value<string>("footnote");
 
 		///<summary>
-		/// OrganizationSubtitle
+		/// Organization
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("organizationSubtitle")]
-		public string OrganizationSubtitle => this.Value<string>("organizationSubtitle");
+		[ImplementPropertyType("organization")]
+		public string Organization => this.Value<string>("organization");
 
 		///<summary>
-		/// OrganizationValue
+		/// Reference Number
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("organizationValue")]
-		public string OrganizationValue => this.Value<string>("organizationValue");
+		[ImplementPropertyType("referenceNumber")]
+		public string ReferenceNumber => this.Value<string>("referenceNumber");
 
 		///<summary>
-		/// RegistrationNumberSubtitle
+		/// Registration Number
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("registrationNumberSubtitle")]
-		public string RegistrationNumberSubtitle => this.Value<string>("registrationNumberSubtitle");
+		[ImplementPropertyType("registrationNumber")]
+		public string RegistrationNumber => this.Value<string>("registrationNumber");
 
 		///<summary>
-		/// RegistrationNumberValue
+		/// Subtitle
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("registrationNumberValue")]
-		public string RegistrationNumberValue => this.Value<string>("registrationNumberValue");
+		[ImplementPropertyType("subtitle")]
+		public string Subtitle => this.Value<string>("subtitle");
 
 		///<summary>
 		/// Title
