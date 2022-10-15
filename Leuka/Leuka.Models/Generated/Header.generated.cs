@@ -24,6 +24,14 @@ namespace Leuka.Models.Generated
 	/// <summary>Header</summary>
 	public partial interface IHeader : IPublishedContent
 	{
+		/// <summary>Donation Button</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		IEnumerable<Button> DonationButton { get; }
+
+		/// <summary>Links</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		IEnumerable<Umbraco.Web.Models.Link> Links { get; }
+
 		/// <summary>Logo</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		Image Logo { get; }
@@ -53,6 +61,28 @@ namespace Leuka.Models.Generated
 		{ }
 
 		// properties
+
+		///<summary>
+		/// Donation Button
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("donationButton")]
+		public IEnumerable<Button> DonationButton => GetDonationButton(this);
+
+		/// <summary>Static getter for Donation Button</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static IEnumerable<Button> GetDonationButton(IHeader that) => that.Value<IEnumerable<Button>>("donationButton");
+
+		///<summary>
+		/// Links
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("links")]
+		public IEnumerable<Umbraco.Web.Models.Link> Links => GetLinks(this);
+
+		/// <summary>Static getter for Links</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static IEnumerable<Umbraco.Web.Models.Link> GetLinks(IHeader that) => that.Value<IEnumerable<Umbraco.Web.Models.Link>>("links");
 
 		///<summary>
 		/// Logo: The site logo image.
