@@ -1,0 +1,37 @@
+<div class="blog-grid">
+  <div class="blog-grid-header">
+    <h1>Blog</h1>
+    <div class="filter">
+      <div class="title">Filtriraj po kategorijama:</div>
+      <div class="select-wrapper">
+        <select name="filter-categories">
+          <option value="all" selected>Sve kategorije</option>
+          <option value="saveti">Saveti</option>
+          <option value="novosti">Novosti</option>
+          <option value="mediji">Mediji o nama</option>
+          <option class="reset" value="reset">Resetuj filter</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="blog-grid-items">
+    <div class="blog-grid-item">
+      include ../blog-topic-card/blog-topic-card.html
+    </div>
+    <div class="blog-grid-item">
+      include ../blog-topic-card/blog-topic-card.html
+    </div>
+    <div class="blog-grid-item">
+      include ../blog-topic-card/blog-topic-card.html
+    </div>
+    <div class="blog-grid-item">
+      include ../blog-topic-card/blog-topic-card.html
+    </div>
+    <div class="blog-grid-item">
+      include ../blog-topic-card/blog-topic-card.html
+    </div>
+  </div>
+  <div class="blog-grid-load-more">
+    <a href="#" class="button button-stroked">Učitaj jos članaka</a>
+  </div>
+</div>
