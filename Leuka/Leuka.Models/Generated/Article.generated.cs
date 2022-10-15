@@ -67,6 +67,27 @@ namespace Leuka.Models.Generated
 		public IHtmlString PageDetails => this.Value<IHtmlString>("pageDetails");
 
 		///<summary>
+		/// Preview image: This image will be shown on the article preview
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("previewImage")]
+		public Image PreviewImage => this.Value<Image>("previewImage");
+
+		///<summary>
+		/// Preview text: This text will be shown as a description on the article preview
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("previewText")]
+		public string PreviewText => this.Value<string>("previewText");
+
+		///<summary>
+		/// Tags
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("tags")]
+		public IEnumerable<string> Tags => this.Value<IEnumerable<string>>("tags");
+
+		///<summary>
 		/// App Store URL
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
