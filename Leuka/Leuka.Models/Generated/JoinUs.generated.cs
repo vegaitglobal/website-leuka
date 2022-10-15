@@ -46,6 +46,20 @@ namespace Leuka.Models.Generated
 		// properties
 
 		///<summary>
+		/// ContactUs
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("contactUs")]
+		public IEnumerable<Contactus> ContactUs => this.Value<IEnumerable<Contactus>>("contactUs");
+
+		///<summary>
+		/// Gallery
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("gallery")]
+		public IEnumerable<Gallery> Gallery => this.Value<IEnumerable<Gallery>>("gallery");
+
+		///<summary>
 		/// Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]

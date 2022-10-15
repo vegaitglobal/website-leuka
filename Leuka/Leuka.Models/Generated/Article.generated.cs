@@ -46,25 +46,25 @@ namespace Leuka.Models.Generated
 		// properties
 
 		///<summary>
-		/// REUSABLE
+		/// Author Details
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("rEUSABLE")]
-		public IEnumerable<IPublishedContent> REusable => this.Value<IEnumerable<IPublishedContent>>("rEUSABLE");
+		[ImplementPropertyType("authorDetails")]
+		public IEnumerable<AuthorDetails> AuthorDetails => this.Value<IEnumerable<AuthorDetails>>("authorDetails");
 
 		///<summary>
-		/// Table
+		/// Headline Info
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("table")]
-		public IEnumerable<Accordion> Table => this.Value<IEnumerable<Accordion>>("table");
+		[ImplementPropertyType("headlineInfo")]
+		public IEnumerable<TitleDescriptionAndButton> HeadlineInfo => this.Value<IEnumerable<TitleDescriptionAndButton>>("headlineInfo");
 
 		///<summary>
-		/// TopicDetails
+		/// Page Details
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("topicDetails")]
-		public IEnumerable<TopicDetails> TopicDetails => this.Value<IEnumerable<TopicDetails>>("topicDetails");
+		[ImplementPropertyType("pageDetails")]
+		public IHtmlString PageDetails => this.Value<IHtmlString>("pageDetails");
 
 		///<summary>
 		/// App Store URL

@@ -20,58 +20,58 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Leuka.Models.Generated
 {
-	/// <summary>Blog content</summary>
-	[PublishedModel("blogContentList")]
-	public partial class BlogContentList : PublishedElementModel
+	/// <summary>Author Details</summary>
+	[PublishedModel("authorDetails")]
+	public partial class AuthorDetails : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "blogContentList";
+		public new const string ModelTypeAlias = "authorDetails";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<BlogContentList, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<AuthorDetails, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public BlogContentList(IPublishedElement content)
+		public AuthorDetails(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Blog category
+		/// Description
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("blogCategory")]
-		public string BlogCategory => this.Value<string>("blogCategory");
+		[ImplementPropertyType("description")]
+		public string Description => this.Value<string>("description");
 
 		///<summary>
-		/// Blog description
+		/// Facebook URL
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("blogDescription")]
-		public string BlogDescription => this.Value<string>("blogDescription");
+		[ImplementPropertyType("facebookURL")]
+		public Umbraco.Web.Models.Link FacebookUrl => this.Value<Umbraco.Web.Models.Link>("facebookURL");
 
 		///<summary>
-		/// Blog top news (izdvajamo)
+		/// Full Name
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("blogTopNewsIzdvajamo")]
-		public bool BlogTopNewsIzdvajamo => this.Value<bool>("blogTopNewsIzdvajamo");
+		[ImplementPropertyType("fullName")]
+		public string FullName => this.Value<string>("fullName");
 
 		///<summary>
-		/// Full blog description
+		/// Google+ URL
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("fullBlogDescription")]
-		public IHtmlString FullBlogDescription => this.Value<IHtmlString>("fullBlogDescription");
+		[ImplementPropertyType("googleURL")]
+		public Umbraco.Web.Models.Link GoogleUrl => this.Value<Umbraco.Web.Models.Link>("googleURL");
 
 		///<summary>
 		/// Image
@@ -81,10 +81,24 @@ namespace Leuka.Models.Generated
 		public Image Image => this.Value<Image>("image");
 
 		///<summary>
-		/// Title
+		/// Publish Date
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("title")]
-		public string Title => this.Value<string>("title");
+		[ImplementPropertyType("publishDate")]
+		public DateTime PublishDate => this.Value<DateTime>("publishDate");
+
+		///<summary>
+		/// Twitter URL
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("twitterURL")]
+		public Umbraco.Web.Models.Link TwitterUrl => this.Value<Umbraco.Web.Models.Link>("twitterURL");
+
+		///<summary>
+		/// WhatsApp Info
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("whatsAppInfo")]
+		public string WhatsAppInfo => this.Value<string>("whatsAppInfo");
 	}
 }

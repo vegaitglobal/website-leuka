@@ -11,13 +11,7 @@ namespace Leuka.Core.ViewModels.Pages
         public ArticleViewModel(IPageContext<Article> context) : base(context)
         {
 
-            var topicDetails = context.Page.TopicDetails;
-            if (topicDetails != null)
-            {
-                TopicDetailsModel = topicDetails.Select(x => new TopicDetailsViewModel(x)).FirstOrDefault();
-            }
         }
 
-        public TopicDetailsViewModel TopicDetailsModel { get; }
     }
 }

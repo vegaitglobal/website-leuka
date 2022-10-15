@@ -416,11 +416,14 @@
     <Compile Include="Generated\AboutUs.cs" />
     <Compile Include="Generated\AboutUs.generated.cs" />
     <Compile Include="Generated\Accordion.generated.cs" />
+    <Compile Include="Generated\AppPromotion.generated.cs" />
     <Compile Include="Generated\Article.generated.cs" />
+    <Compile Include="Generated\AuthorDetails.generated.cs" />
     <Compile Include="Generated\BlogContentList.generated.cs" />
     <Compile Include="Generated\Blogs.generated.cs" />
     <Compile Include="Generated\Button.generated.cs" />
     <Compile Include="Generated\Contact.generated.cs" />
+    <Compile Include="Generated\Contactus.generated.cs" />
     <Compile Include="Generated\DonatePopup.generated.cs" />
     <Compile Include="Generated\Error404.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>

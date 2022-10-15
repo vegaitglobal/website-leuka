@@ -520,6 +520,7 @@
     <Content Include="Views\Partials\NestedContent\_ThankyouPopup.cshtml" />
     <Content Include="Views\Partials\NestedContent\_GalleryRow.cshtml" />
     <Content Include="Views\Partials\NestedContent\_Separator.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_AppPromotion.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
