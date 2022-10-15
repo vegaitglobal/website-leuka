@@ -7,6 +7,8 @@ namespace Leuka.Core.ViewModels.Pages
 	{
 		public Error404ViewModel(IPageContext<Error404> context) : base(context)
 		{
+			HomePageLinkDescription = context.Page.HomePageLinkDescription;
 		}
+		public string HomePageLinkDescription { get; set; }
 	}
 }
