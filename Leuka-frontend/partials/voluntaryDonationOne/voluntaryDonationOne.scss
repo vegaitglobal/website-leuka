@@ -1,6 +1,5 @@
 .voluntary-donation {
   font-family: Poppins;
-  background-color: #dbe7fc;
   padding: 30px;
   overflow-wrap: break-word;
 
@@ -35,31 +34,6 @@
       color: #1e407c;
       font-size: 20px;
     }
-
-    .buttons {
-      margin-top: 35px;
-
-      a {
-        text-decoration: none;
-        display: inline-block;
-      }
-
-      .button-left {
-        font-size: 18px;
-        font-family: 800;
-        padding: 12px 34px;
-        background: #03178f;
-        border-radius: 73px;
-        color: #fff;
-      }
-
-      .button-right {
-        font-size: 18px;
-        font-family: 800;
-        color: #03178f;
-        margin: 14px;
-      }
-    }
   }
 
   .voluntary-donation-image {
@@ -67,7 +41,7 @@
 
     img {
       width: 100%;
-      height: auto;
+      max-height: 100%;
     }
   }
 
@@ -81,7 +55,7 @@
 
       .voluntary-donation-content {
         width: 50%;
-        padding-right: 15px;
+        padding: 0 15px;
 
         .tag {
           p {
@@ -94,8 +68,27 @@
         display: flex;
         align-items: center;
         width: 50%;
-        padding-left: 15px;
+        padding: 0 15px;
       }
     }
   }
+
+  @media (min-width: 1200px) {
+    .voluntary-donation-container {
+
+      .voluntary-donation-content,
+      .voluntary-donation-image {
+        padding: 0 50px;
+      }
+    }
+  }
+
+  &.bg-lighblue {
+    background-color: #dbe7fc;
+  }
+  
+  &.bg-white {
+    background-color: #fff;
+  }
 }
+

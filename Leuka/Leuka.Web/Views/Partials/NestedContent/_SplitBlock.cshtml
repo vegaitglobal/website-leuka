@@ -4,10 +4,17 @@
 {
     Html.RenderPartial(Model.Separator.PartialViewPath, Model.Separator);
 }
-
-<h2>@Model.Title</h2>
-
-@foreach (var button in Model.Buttons)
-{
-    Html.RenderPartial(button.PartialViewPath, button);
-}
+<div class="voluntary-donation @Model.ComponentClass">
+    <div class="voluntary-donation-container">
+        @if (Model.Alignment == "Left")
+        {
+            Html.RenderPartial("~/Views/Partials/NestedContent/_SplitBlockImageContent.cshtml", Model);
+            Html.RenderPartial("~/Views/Partials/NestedContent/_SplitBlockTextContent.cshtml", Model);
+        }
+        else
+        {
+            Html.RenderPartial("~/Views/Partials/NestedContent/_SplitBlockTextContent.cshtml", Model);
+            Html.RenderPartial("~/Views/Partials/NestedContent/_SplitBlockImageContent.cshtml", Model);
+        }
+    </div>
+</div>

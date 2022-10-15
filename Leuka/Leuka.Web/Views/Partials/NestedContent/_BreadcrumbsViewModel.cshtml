@@ -1,0 +1,14 @@
+﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.BreadcrumbsViewModel>
+
+@if (Model.Chain.Any())
+{
+    var numberOfItems = Model.Chain.Count;
+    for (int i = 0; i < numberOfItems; i++)
+    {
+        <a href="@Model.Chain.ElementAt(i).Link">@Model.Chain.ElementAt(i).Text</a>
+        if (i + 1 != numberOfItems)
+        {
+            <div>>></div>
+        }
+    }
+}
