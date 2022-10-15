@@ -416,6 +416,7 @@
     <Compile Include="Generated\Accordion.generated.cs" />
     <Compile Include="Generated\Article.generated.cs" />
     <Compile Include="Generated\Blogs.generated.cs" />
+    <Compile Include="Generated\Contact.generated.cs" />
     <Compile Include="Generated\Error404.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
@@ -441,6 +442,7 @@
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Generated\IPage.cs" />
+    <Compile Include="Generated\JoinUs.generated.cs" />
     <Compile Include="Generated\MediumTextBlock.generated.cs" />
     <Compile Include="Generated\ModelsBuilder.cs">
       <Generator>UmbracoModelsBuilder</Generator>
@@ -448,6 +450,7 @@
     <Compile Include="Generated\Page.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Generated\Quote.generated.cs" />
     <Compile Include="Generated\SearchResults.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
