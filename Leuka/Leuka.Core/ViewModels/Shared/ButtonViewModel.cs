@@ -1,5 +1,6 @@
 ﻿using Leuka.Models.Generated;
 using System;
+using Umbraco.Web.Models;
 
 namespace Leuka.Core.ViewModels.Shared
 {
@@ -12,6 +13,12 @@ namespace Leuka.Core.ViewModels.Shared
             Link = button.Link.Url;
             Text = button.LinkTitle;
             SetButonClass(button);
+        }
+
+        public ButtonViewModel(Link link)
+        {
+            Link = link?.Url;
+            Text = link?.Name;
         }
 
         public string ButtonColor { get; set; }
