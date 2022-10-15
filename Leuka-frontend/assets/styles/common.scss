@@ -1,6 +1,7 @@
 .button {
     box-sizing: border-box;
-    font-family: Poppins;
+    font-family: $text-font;
+    text-decoration-style: none;
     display: flex;
     width: fit-content;
     justify-content: center;
