@@ -9,7 +9,7 @@
       rgba(218, 237, 248, 0.2) 100%
     ),
     #ffffff;
-  height: 650px;
+  min-height: 650px;
 
   .blog-carousel-heading {
     display: flex;
@@ -78,7 +78,6 @@
   .swiper {
     margin-top: 57px;
     max-width: 1600px;
-    height: 100%;
 
     .swiper-wrapper {
       height: auto;
@@ -104,8 +103,10 @@
 
   .swiper-mobile {
     margin-top: 60px;
+    height: auto;
+
     .blog-topic-card {
-      margin: 0;
+      margin: 0 auto;
     }
 
     img {
