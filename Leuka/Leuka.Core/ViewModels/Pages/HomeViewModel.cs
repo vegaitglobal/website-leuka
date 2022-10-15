@@ -54,6 +54,13 @@ namespace Leuka.Core.ViewModels.Pages
                 Components.AddRange(sponsorsModels);
             }
 
+
+            var blogCarousel = context.Page.BlogCarousel;
+            if (blogCarousel != null)
+            {
+                var blogCarouselModels = blogCarousel.Select(x => new BlogCarouselViewModel(x));
+                Components.AddRange(blogCarouselModels);
+            }
         }
 
         public List<IContentViewModel> Components { get; set; }

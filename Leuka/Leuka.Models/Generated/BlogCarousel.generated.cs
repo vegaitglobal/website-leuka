@@ -20,71 +20,43 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Leuka.Models.Generated
 {
-	/// <summary>AppPromotion</summary>
-	[PublishedModel("appPromotion")]
-	public partial class AppPromotion : PublishedElementModel
+	/// <summary>Blog Carousel</summary>
+	[PublishedModel("blogCarousel")]
+	public partial class BlogCarousel : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "appPromotion";
+		public new const string ModelTypeAlias = "blogCarousel";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<AppPromotion, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<BlogCarousel, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public AppPromotion(IPublishedElement content)
+		public BlogCarousel(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// AndroidAppLink
+		/// Blogs Pages
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("androidAppLink")]
-		public Umbraco.Web.Models.Link AndroidAppLink => this.Value<Umbraco.Web.Models.Link>("androidAppLink");
+		[ImplementPropertyType("blogsPages")]
+		public IEnumerable<Umbraco.Web.Models.Link> BlogsPages => this.Value<IEnumerable<Umbraco.Web.Models.Link>>("blogsPages");
 
 		///<summary>
-		/// AppleAppLink
+		/// Number of displayed previews: Represents number of previews that will be displayed in carousel. If not set, all blog previews will be displayed
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("appleAppLink")]
-		public Umbraco.Web.Models.Link AppleAppLink => this.Value<Umbraco.Web.Models.Link>("appleAppLink");
-
-		///<summary>
-		/// BackgroundImage
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("backgroundImage")]
-		public Image BackgroundImage => this.Value<Image>("backgroundImage");
-
-		///<summary>
-		/// Description
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("description")]
-		public string Description => this.Value<string>("description");
-
-		///<summary>
-		/// Separator
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("separator")]
-		public IEnumerable<Separator> Separator => this.Value<IEnumerable<Separator>>("separator");
-
-		///<summary>
-		/// Title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("title")]
-		public string Title => this.Value<string>("title");
+		[ImplementPropertyType("numberOfDisplayedPreviews")]
+		public int NumberOfDisplayedPreviews => this.Value<int>("numberOfDisplayedPreviews");
 	}
 }

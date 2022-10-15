@@ -60,6 +60,13 @@ namespace Leuka.Models.Generated
 		public IEnumerable<Gallery> Gallery => this.Value<IEnumerable<Gallery>>("gallery");
 
 		///<summary>
+		/// PreContactField
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("preContactField")]
+		public IEnumerable<JoinUsPreContactPage> PreContactField => this.Value<IEnumerable<JoinUsPreContactPage>>("preContactField");
+
+		///<summary>
 		/// Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
