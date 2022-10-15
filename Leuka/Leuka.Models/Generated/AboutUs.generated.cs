@@ -60,6 +60,13 @@ namespace Leuka.Models.Generated
 		public IHtmlString Description => this.Value<IHtmlString>("description");
 
 		///<summary>
+		/// Donate
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("donate")]
+		public IEnumerable<DonatePopup> Donate => this.Value<IEnumerable<DonatePopup>>("donate");
+
+		///<summary>
 		/// Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
