@@ -20,44 +20,37 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Leuka.Models.Generated
 {
-	/// <summary>Blog</summary>
-	[PublishedModel("blog")]
-	public partial class Blog : PublishedContentModel, IFooter, IHeader, IPage
+	/// <summary>HowToHelp</summary>
+	[PublishedModel("howToHelp")]
+	public partial class HowToHelp : PublishedContentModel, IFooter, IHeader, IPage
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "blog";
+		public new const string ModelTypeAlias = "howToHelp";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Blog, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<HowToHelp, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public Blog(IPublishedContent content)
+		public HowToHelp(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// REUSABLE
+		/// Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("rEUSABLE")]
-		public IEnumerable<IPublishedContent> REusable => this.Value<IEnumerable<IPublishedContent>>("rEUSABLE");
-
-		///<summary>
-		/// Table
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("table")]
-		public IEnumerable<Accordion> Table => this.Value<IEnumerable<Accordion>>("table");
+		[ImplementPropertyType("title")]
+		public string Title => this.Value<string>("title");
 
 		///<summary>
 		/// Copyright Text: The site copyright text.
@@ -65,6 +58,20 @@ namespace Leuka.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("copyrightText")]
 		public string CopyrightText => Footer.GetCopyrightText(this);
+
+		///<summary>
+		/// Donation Button
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("donationButton")]
+		public IEnumerable<Button> DonationButton => Header.GetDonationButton(this);
+
+		///<summary>
+		/// Links
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("links")]
+		public IEnumerable<Umbraco.Web.Models.Link> Links => Header.GetLinks(this);
 
 		///<summary>
 		/// Logo: The site logo image.

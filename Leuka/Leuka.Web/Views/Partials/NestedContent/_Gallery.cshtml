@@ -1,0 +1,7 @@
+﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.GalleryViewModel>
+
+@foreach (var image in Model.Images)
+{
+    <img src="@image.Url" />
+}
+
