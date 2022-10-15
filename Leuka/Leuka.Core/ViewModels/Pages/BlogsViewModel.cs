@@ -9,7 +9,7 @@ namespace Leuka.Core.ViewModels.Pages
 
         public BlogsViewModel(IPageContext<Blogs> context) : base(context)
         {
-            Title = context.Page.Title;
+           
         }
     }
 }

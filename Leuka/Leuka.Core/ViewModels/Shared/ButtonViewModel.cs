@@ -10,7 +10,7 @@ namespace Leuka.Core.ViewModels.Shared
             ButtonColor = button.ButtonColor;
             ButtonStyle = button.ButtonStyle;
             Link = button.Link.Url;
-            Text = button.Link.Name;
+            Text = button.LinkTitle;
             SetButonClass(button);
         }
 

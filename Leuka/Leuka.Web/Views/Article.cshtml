@@ -1,5 +1,10 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Blog>
+﻿@inherits UmbracoViewPage<ArticleViewModel>
 @using ContentModels = Leuka.Models.Generated;
 @{
-	Layout = null;
+    Layout = null;
+}
+
+@if (Model.TopicDetailsModel != null)
+{
+    Html.RenderPartial(Model.TopicDetailsModel.PartialViewPath, Model.TopicDetailsModel);
 }

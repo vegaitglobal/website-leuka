@@ -509,9 +509,12 @@
     <Content Include="Views\Contact.cshtml" />
     <Content Include="Views\JoinUs.cshtml" />
     <Content Include="Views\HowToHelp.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_TopicDetails.cshtml" />
     <Content Include="Views\Partials\NestedContent\_Sponsors.cshtml" />
     <Content Include="Views\Partials\NestedContent\_Gallery.cshtml" />
     <Content Include="Views\NasiPobednici.cshtml" />
+    <Content Include="Views\AboutUs.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_DonatePopup.cshtml" />
     <Content Include="Views\Partials\NestedContent\_Button.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -304,6 +304,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Attributes\ExternalRedirectAttribute.cs" />
+    <Compile Include="Caching\CacheHelper.cs" />
     <Compile Include="Components\ApplicationConfigurationComponent.cs" />
     <Compile Include="Composers\SearchComposer.cs" />
     <Compile Include="Contexts\IPageContext.cs" />
@@ -338,12 +339,14 @@
     <Compile Include="Handlers\DomainRootRouteHandler.cs" />
     <Compile Include="Handlers\Error404RouteHandler.cs" />
     <Compile Include="HttpHandlers\RobotsHandler.cs" />
+    <Compile Include="Models\EmailSettings.cs" />
     <Compile Include="Models\IPagination.cs" />
     <Compile Include="Models\IReadOnlyPagedCollection.cs" />
     <Compile Include="Models\Page.cs" />
     <Compile Include="Models\Pagination.cs" />
     <Compile Include="Models\ReadOnlyPagedCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SmtpHelper.cs" />
     <Compile Include="UmbracoDictionary.cs" />
     <Compile Include="ViewEngines\PartialViewEngine.cs" />
     <Compile Include="ViewModels\IContentViewModel.cs" />
@@ -370,10 +373,12 @@
     <Compile Include="ViewModels\Shared\ButtonViewModel.cs" />
     <Compile Include="ViewModels\Shared\GalleryViewModel.cs" />
     <Compile Include="ViewModels\Shared\ImageViewModel.cs" />
+    <Compile Include="ViewModels\Shared\MediumTextBlockViewModel.cs" />
+    <Compile Include="ViewModels\Shared\DonatePopupViewModel.cs" />
     <Compile Include="ViewModels\Shared\QuoteViewModel.cs" />
     <Compile Include="ViewModels\Shared\SponsorsViewModel.cs" />
     <Compile Include="ViewModels\Shared\SplitBlockViewModel.cs" />
-    <Compile Include="ViewModels\Shared\MediumTextBlockViewModel.cs" />
+    <Compile Include="ViewModels\Shared\TopicDetailsViewModel.cs" />
     <Compile Include="ViewModels\Shared\LinkViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
