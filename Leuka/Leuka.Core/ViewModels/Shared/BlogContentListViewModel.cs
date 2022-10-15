@@ -25,6 +25,9 @@ namespace Leuka.Core.ViewModels.Shared
         public ImageViewModel Image { get; set; }
 
         public string BlogCategory { get; set; }
+
+        public bool BlogTopNews { get; set; }
+
         public string PartialViewPath => "~/Views/Partials/NestedContent/_BlogList.cshtml";
 
         private static IEnumerable<BlogContentListViewModel> CreateBlogContent(IEnumerable<BlogContentList> blogContentLists)
@@ -36,6 +39,7 @@ namespace Leuka.Core.ViewModels.Shared
                     Title = blogContent.Title,
                     BlogDescription = blogContent.BlogDescription,
                     BlogCategory = blogContent.BlogCategory,
+                    BlogTopNews = blogContent.BlogTopNewsIzdvajamo,
                 });
         }
     }

@@ -367,6 +367,7 @@
     <Compile Include="ViewModels\Partials\Listing\SearchResultsItemViewModel.cs" />
     <Compile Include="ViewModels\Shared\AlternateLinkViewModel.cs" />
     <Compile Include="ViewModels\Shared\BlogContentListViewModel.cs" />
+    <Compile Include="ViewModels\Shared\HeaderViewModel.cs" />
     <Compile Include="ViewModels\Shared\ImageViewModel.cs" />
     <Compile Include="ViewModels\Shared\QuoteViewModel.cs" />
     <Compile Include="ViewModels\Shared\SponsorsViewModel.cs" />

@@ -53,11 +53,11 @@ namespace Leuka.Models.Generated
 		public Umbraco.Core.Models.Blocks.BlockListModel BlogContentList => this.Value<Umbraco.Core.Models.Blocks.BlockListModel>("blogContentList");
 
 		///<summary>
-		/// Title
+		/// Under page title description
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("title")]
-		public string Title => this.Value<string>("title");
+		[ImplementPropertyType("underPageTitleDescription")]
+		public string UnderPageTitleDescription => this.Value<string>("underPageTitleDescription");
 
 		///<summary>
 		/// Copyright Text: The site copyright text.

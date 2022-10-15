@@ -1,7 +1,7 @@
 @using Leuka.Core.ViewModels.Shared
 @inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.BlogContentListViewModel>
 
-@foreach (BlogContentListViewModel listViewModel in Model.BlogList)
+@foreach (BlogContentListViewModel listViewModel in Model.BlogList.Where(listViewModel => !listViewModel.BlogTopNews))
 {
     <img src="@listViewModel.Image.Url" alt="Image not found."/>
     <h2>@listViewModel.Title</h2>

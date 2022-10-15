@@ -13,15 +13,19 @@ namespace Leuka.Core.ViewModels.Pages
         {
             Components = new List<IContentViewModel>();
 
-            Addheader(context);
+            AddHeader(context);
             AddBlogContent(context);
         }
 
-        private void Addheader(IPageContext<Blogs> context)
-        {
-        }
-
         public List<IContentViewModel> Components { get; set; }
+
+        private void AddHeader(IPageContext<Blogs> context)
+        {
+            Blogs headerContent = context.Page;
+
+            var headerViewModel = new HeaderViewModel(headerContent);
+            Components.Add(headerViewModel);
+        }
 
         private void AddBlogContent(IPageContext<Blogs> context)
         {
@@ -32,8 +36,8 @@ namespace Leuka.Core.ViewModels.Pages
                 return;
             }
 
-            var mediumTextBlocksModels = new BlogContentListViewModel(blogContentList);
-            Components.Add(mediumTextBlocksModels);
+            var blogContentListViewModel = new BlogContentListViewModel(blogContentList);
+            Components.Add(blogContentListViewModel);
         }
     }
 }
