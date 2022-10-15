@@ -50,7 +50,7 @@ namespace Leuka.Models.Generated
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("image")]
-		public Image Image => this.Value<Image>("image");
+		public IEnumerable<Image> Image => this.Value<IEnumerable<Image>>("image");
 
 		///<summary>
 		/// Job title: Job title of the person quoting

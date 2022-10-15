@@ -1,4 +1,5 @@
 ﻿using Leuka.Models.Generated;
+using System.Linq;
 
 namespace Leuka.Core.ViewModels.Shared
 {
@@ -9,7 +10,7 @@ namespace Leuka.Core.ViewModels.Shared
             Name = quote.QuotatorName;
             JobTitle = quote.JobTitle;
             Text = quote.QuoteText;
-            Image = new ImageViewModel(quote.Image);
+            Image = new ImageViewModel(quote.Image.FirstOrDefault());
         }
         public string Name { get; }
         public string JobTitle { get; }

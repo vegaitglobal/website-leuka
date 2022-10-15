@@ -1,4 +1,5 @@
 ﻿using Leuka.Models.Generated;
+using System.Linq;
 
 namespace Leuka.Core.ViewModels.Shared
 {
@@ -9,7 +10,7 @@ namespace Leuka.Core.ViewModels.Shared
 			Title = splitBlock.Title;
 			Description = splitBlock.Description;
 			Tag = splitBlock.Tag;
-			Image = new ImageViewModel(splitBlock.Image);
+			Image = new ImageViewModel(splitBlock.Image.FirstOrDefault());
 		}
 		public string Title { get; }
 		public string Description { get; }

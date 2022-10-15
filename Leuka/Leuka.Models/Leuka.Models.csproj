@@ -458,6 +458,7 @@
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Generated\SplitBlock.generated.cs" />
+    <Compile Include="Generated\Sponsors.generated.cs" />
     <Compile Include="MediaTypes\IMedia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

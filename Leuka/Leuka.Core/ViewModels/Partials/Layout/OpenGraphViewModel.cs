@@ -6,6 +6,7 @@ using Leuka.Core.ViewModels.Shared;
 using Leuka.Models.DocumentTypes;
 using Leuka.Models.Extensions;
 using Leuka.Models.Generated;
+using System.Linq;
 
 namespace Leuka.Core.ViewModels.Partials.Layout
 {
@@ -19,7 +20,7 @@ namespace Leuka.Core.ViewModels.Partials.Layout
 			Title = GetTitle(context.Page);
 			Description = GetDescription(context.Page);
 			//TODO if Open Graph Image is null use banner image
-			Image = context.Page.OpenGraphImage.ToViewModel();
+			Image = context.Page.OpenGraphImage.FirstOrDefault().ToViewModel();
 			CanonicalUrl = seo.GetCanonicalUrl(context.SiteSettings.CanonicalDomain);
 			Locale = context.Page.GetCultureFromDomains();
 			SiteName = context.SiteSettings.SiteName;

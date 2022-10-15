@@ -3,6 +3,7 @@ using Umbraco.Web;
 using Leuka.Core.Extensions;
 using Leuka.Core.ViewModels.Shared;
 using Leuka.Models.Generated;
+using System.Linq;
 
 namespace Leuka.Core.ViewModels.Partials.Layout
 {
@@ -12,7 +13,7 @@ namespace Leuka.Core.ViewModels.Partials.Layout
 		{
 			if (header == null) throw new ArgumentNullException(nameof(header));
 
-			Logo = header.Logo.ToViewModel();
+			Logo = header.Logo.FirstOrDefault().ToViewModel();
 			LogoUrl = header.AncestorOrSelf<Home>().Url();
 		}
 
