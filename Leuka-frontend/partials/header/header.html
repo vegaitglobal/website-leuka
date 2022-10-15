@@ -4,11 +4,11 @@
 <header class="header" id="header">
     <div class="header-wrapper" id="header-wrapper">
         <div class="images">
-            <img src="../assets/images/logo-transparent-1.svg" />
-            <img src="../assets/images/logo-transparent-2.png" alt="Leuka"/>
+            <img src="images/logo-transparent-1.svg" />
+            <img src="images/logo-transparent-2.png" alt="Leuka"/>
         </div>
         <button class="hamburger-icon" id="hamburger-icon" onclick="myFunction()">
-            <img src="../assets/images/hamburger.svg" id="hamburger-icon-img"/>
+            <img src="images/hamburger.svg" id="hamburger-icon-img"/>
         </button>
         <div class="hamburger">
             <div class="header-buttons">
@@ -28,15 +28,15 @@
             </div>
         </div>
         <div class="media-icons">
-            <a href="#"><img src="../assets/images/Facebook-header.svg"/></a>
-            <a href="#"><img src="../assets/images/Twitter-header.svg"/></a>
-            <a href="#"><img src="../assets/images/Instagram-header.svg"/></a>
+            <a href="#"><img src="images/Facebook-header.svg"/></a>
+            <a href="#"><img src="images/Twitter-header.svg"/></a>
+            <a href="#"><img src="images/Instagram-header.svg"/></a>
         </div>
     </div>
     
     <div class="vector-scale">
-        <img src="../assets/images/Vector-header.svg" class="img-vector"/>
-        <img src="../assets/images/Vector-header-2.svg" class="img-vector-second"/>
+        <img src="images/Vector-header.svg" class="img-vector"/>
+        <img src="images/Vector-header-2.svg" class="img-vector-second"/>
     </div>
 </header>
 <script>
@@ -44,11 +44,11 @@
         var header =  document.getElementById("header")
         if ( !header.classList.contains('header-open') ) {
              header.classList.add('header-open')
-             document.getElementById('hamburger-icon-img').src = '../assets/images/hamburger-x.svg'
+             document.getElementById('hamburger-icon-img').src = 'images/hamburger-x.svg'
              document.getElementById('hamburger-icon-img').style.marginLeft = '2.2em';
         } else {
             header.classList.remove('header-open')
-            document.getElementById('hamburger-icon-img').src = '../assets/images/hamburger.svg'
+            document.getElementById('hamburger-icon-img').src = 'images/hamburger.svg'
         }
     }
 </script>
