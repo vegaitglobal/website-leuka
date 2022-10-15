@@ -1,4 +1,6 @@
-﻿namespace Leuka.Core.ViewModels.Shared
+﻿using Leuka.Models.Generated;
+
+namespace Leuka.Core.ViewModels.Shared
 {
     public class DonatePopupViewModel : IContentViewModel
     {
