@@ -88,6 +88,13 @@ namespace Leuka.Models.Generated
 		public IEnumerable<string> TextList => this.Value<IEnumerable<string>>("textList");
 
 		///<summary>
+		/// Thank you popup
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("thankYouPopup")]
+		public IEnumerable<ThankyouPopup> ThankYouPopup => this.Value<IEnumerable<ThankyouPopup>>("thankYouPopup");
+
+		///<summary>
 		/// Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
