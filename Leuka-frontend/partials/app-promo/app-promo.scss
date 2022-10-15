@@ -45,23 +45,22 @@
 				margin: auto;
 				margin-bottom: 40px;
 			}
+		}
 
-			.app-promo-action {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				max-width: 420px;
-				font-weight: 600;
-				font-size: 40px;
-				line-height: 95%;
-				letter-spacing: -0.025em;
-				color: #FFFFFF;
+		.app-promo-action {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			max-width: 420px;
+			font-weight: 600;
+			font-size: 40px;
+			line-height: 95%;
+			letter-spacing: -0.025em;
+			color: #FFFFFF;
 
-				@media (max-width: 850px) {
-					margin: auto;
-				}
+			@media (max-width: 850px) {
+				margin: auto;
 			}
-
 
 			.app-promo-description {
 				max-width: 75%;
