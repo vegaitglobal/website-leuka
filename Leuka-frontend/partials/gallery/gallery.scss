@@ -1,0 +1,55 @@
+@import "../../assets/styles/breakpoints.scss";
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+
+    .gallery-row {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 1440px;
+        max-height: 900px;
+        display: grid;
+        grid-template-columns: 6fr 4fr 3fr;
+        grid-template-rows: 1fr;
+        justify-content: center;
+        grid-gap: 30px;
+        padding: 0 30px;
+        margin: 15px 0;
+
+        &.reversed {
+            grid-template-columns: 7fr 5fr 12fr;
+
+            @include tablet {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .image-wrapper {
+            box-sizing: border-box;
+            max-width: 100%;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+
+            @include tablet {
+                height: 240px;
+            }
+
+            img {
+                min-width: 100%;
+                min-height: 100%;
+                position: relative;
+            }
+        }
+
+        @include desktop {
+            max-height: 300px;
+        }
+
+        @include tablet {
+            grid-template-columns: 1fr;
+            max-height: unset;
+        }
+    }
+}
