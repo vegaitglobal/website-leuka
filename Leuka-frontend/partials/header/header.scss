@@ -2,7 +2,7 @@
 @import '../../assets/styles/fonts.scss';
 
 .header {
-    background-color: $dark-blue;
+    background-color: $color-blue;
     color: $text-color;
     font-family: $text-font;
     font-style: normal;
@@ -54,11 +54,11 @@ img {
 }
 
 .donate-button {
-    background-color: #5ADE7D;
+    background-color: $color-green;
     border-style: solid;
-    border-color: #5ADE7D;
+    border-color: $color-green;
     border-radius: 500px;
-    color: $dark-blue;
+    color: $color-blue;
     width: 136px;
     height: 50px;
     margin-top: 0.6%;
@@ -153,7 +153,7 @@ button:hover {
             font-size: 26px;
 
             a {
-                color: $dark-blue;
+                color: $color-blue;
             }
 
             .donate-button {
