@@ -1,0 +1,25 @@
+﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.SplitBlockViewModel>
+
+<div class="voluntary-donation-content">
+    @if (!string.IsNullOrEmpty(Model.Tag))
+    {
+        <div class="tag">
+            <p>@Model.Tag</p>
+        </div>
+    }
+    <div class="voluntary-donation-text">
+        <h3>@Model.Title</h3>
+        <p>
+            @Model.Description
+        </p>
+        @if (Model.Buttons != null && Model.Buttons.Count() > 0)
+        {
+            <div class="buttons">
+                @foreach (var button in Model.Buttons)
+                {
+                    Html.RenderPartial(button.PartialViewPath, button);
+                }
+            </div>
+        }
+    </div>
+</div>

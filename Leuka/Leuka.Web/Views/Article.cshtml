@@ -1,10 +1,18 @@
 ﻿@inherits UmbracoViewPage<ArticleViewModel>
-@using ContentModels = Leuka.Models.Generated;
-@{
-    Layout = null;
+
+@if (Model.HeadlineInfo != null)
+{
+    Html.RenderPartial(Model.HeadlineInfo.PartialViewPath, Model.HeadlineInfo);
 }
 
-@if (Model.TopicDetailsModel != null)
+@if (Model.Breadcrumbs.Chain != null)
 {
-    Html.RenderPartial(Model.TopicDetailsModel.PartialViewPath, Model.TopicDetailsModel);
+    Html.RenderPartial(Model.Breadcrumbs.PartialViewPath, Model.Breadcrumbs);
 }
+
+@Model.PageDetails
+@if (Model.AuthorDetails != null)
+{
+    Html.RenderPartial(Model.AuthorDetails.PartialViewPath, Model.AuthorDetails);
+}
+            }

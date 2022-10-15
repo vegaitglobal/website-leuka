@@ -1,5 +1,6 @@
 @import '../../assets/styles/colors.scss';
 @import '../../assets/styles/fonts.scss';
+@import '../../assets/styles/common.scss';
 
 .header {
     background-color: $color-blue;
@@ -77,8 +78,8 @@ button:hover {
 }
 
 .vector-scale {
-    position: relative; 
-    transform: scale(1); 
+    position: relative;
+    transform: scale(1);
     left: 0;
 }
 
@@ -125,8 +126,8 @@ button:hover {
     }
 
     .vector-scale {
-        position: relative; 
-        transform: scale(3); 
+        position: relative;
+        transform: scale(3);
         left: 100px;
         margin-top: 2em;
     }
@@ -143,9 +144,11 @@ button:hover {
         .vector-scale {
             display: none;
         }
+
         .hamburger {
             display: contents;
         }
+
         .header-buttons {
             flex-direction: column;
             margin-top: 3em;
@@ -178,4 +181,5 @@ button:hover {
             margin-bottom: 1em;
         }
     }
+
 }
