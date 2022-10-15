@@ -13,19 +13,10 @@ namespace Leuka.Core.ViewModels.Pages
         {
             Components = new List<IContentViewModel>();
 
-            AddHeader(context);
             AddBlogContent(context);
         }
 
         public List<IContentViewModel> Components { get; set; }
-
-        private void AddHeader(IPageContext<Blogs> context)
-        {
-            Blogs headerContent = context.Page;
-
-            var headerViewModel = new HeaderViewModel(headerContent);
-            Components.Add(headerViewModel);
-        }
 
         private void AddBlogContent(IPageContext<Blogs> context)
         {
