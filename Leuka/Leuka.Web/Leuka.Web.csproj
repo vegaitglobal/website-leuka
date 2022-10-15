@@ -506,6 +506,7 @@
     <Content Include="Views\HowToHelp.cshtml" />
     <Content Include="Views\Partials\NestedContent\_Sponsors.cshtml" />
     <Content Include="Views\Partials\NestedContent\_Gallery.cshtml" />
+    <Content Include="Views\NasiPobednici.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
