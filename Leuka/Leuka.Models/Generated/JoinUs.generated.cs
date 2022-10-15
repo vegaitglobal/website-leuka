@@ -53,11 +53,74 @@ namespace Leuka.Models.Generated
 		public string Title => this.Value<string>("title");
 
 		///<summary>
+		/// App Store URL
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("appStoreURL")]
+		public Umbraco.Web.Models.Link AppStoreUrl => Footer.GetAppStoreUrl(this);
+
+		///<summary>
+		/// Contact Email
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("contactEmail")]
+		public string ContactEmail => Footer.GetContactEmail(this);
+
+		///<summary>
 		/// Copyright Text: The site copyright text.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("copyrightText")]
 		public string CopyrightText => Footer.GetCopyrightText(this);
+
+		///<summary>
+		/// Facebook URL
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("facebookURL")]
+		public Umbraco.Web.Models.Link FacebookUrl => Footer.GetFacebookUrl(this);
+
+		///<summary>
+		/// FooterLinks
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("footerLinks")]
+		public IEnumerable<Umbraco.Web.Models.Link> FooterLinks => Footer.GetFooterLinks(this);
+
+		///<summary>
+		/// Footer Logo
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("footerLogo")]
+		public Image FooterLogo => Footer.GetFooterLogo(this);
+
+		///<summary>
+		/// Instagram URL
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("instagramURL")]
+		public Umbraco.Web.Models.Link InstagramUrl => Footer.GetInstagramUrl(this);
+
+		///<summary>
+		/// MediaLinks
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("mediaLinks")]
+		public IEnumerable<Umbraco.Web.Models.Link> MediaLinks => Footer.GetMediaLinks(this);
+
+		///<summary>
+		/// Play Store URL
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("playStoreURL")]
+		public Umbraco.Web.Models.Link PlayStoreUrl => Footer.GetPlayStoreUrl(this);
+
+		///<summary>
+		/// Twitter URL
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("twitterURL")]
+		public Umbraco.Web.Models.Link TwitterUrl => Footer.GetTwitterUrl(this);
 
 		///<summary>
 		/// Donation Button
