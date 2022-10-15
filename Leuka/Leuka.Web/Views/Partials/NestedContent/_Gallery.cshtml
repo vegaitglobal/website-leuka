@@ -1,0 +1,13 @@
+﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.GalleryViewModel>
+
+@if (Model.Separator != null)
+{
+    Html.RenderPartial(Model.Separator.PartialViewPath, Model.Separator);
+}
+
+<div class="gallery">
+    @foreach (var row in Model.GalleryRows)
+    {
+        Html.RenderPartial(row.PartialViewPath, row);
+    }
+</div>
