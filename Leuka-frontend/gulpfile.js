@@ -21,7 +21,7 @@ gulp.task("build", (done) => {
 gulp.task("pug", () => src("./src/*.pug").pipe(pug()).pipe(dest("./dist")));
 
 gulp.task("scss", () =>
-  src([ "./assets/styles/index.scss", "./partials/**/*.scss"])
+  src(["./assets/styles/index.scss", "./partials/**/*.scss"])
     .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
     .pipe(concat("index.css"))
     .pipe(gulp.dest("./dist"))
@@ -30,7 +30,7 @@ gulp.task("scss", () =>
 gulp.task("watch", () => {
   browserSync.init({
     server: {
-      baseDir: "./dist",
+      baseDir: ".",
     },
   });
 
@@ -40,7 +40,7 @@ gulp.task("watch", () => {
       "partials/**/*.scss",
       "partials/**/*.html",
       "src/*.pug",
-      "assets/styles/*.scss"
+      "assets/styles/*.scss",
     ],
     gulp.series("build")
   );

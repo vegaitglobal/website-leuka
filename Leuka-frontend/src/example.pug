@@ -1,8 +1,15 @@
 html
   head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='description', content='Some description')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
     link(rel="stylesheet", href="index.css")
+    link(rel="stylesheet", href='https://fonts.googleapis.com/css?family=Poppins')
 
   body
     block content
+      include ../partials/voluntaryDonationOne/voluntaryDonationOne.html
       include ../partials/header/header.html
       include ../partials/footer/footer.html
