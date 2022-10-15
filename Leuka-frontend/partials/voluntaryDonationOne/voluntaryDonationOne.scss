@@ -1,0 +1,101 @@
+.voluntary-donation {
+  font-family: Poppins;
+  background-color: #dbe7fc;
+  padding: 30px;
+  overflow-wrap: break-word;
+
+  .tag {
+    margin-top: 60px;
+    display: inline-block;
+    transform: rotate(2.96deg);
+
+    p {
+      background-color: #e23f72;
+      padding: 5px 12px;
+      border-radius: 4px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      color: #fff;
+    }
+  }
+
+  &-text {
+    margin-top: 25px;
+
+    h3 {
+      font-size: 40px;
+      color: #03178f;
+      font-weight: 600;
+    }
+
+    p {
+      margin-top: 29px;
+      color: #1e407c;
+      font-size: 20px;
+    }
+
+    .buttons {
+      margin-top: 35px;
+
+      a {
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .button-left {
+        font-size: 18px;
+        font-family: 800;
+        padding: 12px 34px;
+        background: #03178f;
+        border-radius: 73px;
+        color: #fff;
+      }
+
+      .button-right {
+        font-size: 18px;
+        font-family: 800;
+        color: #03178f;
+        margin: 14px;
+      }
+    }
+  }
+
+  .voluntary-donation-image {
+    margin-top: 33px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding: 82px;
+
+    .voluntary-donation-container {
+      display: flex;
+      max-width: 1235px;
+      margin: 0 auto;
+
+      .voluntary-donation-content {
+        width: 50%;
+        padding-right: 15px;
+
+        .tag {
+          p {
+            background-color: #45a4dc;
+          }
+        }
+      }
+
+      .voluntary-donation-image {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        padding-left: 15px;
+      }
+    }
+  }
+}
