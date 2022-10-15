@@ -30,7 +30,7 @@ gulp.task("scss", () =>
 gulp.task("watch", () => {
   browserSync.init({
     server: {
-      baseDir: "./dist",
+      baseDir: ".",
     },
   });
 
