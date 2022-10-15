@@ -1,0 +1,66 @@
+.button {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    height: 50px;
+    padding: 0 30px;
+    min-width: 140px;
+    border-radius: 70px;
+    border-width: 0;
+    color: #FFFFFF;
+    background-color: $color-blue;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    cursor: pointer;
+
+    &:focus,
+    &:focus-visible,
+    &:hover {
+        box-shadow: 0 0 0 0.20rem rgba($color-blue, .5);
+    }
+
+    &-stroked {
+        background-color: #FFFFFF;
+        color: $color-blue;
+        border: 2px solid;
+
+        &:focus,
+        &:focus-visible,
+        &:hover {
+            box-shadow: 0 0 0 0.20rem rgba($color-blue, .5);
+        }
+    }
+
+    &-link {
+        background-color: transparent;
+        color: $color-blue;
+
+        &:focus,
+        &:focus-visible,
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &-pink {
+        background-color: $color-pink;
+
+        &:focus,
+        &:focus-visible,
+        &:hover {
+            box-shadow: 0 0 0 0.20rem rgba($color-pink, .5);
+        }
+    }
+
+    &-green {
+        background-color: $color-green;
+        color: #03178F;
+
+        &:focus,
+        &:focus-visible,
+        &:hover {
+            box-shadow: 0 0 0 0.20rem rgba($color-green, .5);
+        }
+    }
+}
