@@ -29,7 +29,6 @@
 {
     foreach (var popup in @Model.DonatePopups)
     {
-        @popup
         Html.RenderPartial(AboutUsViewModel.PopupPartialViewPath, popup);
     }
 }

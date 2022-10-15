@@ -517,6 +517,8 @@
     <Content Include="Views\Partials\NestedContent\_DonatePopup.cshtml" />
     <Content Include="Views\Partials\NestedContent\_Button.cshtml" />
     <Content Include="Views\Partials\NestedContent\_TitleDescriptionAndButton.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_ThankyouPopup.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_GalleryRow.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
