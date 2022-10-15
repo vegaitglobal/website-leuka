@@ -1,181 +1,146 @@
-@import '../../assets/styles/colors.scss';
-@import '../../assets/styles/fonts.scss';
+.header-container-main {
+	width: 100%;
+	background-color: #03178F;
+	height: 175px;
 
-.header {
-    background-color: $color-blue;
-    color: $text-color;
-    font-family: $text-font;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    width: 100%;
-    height: 21%;
-    position: fixed;
+    
+	@media only screen and (max-width: 900px) {
+		height: 135px;
+	}
 }
 
-.header-wrapper {
-    width: 100%;
-    display: block;
-    margin-top: 1%;
+.header-main-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1205px;
+	height: 84px;
+	margin: auto;
+	position: relative;
 }
 
-.header-buttons {
+.nav-container {
+	display: none;
+
+	@media only screen and (min-width: 900px) {
+		display: flex;
+		padding-right: 26px;
+
+		.doniraj-button {
+			display: flex;
+			align-items: center;
+			color: white
+		}
+	}
+}
+
+.header-nav-list {
+	display: flex;
+
+	&>li {
+        text-align: center;
+		padding: 16px 10px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 26px;
+		letter-spacing: -0.025em;
+		color: #FFFFFF;
+		cursor: pointer;
+		margin-right: 10px;
+	}
+}
+
+#hamburger-icon {
+	cursor: pointer;
+	margin: 46px;
+
+	@media only screen and (min-width: 900px) {
+		display: none;
+	}
+}
+
+.hideMobileMenu {
+	display: none;
+}
+
+.mobile-menu-expanded {
+	width: 100%;
+    height: 940px;
+   
+	max-height: 700px;
+	background: linear-gradient(180deg, rgba(126, 214, 210, 0.2) 0%, rgba(66, 133, 244, 0.2) 60.89%, rgba(218, 237, 248, 0.2) 100%), #FFFFFF;
+	z-index: 99999;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+
+	.mm-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 40px 30px;
+	}
+
+}
+
+.closeMobileMenuButton {
+	cursor: pointer;
+}
+
+.expandedMobileMenuItems {
+
+	li {
+        margin: 0 auto;
+        width: 356px;
+        margin-top: 30px;
+		border-bottom: 1px solid rgb(3, 23, 143, 0.2);
+		padding-bottom: 15px;
+		font-weight: 400;
+		font-size: 26px;
+		line-height: 93.6%;
+		text-align: center;
+		letter-spacing: -0.025em;
+		color: #03178F;
+        cursor: pointer;
+	}
+
+}
+
+.socials {
     display: flex;
-    justify-content: flex-end;
-    margin-right: 10%;
-}
+    justify-content: center;
+    width: 356px;
+    margin: 20px auto 56px;
 
-.nav-item {
-    color: $text-color;
-    text-decoration: none;
-    margin-right: 2%;
-    margin-top: 2%;
-}
+    .socials-container {
+        display: flex;
+        justify-content: center;
+        gap: 22px;
 
-img {
-    display: inline;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.img-vector,
-.img-vector-second {
-    width: 100%;
-}
-
-.img-vector-second {
-    margin-top: -2.8%;
-}
-
-.images {
-    float: left;
-    max-width: 30%;
-    margin-left: 8%;
-}
-
-.donate-button {
-    background-color: $color-green;
-    border-style: solid;
-    border-color: $color-green;
-    border-radius: 500px;
-    color: $color-blue;
-    width: 136px;
-    height: 50px;
-    margin-top: 0.6%;
-    font-family: $text-font;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-}
-
-button:hover {
-    cursor: pointer;
-}
-
-.hamburger {
-    display: contents;
+        a {
+            cursor: pointer;
+        } 
+    }
 }
 
 .vector-scale {
-    position: relative; 
-    transform: scale(1); 
-    left: 0;
+    height: 100%;
+    display: flex;
+
+
+    svg {
+        position: absolute;
+        &:nth-child(2) {    
+            transform: translateY(10px);
+        }
+    }
 }
 
-.hamburger-icon,
-.media-icons,
-.horisontal-line {
-    display: none;
-}
+.donateForMobile {
 
-@media screen and (max-width: 768px) {
-    .hamburger {
-        display: none;
-    }
-
-    .images {
-        max-width: 70%;
-        margin-left: 1em;
-        margin-top: 0em;
-    }
-
-    img {
-        display: inline-flex;
-        max-height: 2.7em;
-    }
-
-    .hamburger-icon {
-        display: block;
-        background-color: transparent;
-        border: none;
-        color: $text-color;
-        margin-left: 33em;
-        margin-top: 4em;
-        font-size: 8px;
-        z-index: 99;
-    }
-
-    .header {
-        height: 8em;
-    }
-
-    .img-vector,
-    .img-vector-second {
-        width: 100%;
-    }
-
-    .vector-scale {
-        position: relative; 
-        transform: scale(3); 
-        left: 100px;
-        margin-top: 2em;
-    }
-
-    .header-open {
-        background: linear-gradient(180deg, rgba(126, 214, 210, 0.2) 0%, rgba(66, 133, 244, 0.2) 60.89%, rgba(218, 237, 248, 0.2) 100%);
-        height: calc(100vh);
-        position: fixed;
-
-        .hamburger-icon-x {
-            display: contents;
-        }
-
-        .vector-scale {
-            display: none;
-        }
-        .hamburger {
-            display: contents;
-        }
-        .header-buttons {
-            flex-direction: column;
-            margin-top: 3em;
-            margin-left: 1em;
-            font-size: 26px;
-
-            a {
-                color: $color-blue;
-            }
-
-            .donate-button {
-                width: 190px;
-                height: 50px;
-            }
-        }
-
-        .horisontal-line {
-            display: block;
-            border-top: 1px solid #03178F;
-            opacity: 0.1;
-            width: 100%;
-        }
-
-        .media-icons {
-            display: block;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            left: 38%;
-            margin-bottom: 1em;
-        }
-    }
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
 }
