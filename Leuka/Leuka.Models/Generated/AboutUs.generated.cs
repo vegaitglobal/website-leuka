@@ -20,37 +20,30 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Leuka.Models.Generated
 {
-	/// <summary>Contact</summary>
-	[PublishedModel("contact")]
-	public partial class Contact : PublishedContentModel, IFooter, IHeader, IPage, ISiteSettings
+	/// <summary>AboutUs</summary>
+	[PublishedModel("aboutUs")]
+	public partial class AboutUs : PublishedContentModel, IFooter, IHeader, IPage, ISiteSettings
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "contact";
+		public new const string ModelTypeAlias = "aboutUs";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Contact, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<AboutUs, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public Contact(IPublishedContent content)
+		public AboutUs(IPublishedContent content)
 			: base(content)
 		{ }
 
 		// properties
-
-		///<summary>
-		/// Title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("title")]
-		public string Title => this.Value<string>("title");
 
 		///<summary>
 		/// Copyright Text: The site copyright text.

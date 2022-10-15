@@ -20,26 +20,26 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Leuka.Models.Generated
 {
-	/// <summary>Contact</summary>
-	[PublishedModel("contact")]
-	public partial class Contact : PublishedContentModel, IFooter, IHeader, IPage, ISiteSettings
+	/// <summary>JoinUs</summary>
+	[PublishedModel("joinUs")]
+	public partial class JoinUs : PublishedContentModel, IFooter, IHeader, IPage
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public new const string ModelTypeAlias = "contact";
+		public new const string ModelTypeAlias = "joinUs";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Contact, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<JoinUs, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public Contact(IPublishedContent content)
+		public JoinUs(IPublishedContent content)
 			: base(content)
 		{ }
 
@@ -205,96 +205,5 @@ namespace Leuka.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("umbracoUrlName")]
 		public string UmbracoUrlName => Page.GetUmbracoUrlName(this);
-
-		///<summary>
-		/// Canonical Domain: The site canonical domain.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("canonicalDomain")]
-		public string CanonicalDomain => SiteSettings.GetCanonicalDomain(this);
-
-		///<summary>
-		/// Cookie Script
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("cookieScript")]
-		public string CookieScript => SiteSettings.GetCookieScript(this);
-
-		///<summary>
-		/// Google Analytics Script Code
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("googleAnalyticsScriptCode")]
-		public string GoogleAnalyticsScriptCode => SiteSettings.GetGoogleAnalyticsScriptCode(this);
-
-		///<summary>
-		/// Google Tag Manager Non-Script Code
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("googleTagManagerNonScriptCode")]
-		public string GoogleTagManagerNonScriptCode => SiteSettings.GetGoogleTagManagerNonScriptCode(this);
-
-		///<summary>
-		/// Google Tag Manager Script Code
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("googleTagManagerScriptCode")]
-		public string GoogleTagManagerScriptCode => SiteSettings.GetGoogleTagManagerScriptCode(this);
-
-		///<summary>
-		/// Hide All Pages From Search Engines: This will create robots meta tag with "noindex,nofollow" value. Note: this should be unchecked on the live site.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("hideAllPagesFromSearchEngines")]
-		public bool HideAllPagesFromSearchEngines => SiteSettings.GetHideAllPagesFromSearchEngines(this);
-
-		///<summary>
-		/// Port
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("port")]
-		public string Port => SiteSettings.GetPort(this);
-
-		///<summary>
-		/// Receiver Email Address
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("receiverEmailAddress")]
-		public string ReceiverEmailAddress => SiteSettings.GetReceiverEmailAddress(this);
-
-		///<summary>
-		/// Robots: Content that will be served when Robots.txt is requested.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("robots")]
-		public string Robots => SiteSettings.GetRobots(this);
-
-		///<summary>
-		/// Sender Email Address
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("senderEmailAddress")]
-		public string SenderEmailAddress => SiteSettings.GetSenderEmailAddress(this);
-
-		///<summary>
-		/// Sender Email Password
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("senderEmailPassword")]
-		public string SenderEmailPassword => SiteSettings.GetSenderEmailPassword(this);
-
-		///<summary>
-		/// Server Address
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("serverAddress")]
-		public string ServerAddress => SiteSettings.GetServerAddress(this);
-
-		///<summary>
-		/// Site Name: The site name.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("siteName")]
-		public string SiteName => SiteSettings.GetSiteName(this);
 	}
 }

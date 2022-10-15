@@ -22,7 +22,7 @@ namespace Leuka.Models.Generated
 {
 	/// <summary>Error404</summary>
 	[PublishedModel("error404")]
-	public partial class Error404 : PublishedContentModel, IPage
+	public partial class Error404 : PublishedContentModel, IFooter, IHeader, IPage
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -44,6 +44,27 @@ namespace Leuka.Models.Generated
 		{ }
 
 		// properties
+
+		///<summary>
+		/// Home Page Link Description: Link to homepage
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("homePageLinkDescription")]
+		public string HomePageLinkDescription => this.Value<string>("homePageLinkDescription");
+
+		///<summary>
+		/// Copyright Text: The site copyright text.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("copyrightText")]
+		public string CopyrightText => Footer.GetCopyrightText(this);
+
+		///<summary>
+		/// Logo: The site logo image.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("logo")]
+		public Image Logo => Header.GetLogo(this);
 
 		///<summary>
 		/// Alternate Languages: Language codes (en-US, en-GB etc).
