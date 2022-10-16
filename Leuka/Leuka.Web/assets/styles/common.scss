@@ -38,14 +38,13 @@
     &-link {
         background-color: transparent;
         color: $color-blue;
-        
+
         &:focus,
         &:focus-visible,
         &:hover {
             text-decoration: underline;
         }
     }
-
 
     &-pink {
         background-color: $color-pink;
