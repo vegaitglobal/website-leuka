@@ -1,11 +1,10 @@
 var modal = document.getElementById("modal");
 
-var btn = document.getElementById("donate-button");
+var btn = document.getElementById("modalBtn");
 
 var span = document.getElementsByClassName("close")[0];
 
 btn.onclick = function () {
-  console.log('Clicked')
   modal.style.display = "block";
 };
 

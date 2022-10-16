@@ -48,7 +48,7 @@ namespace Leuka.Core.Controllers.RenderMvc
                     {
                         Description = x.PreviewText,
                         Image = new ImageViewModel(x.PreviewImage),
-                        Link = x.Url(),
+                        Link = new LinkViewModel(x.Url(), x.PageTitle),
                         Title = x.PageTitle,
                         Tags = string.Join(",", x.Tags)
                     });

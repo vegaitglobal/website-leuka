@@ -1,11 +1,13 @@
-﻿<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.ContactusViewModel>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta charset="UTF-8" />
 
-<div class="contact-us-wrapper"> 
+<div class="contact-us-wrapper @Model.ContactUsFormClass">
     <div class="contact-us-form-wrapper">
         <h1 class="form-header">
-            <img src="/assets/Images/Ring.svg" class="ring-svg" />
-            Kontaktirajte nas!        
+            <img src="~/assets/Images/Ring.svg" class="ring-svg" />
+            Kontaktirajte nas!
         </h1>
         <h3 class="form-quote">Konačno, možda najvažniji efekat leukemije</h3>
 
@@ -13,28 +15,29 @@
             <div class="row">
                 <div>
                     <label for="firstName">IME*</label> <br>
-                    <input type="text" placeholder="Vaše ime" name="firstName" id="firstName"/>
+                    <input type="text" placeholder="Vaše ime" name="firstName" id="firstName" />
                 </div>
                 <div>
                     <label for="lastName">PREZIME*</label><br>
-                    <input type="text" placeholder="Vaše prezime" name="lastName" id="lastName"/>
+                    <input type="text" placeholder="Vaše prezime" name="lastName" id="lastName" />
                 </div>
             </div>
             <div>
                 <label for="email">EMAIL*</label><br>
-                <input type="text" placeholder="Vaš Email" name="email" id="email"/>
+                <input type="text" placeholder="Vaš Email" name="email" id="contact-email" />
             </div>
             <div>
                 <label for="messageText">PORUKA*</label><br>
-                <input type="text" placeholder="Poruka" name="messageText" id="messageText"/>
+                <input type="text" placeholder="Poruka" name="messageText" id="messageText" />
             </div>
             <div class="checkbox-input">
                 <input type="checkbox" name="involveInActions" id="involveInActions">
                 <span>Želim da se priključim akcijama!</span>
             </div>
-            <div class="contact-us-button" onclick="submitForm()">
-                <a href="#" onclick="submitForm()">Pošalji poruku</a>
+            <div class="contact-us-button" id="submit-contact-message">
+                <a href="#" >Pošalji poruku</a>
             </div>
         </form>
     </div>
 </div>
+<script src="~/assets/js/contact.js"></script>

@@ -532,6 +532,9 @@
     <Content Include="Views\Partials\NestedContent\_BlogCarousel.cshtml" />
     <Content Include="Views\Partials\NestedContent\_BlockGridViewModel.cshtml" />
     <Content Include="Views\Partials\NestedContent\_BlockGridViewModelPartial.cshtml" />
+    <Content Include="Views\Partials\NestedContent\AppPromotion.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_OrganizationInfoBanner.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_HighlightedArticle.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

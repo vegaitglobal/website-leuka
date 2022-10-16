@@ -12,11 +12,11 @@ namespace Leuka.Core.ViewModels.Pages
 		{
             Components = new List<IContentViewModel>();
 
-            var mediumTextBlocks = context.Page.MediumText;
-            if (mediumTextBlocks != null)
+            var headlineInfo = context.Page.HeadlineInfo;
+            if (headlineInfo != null)
             {
-                var mediumTextBlocksModels =  mediumTextBlocks.Select(x =>  new MediumTextBlockViewModel(x));
-                Components.AddRange(mediumTextBlocksModels);
+                var headlineInfoModels = headlineInfo.Select(x => new TitleDescriptionAndButtonViewModel(x));
+                Components.AddRange(headlineInfoModels);
             }
 
             var splitBlocks = context.Page.SplitBlock;
@@ -26,12 +26,20 @@ namespace Leuka.Core.ViewModels.Pages
                 Components.AddRange(splitBlocksModels);
             }
 
+            var mediumTextBlocks = context.Page.MediumText;
+            if (mediumTextBlocks != null)
+            {
+                var mediumTextBlocksModels =  mediumTextBlocks.Select(x =>  new MediumTextBlockViewModel(x));
+                Components.AddRange(mediumTextBlocksModels);
+            }
+
             var quotes = context.Page.Quote;
             if (quotes != null)
             {
                 var quotesModels = quotes.Select(x => new QuoteViewModel(x));
                 Components.AddRange(quotesModels);
             }
+
 
             var donations = context.Page.Donations;
             if (donations != null)
@@ -67,6 +75,13 @@ namespace Leuka.Core.ViewModels.Pages
             {
                 var appPromotionModels = appPromotion.Select(x => new AppPromotionViewModel(x));
                 Components.AddRange(appPromotionModels);
+            }
+
+            var contactUs = context.Page.ContactUs;
+            if (contactUs != null)
+            {
+                var contactUsViewModels = contactUs.Select(x => new ContactusViewModel(x));
+                Components.AddRange(contactUsViewModels);
             }
         }
 

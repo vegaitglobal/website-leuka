@@ -1,9 +1,21 @@
 ﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.TitleDescriptionAndButtonViewModel>
+<div class="homepage-header">
+    <div class="container">
+        <div class="heading">
+            <h1>@Model.Title</h1>
+        </div>
 
-<h2>@Model.Title</h2>
-<h2>@Model.Description</h2>
+        <div class="description">
+            <p> 
+                @Model.Description
+            </p>
+        </div>
 
-@if (Model.Button != null)
-{
-    Html.RenderPartial(Model.Button.PartialViewPath, Model.Button);
-}
+        <div style="display: flex; justify-content: center; margin: 20px 0">
+            @if (Model.Button != null)
+            {
+                Html.RenderPartial(Model.Button.PartialViewPath, Model.Button);
+            }
+        </div>
+    </div>
+</div>
