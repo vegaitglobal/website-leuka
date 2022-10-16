@@ -5,6 +5,7 @@ var donateBtn = document.getElementById("donate-modal-button");
 var donateClose = document.getElementById("donate-modal-close");
 
 donateBtn.onclick = function () {
+  console.log('Donating');
   donateModal.style.display = "block";
 };
 
