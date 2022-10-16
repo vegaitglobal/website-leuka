@@ -44,7 +44,8 @@
     }
 
     @include tablet {
-        width: 400px;
+        max-width: 400px;
+        width: 100%;
     }
 
 }
@@ -110,7 +111,8 @@
     @include tablet {
         margin-left: 50px;
         margin-top: 43px;
-        width: 400px;
+        width: auto;
+        max-width: 400px;
     }
 }
 
