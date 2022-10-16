@@ -67,6 +67,13 @@ namespace Leuka.Models.Generated
 		public IEnumerable<Contactus> ContactUs => this.Value<IEnumerable<Contactus>>("contactUs");
 
 		///<summary>
+		/// Donate
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("donate")]
+		public IEnumerable<DonatePopup> Donate => this.Value<IEnumerable<DonatePopup>>("donate");
+
+		///<summary>
 		/// Donations: Information component about donations
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
@@ -179,6 +186,13 @@ namespace Leuka.Models.Generated
 		public Umbraco.Web.Models.Link PlayStoreUrl => Footer.GetPlayStoreUrl(this);
 
 		///<summary>
+		/// Separator
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("separator")]
+		public IEnumerable<Separator> Separator => Footer.GetSeparator(this);
+
+		///<summary>
 		/// Twitter URL
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
@@ -205,6 +219,20 @@ namespace Leuka.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("logo")]
 		public Image Logo => Header.GetLogo(this);
+
+		///<summary>
+		/// PopupDonate
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("popupDonate")]
+		public IEnumerable<DonatePopup> PopupDonate => Header.GetPopupDonate(this);
+
+		///<summary>
+		/// ThanksPopup
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("thanksPopup")]
+		public IEnumerable<ThankyouPopup> ThanksPopup => Header.GetThanksPopup(this);
 
 		///<summary>
 		/// Alternate Languages: Language codes (en-US, en-GB etc).

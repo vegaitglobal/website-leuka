@@ -1,4 +1,10 @@
-﻿@inherits UmbracoViewPage<ContactViewModel>
-@using ContentModels = Leuka.Models.Generated;
+﻿@using Leuka.Core.ViewModels
+@inherits UmbracoViewPage<ContactViewModel>
 
-<h2>@Model.Title</h2>
+@if (Model.Components != null)
+{
+    foreach (IContentViewModel component in Model.Components)
+    {
+        Html.RenderPartial(component.PartialViewPath, component);
+    }
+}
