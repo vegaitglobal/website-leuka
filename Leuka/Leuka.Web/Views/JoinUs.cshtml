@@ -1,20 +1,4 @@
-﻿@using Leuka.Core.ViewModels
-@using Leuka.Core.ViewModels.Shared
-@inherits UmbracoViewPage<JoinUsViewModel>
+﻿@inherits UmbracoViewPage<JoinUsViewModel>
+@using ContentModels = Leuka.Models.Generated;
 
-@foreach (IContentViewModel component in Model.Components)
-{
-    if (component.GetType() == typeof(ContactusViewModel))
-    {
-        var contactusViewModel = component as ContactusViewModel;
-
-        if (contactusViewModel != null && contactusViewModel.Enabled)
-        {
-            Html.RenderPartial(component.PartialViewPath, component);
-        }
-    }
-    else
-    {
-        Html.RenderPartial(component.PartialViewPath, component);
-    }
-}
+<h2>@Model.Title</h2>

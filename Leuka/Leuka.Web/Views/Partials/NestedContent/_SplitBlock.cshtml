@@ -1,20 +1,33 @@
 ﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.SplitBlockViewModel>
 
-@if (Model.Separator != null)
-{
-    Html.RenderPartial(Model.Separator.PartialViewPath, Model.Separator);
-}
-<div class="voluntary-donation page-content-block @Model.ComponentClass">
+<div class="voluntary-donation">
     <div class="voluntary-donation-container">
-        @if (Model.Alignment == "Left")
-        {
-            Html.RenderPartial("~/Views/Partials/NestedContent/_SplitBlockImageContent.cshtml", Model);
-            Html.RenderPartial("~/Views/Partials/NestedContent/_SplitBlockTextContent.cshtml", Model);
-        }
-        else
-        {
-            Html.RenderPartial("~/Views/Partials/NestedContent/_SplitBlockTextContent.cshtml", Model);
-            Html.RenderPartial("~/Views/Partials/NestedContent/_SplitBlockImageContent.cshtml", Model);
-        }
+        <div class="voluntary-donation-content">
+            @if (!string.IsNullOrEmpty(Model.Tag))
+            {
+                <div class="tag">
+                    <p>@Model.Tag</p>
+                </div>
+            }
+            <div class="voluntary-donation-text">
+                <h3>@Model.Title</h3>
+                <p>
+                    @Model.Description
+                </p>
+                @if (Model.Buttons != null && Model.Buttons.Count() > 0)
+                {
+                    <div class="buttons">
+                        @foreach (var button in Model.Buttons)
+                        {
+                            Html.RenderPartial(button.PartialViewPath, button);
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="voluntary-donation-image">
+            <img src="@Model.Image.Url"
+                 alt="Voluntary Donation" />
+        </div>
     </div>
 </div>
