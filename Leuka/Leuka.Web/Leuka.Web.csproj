@@ -529,6 +529,8 @@
     <Content Include="Views\Partials\NestedContent\_SplitBlockTextContent.cshtml" />
     <Content Include="Views\Partials\NestedContent\_SplitBlockImageContent.cshtml" />
     <Content Include="Views\Partials\NestedContent\_BlogCarousel.cshtml" />
+    <Content Include="Views\Partials\NestedContent\AppPromotion.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_OrganizationInfoBanner.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

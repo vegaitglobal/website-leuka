@@ -5,7 +5,6 @@ const sass = require("gulp-sass")(require("sass"));
 const del = require("del");
 const image = require("gulp-image");
 const browserSync = require("browser-sync").create();
-const cleanCSS = require("gulp-clean-css");
 
 const { src, dest } = gulp;
 
@@ -20,15 +19,14 @@ gulp.task("scss", () =>
     .src(["./assets/styles/index.scss", "./partials/**/*.scss"])
     .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
     .pipe(concat("index.css"))
-    .pipe(
-      cleanCSS({
-        level: { 1: { specialComments: 0 }, 2: { removeDuplicateRules: true } },
-      })
-    )
     .pipe(gulp.dest("./dist"))
 );
 
-gulp.task("js", () => gulp.src("./src/js/*.js").pipe(dest("./dist/js")));
+gulp.task("js", (resolve, reject) => {
+  gulp.src("./src/js/*.js").pipe(dest("./dist/js"))
+  gulp.src("./assets/js/*.js").pipe(dest("./dist/js"))
+  resolve();
+});
 
 gulp.task("image", function (done) {
   gulp
@@ -47,7 +45,7 @@ gulp.task("reload", (done) => {
 gulp.task("watch", () => {
   browserSync.init({
     server: {
-      baseDir: "dist/",
+      baseDir: "./dist",
     },
   });
 
@@ -58,6 +56,7 @@ gulp.task("watch", () => {
       "partials/**/*.html",
       "partials/**/*.pug",
       "src/js/*.js",
+      "assets/js/*.js",
       "src/*.pug",
       "assets/styles/*.scss",
     ],

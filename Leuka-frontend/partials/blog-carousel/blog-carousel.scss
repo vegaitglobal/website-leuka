@@ -1,0 +1,119 @@
+@import "../../assets/styles/index.scss";
+
+.blog-carousel-section {
+  padding: 130px 30px;
+  background: linear-gradient(
+      180deg,
+      rgba(126, 214, 210, 0.2) 0%,
+      rgba(66, 133, 244, 0.2) 60.89%,
+      rgba(218, 237, 248, 0.2) 100%
+    ),
+    #ffffff;
+  min-height: 650px;
+
+  .blog-carousel-heading {
+    display: flex;
+    max-width: 1235px;
+    margin: 0 auto;
+    position: relative;
+
+    .log-carousel-heading-left {
+      .blog-carousel-tag {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        color: #03178f;
+        background: #ffc95d;
+        border-radius: 4px;
+        transform: rotate(2.96deg);
+        display: inline-block;
+        padding: 2px 10px;
+      }
+
+      h3 {
+        margin-top: 20px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 40px;
+        color: #03178f;
+      }
+    }
+
+    .log-carousel-heading-right {
+      position: relative;
+
+      .swiper-button-prev::after,
+      .swiper-button-next::after {
+        display: none;
+      }
+
+      .swiper-button-prev {
+        left: 100;
+        bottom: 10;
+        top: auto;
+        background: white;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        padding: 5px;
+      }
+
+      .swiper-button-next {
+        left: 150;
+        bottom: 10;
+        top: auto;
+        background: white;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        padding: 5px;
+      }
+
+      @media (max-width: 599px) {
+        display: none;
+      }
+    }
+  }
+
+  .swiper {
+    margin-top: 57px;
+    max-width: 1600px;
+
+    .swiper-wrapper {
+      height: auto;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+
+      .blog-topic-card {
+        margin: 0 15px;
+
+        img {
+          max-height: 100%;
+        }
+      }
+    }
+
+    @media (max-width: 599px) {
+      display: none;
+    }
+  }
+
+  .swiper-mobile {
+    margin-top: 60px;
+    height: auto;
+
+    .blog-topic-card {
+      margin: 0 auto;
+    }
+
+    img {
+      max-height: 100%;
+    }
+    @media (min-width: 599px) {
+      display: none;
+    }
+  }
+}

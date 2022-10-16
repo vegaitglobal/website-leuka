@@ -10,6 +10,7 @@
 .donate-wrapper {
   width: 678px;
   position: relative;
+  padding-bottom: 1px;
   border-radius: 15px;
   background-color: $color-white;
   text-align: center;
@@ -107,7 +108,8 @@
   line-height: 16px;
   font-weight: 400px;
   font-family: $text-font;
-  margin: 166px 47px 100;
+  margin: 166px auto 23px;
+  width: 450px;
 }
 
 @media screen and (max-width: 768px) {

@@ -9,7 +9,6 @@ namespace Leuka.Core.ViewModels.Shared
 		{
             Title = appPromotion.Title;
 			Description = appPromotion.Description;
-			BackgroudImage = new ImageViewModel(appPromotion.BackgroundImage);
 			AndroidAppLinkUrl = appPromotion.AndroidAppLink.Url;
 			AppleAppLinkUrl = appPromotion.AppleAppLink.Url;
 
@@ -22,7 +21,6 @@ namespace Leuka.Core.ViewModels.Shared
         }
 		public string Title { get; }
 		public string Description { get; }
-		public ImageViewModel BackgroudImage { get; }
 		public string AndroidAppLinkUrl { get; }
         public string AppleAppLinkUrl { get; }
         public SeparatorViewModel Separator { get; }
