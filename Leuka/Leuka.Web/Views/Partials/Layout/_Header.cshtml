@@ -147,6 +147,7 @@
     </div>
 </header>
 
+@*
 @if (@Model.DonatePopupComponent.Any())
 {
     foreach (var popup in @Model.DonatePopupComponent)
@@ -162,5 +163,6 @@
         Html.RenderPartial(popup.PartialViewPath, popup);
     }
 }
+*@
 
 <script src="~/assets/js/header.js"></script>

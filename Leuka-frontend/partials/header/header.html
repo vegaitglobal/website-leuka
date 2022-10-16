@@ -122,7 +122,7 @@
             </li>
 
             <div class="donateForMobile">
-                <a id="donate-modal-button" class="button button-green">Doniraj</a>
+                <a id="donate-modal-button" class="button button-green" onclick="handleDonate()">Doniraj</a>
             </div>
         </ul>
 
@@ -414,6 +414,11 @@
         var mobileMenu = document.getElementById("mobile-menu")
         mobileMenu.classList.remove("mobile-menu-expanded")
         mobileMenu.classList.add("hideMobileMenu")
+    }
+
+    function handleDonate() {
+        closeMenu()
+        donateModal.style.display = "block";
     }
 
     // donate.js
