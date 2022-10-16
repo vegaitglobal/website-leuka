@@ -46,7 +46,7 @@ namespace Leuka.Models.Generated
 		// properties
 
 		///<summary>
-		/// DonatePopup
+		/// Donate popup
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("donatePopup")]
@@ -60,11 +60,11 @@ namespace Leuka.Models.Generated
 		public string HomePageLinkDescription => this.Value<string>("homePageLinkDescription");
 
 		///<summary>
-		/// Thankyoupopup
+		/// Thankyou popup
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("thankyoupopup")]
-		public IEnumerable<ThankyouPopup> Thankyoupopup => this.Value<IEnumerable<ThankyouPopup>>("thankyoupopup");
+		[ImplementPropertyType("thankyouPopup")]
+		public IEnumerable<ThankyouPopup> ThankyouPopup => this.Value<IEnumerable<ThankyouPopup>>("thankyouPopup");
 
 		///<summary>
 		/// App Store URL

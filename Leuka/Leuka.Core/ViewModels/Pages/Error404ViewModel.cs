@@ -18,7 +18,7 @@ namespace Leuka.Core.ViewModels.Pages
 			{
 				Components.Add(new DonatePopupViewModel(donatePopup));
 			}
-			var thankyouPopup = context.Page.Thankyoupopup.FirstOrDefault();
+			var thankyouPopup = context.Page.ThankyouPopup.FirstOrDefault();
 			if (thankyouPopup != null)
 			{
 				Components.Add(new ThankYouPopupViewModel(thankyouPopup));
