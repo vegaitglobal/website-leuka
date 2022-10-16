@@ -40,19 +40,6 @@ namespace Leuka.Core.ViewModels.Pages
                 Components.AddRange(quotesModels);
             }
 
-            var donations = context.Page.Donations;
-            if (donations != null)
-            {
-                var donationsModels = donations.Select(x => new SplitBlockViewModel(x));
-                Components.AddRange(donationsModels);
-            }
-
-            var gallery = context.Page.Gallery;
-            if (gallery != null)
-            {
-                var galleryModels = gallery.Select(x => new GalleryViewModel(x));
-                Components.AddRange(galleryModels);
-            }
 
             var sponsors = context.Page.Sponsors;
             if (sponsors != null)
@@ -61,19 +48,11 @@ namespace Leuka.Core.ViewModels.Pages
                 Components.AddRange(sponsorsModels);
             }
 
-
-            var blogCarousel = context.Page.BlogCarousel;
-            if (blogCarousel != null)
+            var gallery = context.Page.Gallery;
+            if (gallery != null)
             {
-                var blogCarouselModels = blogCarousel.Select(x => new BlogCarouselViewModel(x));
-                Components.AddRange(blogCarouselModels);
-            }
-
-            var appPromotion = context.Page.AppPromotion;
-            if (appPromotion != null)
-            {
-                var appPromotionModels = appPromotion.Select(x => new AppPromotionViewModel(x));
-                Components.AddRange(appPromotionModels);
+                var galleryModels = gallery.Select(x => new GalleryViewModel(x));
+                Components.AddRange(galleryModels);
             }
 
             var contactUs = context.Page.ContactUs;

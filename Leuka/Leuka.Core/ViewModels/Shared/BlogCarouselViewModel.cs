@@ -27,7 +27,7 @@ namespace Leuka.Core.ViewModels.Shared
                 {
                     Description = article.PreviewText,
                     Image = new ImageViewModel(article.PreviewImage),
-                    Link = articleLink.Url,
+                    Link = new LinkViewModel(articleLink),
                     Title = article.PageTitle,
                     Tags = string.Join(",", article.Tags)
                 };
