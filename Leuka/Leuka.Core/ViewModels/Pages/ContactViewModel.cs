@@ -13,7 +13,7 @@ namespace Leuka.Core.ViewModels.Pages
 
         private void AddNotificationBanner(IPageContext<Contact> context)
         {
-            context.
+            //context.
         }
     }
 }
