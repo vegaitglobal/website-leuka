@@ -1,0 +1,27 @@
+﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.OrganizationInfoBannerViewModel>
+
+@if (Model.Separator != null)
+{
+    Html.RenderPartial(Model.Separator.PartialViewPath, Model.Separator);
+}
+<div class="angel-section">
+    <div class="container">
+        <div class="heading">
+            <div class="angel-img">
+                <img src="assets/images/angel.svg" alt="" />
+            </div>
+            <h3>
+                @Model.Title
+            </h3>
+        </div>
+
+        <div class="description">
+            <p>
+                @Model.Description
+            </p>
+        </div>
+        @{
+            Html.RenderPartial(Model.Button.PartialViewPath, Model.Button);
+        }
+    </div>
+</div>

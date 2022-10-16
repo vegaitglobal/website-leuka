@@ -11,7 +11,8 @@ namespace Leuka.Core.ViewModels.Shared
             JobTitle = quote.JobTitle;
             Text = quote.QuoteText;
             Image = new ImageViewModel(quote.Image);
-            if(quote.Separator != null && quote.Separator.Any())
+
+            if (quote.Separator != null && quote.Separator.Any())
             {
                 Separator = new SeparatorViewModel(quote.Separator.FirstOrDefault());
             }

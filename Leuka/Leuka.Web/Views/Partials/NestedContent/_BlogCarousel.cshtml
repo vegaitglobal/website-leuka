@@ -1,4 +1,106 @@
-﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.BlogCarouselViewModel>
+﻿@using Leuka.Core.ViewModels.Shared
+@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.BlogCarouselViewModel>
 
 
-RADIIIII!!!!!
+<div class="blog-carousel-section">
+    <div class="blog-carousel-heading">
+        <div class="log-carousel-heading-left">
+            <p class="blog-carousel-tag">vesti & blog</p>
+            <h3>Leuka Blog</h3>
+        </div>
+        <div class="log-carousel-heading-right">
+            <div class="swiper-button-prev">
+                <img src="../assets/images/arrow-left.svg" alt="" />
+            </div>
+            <div class="swiper-button-next">
+                <img src="../assets/images/arrow-right.svg" alt="" />
+            </div>
+        </div>
+    </div>
+
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            @foreach (ArticlePreviewViewModel blogPreview in Model.Articles)
+            {
+                <div class="swiper-slide">
+                    <div class="blog-topic-card">
+                        <div class="blog-topic-card-image">
+                            <h2 class="blog-topic-card-image-title">Izdvajamo:</h2>
+                            <img src="@blogPreview.Image.Url"
+                                 alt="@blogPreview.Image.AlternateText" />
+                        </div>
+                        <div class="blog-topic-card-content">
+                            <div class="tags">
+                                <div class="tag">
+                                    <div class="tag-dot"></div>
+                                    <p>@blogPreview.Tags</p>
+                                </div>
+                            </div>
+                            <h2 class="blog-title">
+                                @blogPreview.Title
+                            </h2>
+                            <p class="blog-desc">
+                                @blogPreview.Description
+                            </p>
+                            <a class="read-more" href="#">Pročitaj više</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="swiper-mobile">
+        @foreach (ArticlePreviewViewModel blogPreview in Model.Articles)
+        {
+           <div class="swiper-slide">
+               <div class="blog-topic-card">
+                   <div class="blog-topic-card-image">
+                       <h2 class="blog-topic-card-image-title">Izdvajamo:</h2>
+                       <img src="@blogPreview.Image.Url"
+                            alt="@blogPreview.Image.AlternateText" />
+                   </div>
+                   <div class="blog-topic-card-content">
+                       <div class="tags">
+                           <div class="tag">
+                               <div class="tag-dot"></div>
+                               <p>@blogPreview.Tags</p>
+                           </div>
+                       </div>
+                       <h2 class="blog-title">
+                           @blogPreview.Title
+                       </h2>
+                       <p class="blog-desc">
+                           @blogPreview.Description
+                       </p>
+                       <a class="read-more" href="#">Pročitaj više</a>
+                   </div>
+               </div>
+           </div>
+        }
+    </div>
+
+    <!-- Initialize Swiper -->
+    <script type="module">
+        var swiper = new Swiper(".swiper", {
+            breakpoints: {
+                600: {
+                    slidesPerView: 2,
+                    spaceBetween: 45,
+                },
+                920: {
+                    slidesPerView: 3,
+                    spaceBetween: 45,
+                },
+                1200: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</div>

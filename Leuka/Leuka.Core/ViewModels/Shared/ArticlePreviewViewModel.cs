@@ -6,7 +6,7 @@
 
         public string Description { get; set; }
 
-        public string Link { get; set; }
+        public LinkViewModel Link { get; set; }
 
         public ImageViewModel Image { get; set; }
 

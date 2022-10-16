@@ -40,6 +40,7 @@ namespace Leuka.Core.ViewModels.Pages
                 Components.AddRange(quotesModels);
             }
 
+
             var donations = context.Page.Donations;
             if (donations != null)
             {

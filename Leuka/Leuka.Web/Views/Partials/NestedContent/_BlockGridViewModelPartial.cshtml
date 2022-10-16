@@ -1,0 +1,18 @@
+﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.BlockGridViewModel>
+
+
+@foreach (var item in Model.Previews)
+            {
+                <div>
+                    @item.Title @item.Description
+                </div>
+            }
+
+@if(Model.TotalNumberOfArticles > Model.NumberOfDispalyedArticles)
+            {
+                <button id="loadMoreButton" onclick="GetMoreArticles()">Učitaj još članaka</button>
+            }
+
+<script>
+    numberOfDispalyedArticles = @Model.NumberOfDispalyedArticles;
+</script>
