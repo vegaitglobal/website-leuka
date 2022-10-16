@@ -435,7 +435,10 @@
     <Content Include="assets\images\arrow-left.svg" />
     <Content Include="assets\images\arrow-right.svg" />
     <Content Include="assets\images\author.jpg" />
+    <Content Include="assets\Images\logo-transparent-1.svg" />
+    <Content Include="assets\Images\logo-transparent-2.png" />
     <Content Include="assets\images\mosaic.png" />
+    <Content Include="assets\Images\Participate-bg.jpg" />
     <Content Include="assets\images\Ring.svg" />
     <Content Include="assets\js\contact.js" />
     <Content Include="assets\js\donate-information.js" />
@@ -480,6 +483,7 @@
     <Content Include="CustomError500.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Views\Partials\NestedContent\_ContactUs.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_HowToParticipate.cshtml" />
     <Content Include="Views\Partials\NestedContent\_Subscriptions.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

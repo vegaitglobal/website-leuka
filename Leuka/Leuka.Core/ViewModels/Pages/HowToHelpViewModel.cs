@@ -45,6 +45,14 @@ namespace Leuka.Core.ViewModels.Pages
                 IEnumerable<QuoteViewModel> quotesModels = quotes.Select(x => new QuoteViewModel(x));
                 Components.AddRange(quotesModels);
             }
+            
+            var howToHelp = context.Page.HowToHelpParticipate;
+
+            if (howToHelp != null)
+            {
+                IEnumerable<HowToParticipateViewModel> quotesModels = howToHelp.Select(x => new HowToParticipateViewModel(x));
+                Components.AddRange(quotesModels);
+            }
 
             IEnumerable<AppPromotion> appPromotion = context.Page.AppPromo;
 

@@ -53,6 +53,20 @@ namespace Leuka.Models.Generated
 		public IEnumerable<BlockGrid> Grid => this.Value<IEnumerable<BlockGrid>>("grid");
 
 		///<summary>
+		/// Highlighted article
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("highlightedArticle")]
+		public IEnumerable<HighlightedArticle> HighlightedArticle => this.Value<IEnumerable<HighlightedArticle>>("highlightedArticle");
+
+		///<summary>
+		/// Page Headline
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("pageHeadline")]
+		public IEnumerable<TitleDescriptionAndButton> PageHeadline => this.Value<IEnumerable<TitleDescriptionAndButton>>("pageHeadline");
+
+		///<summary>
 		/// App Store URL
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
