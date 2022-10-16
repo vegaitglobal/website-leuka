@@ -2,3 +2,8 @@
 @using ContentModels = Leuka.Models.Generated;
 
 <h2>@Model.Title</h2>
+
+@if (Model.Grid != null)
+{
+    Html.RenderPartial(Model.Grid.PartialViewPath, Model.Grid);
+}

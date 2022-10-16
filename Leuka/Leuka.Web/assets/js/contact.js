@@ -6,8 +6,9 @@ const onContact = () => {
     const email = document.getElementById("contact-email").value;
     const messageText = document.getElementById("messageText").value;
     const involveInActions = document.getElementById("involveInActions").checked;
+    const mode = "contact";
 
-    const payload = { firstName, lastName, email, messageText, involveInActions };
+    const payload = { firstName, lastName, email, messageText, involveInActions, mode };
     if (!firstName || !lastName || !email) {
         alert("Molimo Vas unesite sva neophodna polja");
         return;

@@ -453,6 +453,8 @@
     <Content Include="assets\svgs\Polygon.svg" />
     <Content Include="assets\svgs\Twitter.svg" />
     <Content Include="assets\triangle-images\Ring.svg" />
+    <Content Include="assets\Images\Ring.svg" />
+    <Content Include="assets\scripts\jquery-3.6.1.min.js" />
     <Content Include="config\grid.editors.config.js" />
     <Content Include="config\Lang\cs-CZ.user.xml" />
     <Content Include="config\Lang\da-DK.user.xml" />
@@ -557,8 +559,11 @@
     <Content Include="Views\Partials\NestedContent\_SplitBlockTextContent.cshtml" />
     <Content Include="Views\Partials\NestedContent\_SplitBlockImageContent.cshtml" />
     <Content Include="Views\Partials\NestedContent\_BlogCarousel.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_BlockGridViewModel.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_BlockGridViewModelPartial.cshtml" />
     <Content Include="Views\Partials\NestedContent\AppPromotion.cshtml" />
     <Content Include="Views\Partials\NestedContent\_OrganizationInfoBanner.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_HighlightedArticle.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -579,6 +584,7 @@
       <Name>Leuka.Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
