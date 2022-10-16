@@ -14,7 +14,7 @@ namespace Leuka.Core.Controllers.RenderMvc
 			Response.TrySkipIisCustomErrors = true;
 
 			// CurrentTemplate won't work here as this controller may be hit from custom made route
-			return default; //return View(new Error404ViewModel(CreatePageContext(model)));
+			return View(new Error404ViewModel(CreatePageContext(model)));
 		}
 	}
 }
