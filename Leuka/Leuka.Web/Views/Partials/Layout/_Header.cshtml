@@ -147,22 +147,20 @@
     </div>
 </header>
 
-@*
-@if (@Model.DonatePopupComponent.Any())
+@if (@Model.DonatePopupComponents.Any())
 {
-    foreach (var popup in @Model.DonatePopupComponent)
+    foreach (var popup in @Model.DonatePopupComponents)
     {
         Html.RenderPartial(popup.PartialViewPath, popup);
     }
 }
 
-@if (@Model.ThankYouComponent.Any())
+@if (@Model.ThankYouPopupComponents.Any())
 {
-    foreach (var popup in @Model.ThankYouComponent)
+    foreach (var popup in @Model.ThankYouPopupComponents)
     {
         Html.RenderPartial(popup.PartialViewPath, popup);
     }
 }
-*@
 
 <script src="~/assets/js/header.js"></script>
