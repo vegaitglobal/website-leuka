@@ -32,7 +32,7 @@ window.onclick = function (event) {
 };
 
 const onDonate = () => {
-  const endpoint = `http://leuka.local/contact`;
+  const endpoint = `http://leuka.local/kontakt`;
 
   const donor = document.getElementById("donor").value;
   const amount = document.getElementById("amount").value;

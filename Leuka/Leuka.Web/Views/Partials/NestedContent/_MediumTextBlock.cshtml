@@ -1,5 +1,10 @@
 ﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.MediumTextBlockViewModel>
 
+@if (Model.Separator != null)
+{
+    Html.RenderPartial(Model.Separator.PartialViewPath, Model.Separator);
+}
+
 <div class="mid-text-wrapper">
     <div class="main-text">
         <label>

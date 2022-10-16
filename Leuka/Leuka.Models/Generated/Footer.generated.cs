@@ -60,6 +60,10 @@ namespace Leuka.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		Umbraco.Web.Models.Link PlayStoreUrl { get; }
 
+		/// <summary>Separator</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		IEnumerable<Separator> Separator { get; }
+
 		/// <summary>Twitter URL</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		Umbraco.Web.Models.Link TwitterUrl { get; }
@@ -188,6 +192,17 @@ namespace Leuka.Models.Generated
 		/// <summary>Static getter for Play Store URL</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public static Umbraco.Web.Models.Link GetPlayStoreUrl(IFooter that) => that.Value<Umbraco.Web.Models.Link>("playStoreURL");
+
+		///<summary>
+		/// Separator
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("separator")]
+		public IEnumerable<Separator> Separator => GetSeparator(this);
+
+		/// <summary>Static getter for Separator</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static IEnumerable<Separator> GetSeparator(IFooter that) => that.Value<IEnumerable<Separator>>("separator");
 
 		///<summary>
 		/// Twitter URL

@@ -1,6 +1,6 @@
 .angel-section {
   font-family: Poppins;
-  background-image: url("images/mosaic.png");
+  background-image: url("../images/mosaic.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -28,15 +28,8 @@
       color: #2b3363;
     }
 
-    .heading-button {
-      margin: 30px 0;
-      display: inline-block;
-      color: #03178f;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 18px;
-      line-height: 29px;
+    .button-link {
+      margin: 30px auto;
     }
   }
 }
