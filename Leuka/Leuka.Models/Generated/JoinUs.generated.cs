@@ -53,11 +53,11 @@ namespace Leuka.Models.Generated
 		public IEnumerable<Contactus> ContactUs => this.Value<IEnumerable<Contactus>>("contactUs");
 
 		///<summary>
-		/// Gallery
+		/// Organization Info Banner
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("gallery")]
-		public IEnumerable<Gallery> Gallery => this.Value<IEnumerable<Gallery>>("gallery");
+		[ImplementPropertyType("organizationInfoBanner")]
+		public IEnumerable<OrganizationInfoBanner> OrganizationInfoBanner => this.Value<IEnumerable<OrganizationInfoBanner>>("organizationInfoBanner");
 
 		///<summary>
 		/// PreContactField
