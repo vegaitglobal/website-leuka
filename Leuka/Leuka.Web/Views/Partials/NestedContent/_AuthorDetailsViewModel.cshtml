@@ -1,3 +1,75 @@
 ﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.AuthorDetailsViewModel>
 
 @Model.FullName
+
+<div class="blog-post-footer">
+    <div class="blog-post-footer-content">
+        <div class="socials">
+            <div class="author-image">
+                <img src="@Model.Image.Url" alt="@Model.Image.AlternateText">
+            </div>
+            <div class="socials-links">
+                @if (Model.Facebook != null && !string.IsNullOrEmpty(Model.Facebook.Url))
+                {
+                    <a href="@Model.Facebook.Url">
+                        <img src="images/Facebook-header.svg" alt="Facebook-header.svg">
+                    </a>
+
+                }@if (Model.Twitter != null && !string.IsNullOrEmpty(Model.Twitter.Url))
+                {
+                    <a href="@Model.Twitter.Url">
+                        <img src="images/Twitter-header.svg" alt="Twitter-header.svg">
+                    </a>
+
+                }@if (Model.Google != null && !string.IsNullOrEmpty(Model.Google.Url))
+                {
+                    <a href="@Model.Google.Url">
+                        <img src="images/Google-header.svg" alt="Google-header.svg">
+                    </a>
+
+                }@if (!string.IsNullOrEmpty(Model.WhatsApp))
+                {
+                    <a href="tel:@{Model.WhatsApp} ">
+                        <img src="images/WhatsApp-header.svg" alt="WhatsApp-header.svg">
+
+                    </a>
+                }
+            </div>
+        </div>
+        <div class="author">
+            <p class="author-name">@Model.FullName</p>
+            <div class="dot"></div>
+            <p class="created-date">27.10.2022.</p>
+        </div>
+        <div class="author-desc">
+            @Model.Description
+        </div>
+        <div class="socials-links socials-links-bottom">
+            @if (Model.Facebook != null && !string.IsNullOrEmpty(Model.Facebook.Url))
+            {
+                <a href="@Model.Facebook.Url">
+                    <img src="images/Facebook-header.svg" alt="Facebook-header.svg">
+                </a>
+
+            }@if (Model.Twitter != null && !string.IsNullOrEmpty(Model.Twitter.Url))
+            {
+                <a href="@Model.Twitter.Url">
+                    <img src="images/Twitter-header.svg" alt="Twitter-header.svg">
+                </a>
+
+            }@if (Model.Google != null && !string.IsNullOrEmpty(Model.Google.Url))
+            {
+                <a href="@Model.Google.Url">
+                    <img src="images/Google-header.svg" alt="Google-header.svg">
+                </a>
+
+            }@if (!string.IsNullOrEmpty(Model.WhatsApp))
+            {
+                <a href="tel:@{Model.WhatsApp} ">
+                    <img src="images/WhatsApp-header.svg" alt="WhatsApp-header.svg">
+
+                </a>
+                }
+        </div>
+    </div>
+</div>

@@ -10,7 +10,8 @@
     Html.RenderPartial(Model.Breadcrumbs.PartialViewPath, Model.Breadcrumbs);
 }
 
-@Model.PageDetails
+<div class="blog-post-content" style="height: 100px">@Model.PageDetails</div>
+
 @if (Model.AuthorDetails != null)
 {
     Html.RenderPartial(Model.AuthorDetails.PartialViewPath, Model.AuthorDetails);
