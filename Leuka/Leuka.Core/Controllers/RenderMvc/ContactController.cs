@@ -9,6 +9,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Web;
+using System.Web.Http;
 using System.Web.Http.Results;
 using System.Web.Mvc;
 using Umbraco.Core.Composing;
@@ -23,11 +24,16 @@ namespace Leuka.Core.Controllers.RenderMvc
         public ActionResult Index(Contact model)
             => CurrentTemplate(new ContactViewModel(CreatePageContext(model)));
 
-        [HttpPost]
-        public HttpStatusCode Contact(string firstName, string lastName, string email, string messageText, bool involveInActions, string formDescription, IEnumerable<HttpPostedFileBase> files)
+        [System.Web.Mvc.HttpPost]
+        public ActionResult Contact(string firstName, string lastName, string email, string messageText, bool involveInActions, string formDescription, IEnumerable<HttpPostedFileBase> files)
         {
-            ISiteSettings settings = CacheHelper.Instance.TryRead("siteSettings") as ISiteSettings;
-            if (settings == null)
+            if (string.IsNullOrWhiteSpace(firstName) ||
+                string.IsNullOrWhiteSpace(lastName) ||
+                string.IsNullOrWhiteSpace(email))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest, "Missing required fields");
+            }
+            if (!(CacheHelper.Instance.TryRead("siteSettings") is ISiteSettings settings))
             {
                 var umbracoContextFactory = Current.Factory.GetInstance(typeof(IUmbracoContextFactory)) as IUmbracoContextFactory;
                 using (var contextReference = umbracoContextFactory.EnsureUmbracoContext())
@@ -46,11 +52,11 @@ namespace Leuka.Core.Controllers.RenderMvc
             try
             {
                 SmtpHelper.SendEmail(emailSettings, firstName, lastName, email, messageText, involveInActions, formDescription, files);
-                return HttpStatusCode.OK;
+                return new HttpStatusCodeResult(HttpStatusCode.OK, "Message sent successfully");
             }
             catch (Exception ex)
             {
-                return HttpStatusCode.BadRequest;
+                return new HttpStatusCodeResult(HttpStatusCode.InternalServerError, "Something went wrong");
             }
         }
     }
