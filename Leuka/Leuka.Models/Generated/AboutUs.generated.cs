@@ -46,32 +46,11 @@ namespace Leuka.Models.Generated
 		// properties
 
 		///<summary>
-		/// Buttons
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("buttons")]
-		public IEnumerable<Button> Buttons => this.Value<IEnumerable<Button>>("buttons");
-
-		///<summary>
 		/// Contact Us
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("contactUs")]
 		public IEnumerable<Contactus> ContactUs => this.Value<IEnumerable<Contactus>>("contactUs");
-
-		///<summary>
-		/// Highlighted Articles
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("highlightedArticles")]
-		public IEnumerable<HighlightedArticle> HighlightedArticles => this.Value<IEnumerable<HighlightedArticle>>("highlightedArticles");
-
-		///<summary>
-		/// Sponsors
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("sponsors")]
-		public IEnumerable<Sponsors> Sponsors => this.Value<IEnumerable<Sponsors>>("sponsors");
 
 		///<summary>
 		/// App Store URL

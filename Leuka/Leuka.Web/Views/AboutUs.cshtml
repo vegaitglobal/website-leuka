@@ -7,3 +7,27 @@
         Html.RenderPartial(modal.PartialViewPath, modal);
     }
 }
+
+@if (Model.HighlightedArticles.Any())
+{
+    foreach (var article in Model.HighlightedArticles)
+    {
+        Html.RenderPartial(article.PartialViewPath, article);
+    }
+}
+
+@if (Model.Buttons.Any())
+{
+    foreach (var button in Model.Buttons)
+    {
+        Html.RenderPartial(button.PartialViewPath, button);
+    }
+}
+
+@if (Model.Sponsors.Any())
+{
+    foreach (var sponsor in Model.Sponsors)
+    {
+        Html.RenderPartial(sponsor.PartialViewPath, sponsor);
+    }
+}
