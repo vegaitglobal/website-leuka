@@ -11,7 +11,7 @@ namespace Leuka.Core.Controllers.RenderMvc
     public class ArticleController : BasePageController<Article>
     {
         public ActionResult Index(Article model)
-            => CurrentTemplate(new ArticleViewModel(CreatePageContext(model), GetBreadCrumbs(model)));
+             => CurrentTemplate(new ArticleViewModel(CreatePageContext(model), GetBreadCrumbs(model)));
 
         private BreadcrumbsViewModel GetBreadCrumbs(Article page)
         {

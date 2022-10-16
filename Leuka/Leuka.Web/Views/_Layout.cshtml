@@ -19,18 +19,21 @@
     }
 
     <link href="~/assets/styles/index.css" type="text/css" rel="stylesheet" />
+    <link href="https://unpkg.com/swiper/swiper-bundle.min.css" type="text/css" rel="stylesheet" />
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
 </head>
 <body style="display:block;float:left;width:100%;height:100%;">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     @{
-        Html.RenderAction<LayoutController>(c => nameof(c.Header), new { viewModel = Model.Header });
+        Html.RenderPartial("~/Views/Partials/Layout/_Header.cshtml", Model.Header);
     }
     <div>
         @RenderBody()
     </div>
     @{
-        Html.RenderAction<LayoutController>(c => nameof(c.Footer), new { viewModel = Model.Footer });
+        Html.RenderPartial("~/Views/Partials/Layout/_Footer.cshtml", Model.Footer);
     }
 </body>
 </html>

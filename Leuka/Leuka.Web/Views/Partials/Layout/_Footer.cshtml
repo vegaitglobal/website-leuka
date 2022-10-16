@@ -1,78 +1,73 @@
 ﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Partials.Layout.FooterViewModel>
-
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-<meta charset="UTF-8" />
-
 <footer class="footer">
-  <div class="footer-wrapper">
-    <div class="footer-logo-wrapper">
-      <img src="~/assets/images/Logo.svg" class="footer-logo" alt="Logo" />
-      <div class="footer-store-wrapper">
-        <a href="@Model.AppStore.Link">
-          <img class="footer-app-store-logo" src="~/assets/images/App Store.svg" alt="App Store" />
-        </a>
-        <a href="http://google.rs">
-          <img src="~/assets/images/Play Store.svg" class="footer-play-store-logo" alt="Play Store" />
-        </a>
-      </div>
-    </div>
-    @if (@Model.NavigationLinks != null && @Model.NavigationLinks.Any())
-    {
-        <div class="footer-links-wrapper">
-            <div class="footer-title-wrapper">
-                <img class="footer-polygon" src="~/assets/images/Polygon.svg"/>
-                <h6 class="footer-links-title">LINKOVI</h6>
+    <div class="footer-wrapper">
+        <div class="footer-logo-wrapper">
+            <img src="~/assets/images/Logo.svg" class="footer-logo" alt="Logo" />
+            <div class="footer-store-wrapper">
+                <a href="@Model.AppStore.Link">
+                    <img class="footer-app-store-logo" src="~/assets/images/App Store.svg" alt="App Store" />
+                </a>
+                <a href="http://google.rs">
+                    <img src="~/assets/images/Play Store.svg" class="footer-play-store-logo" alt="Play Store" />
+                </a>
             </div>
-             @foreach (var link in @Model.NavigationLinks)
-            {
-                <a href="@link.Url" class="footer-links">@link.Content</a>
-            }
         </div>
-    }
+        @if (Model.NavigationLinks != null && Model.NavigationLinks.Any())
+        {
+            <div class="footer-links-wrapper">
+                <div class="footer-title-wrapper">
+                    <img class="footer-polygon" src="~/assets/images/Polygon.svg" />
+                    <h6 class="footer-links-title">LINKOVI</h6>
+                </div>
+                @foreach (var link in Model.NavigationLinks)
+                {
+                    <a href="@link.Url" class="footer-links">@link.Content</a>
+                }
+            </div>
+        }
 
-    @if (@Model.MediaLinks != null && @Model.MediaLinks.Any())
-    {
+        @if (Model.MediaLinks != null && Model.MediaLinks.Any())
+        {
+            <div class="footer-links-wrapper">
+                <div class="footer-title-wrapper">
+                    <img class="footer-polygon" src="../assets/svgs/Polygon.svg" />
+                    <h6 class="footer-links-title">MEDIJI O NAMA</h6>
+                </div>
+                @foreach (var link in Model.MediaLinks)
+                {
+                    <a href="@link.Url" class="footer-links">@link.Content</a>
+                }
+            </div>
+        }
+
         <div class="footer-links-wrapper">
             <div class="footer-title-wrapper">
                 <img class="footer-polygon" src="../assets/svgs/Polygon.svg" />
-                <h6 class="footer-links-title">MEDIJI O NAMA</h6>
+                <h6 class="footer-links-title">KONTAKT</h6>
             </div>
-            @foreach (var link in @Model.MediaLinks)
-            {
-                <a href="@link.Url" class="footer-links">@link.Content</a>
-            }
+            <a href="mailto:@{@Model.ContactEmail}?subject=your title&body=TThe message" class="footer-links">
+                Email:
+                @Model.ContactEmail
+            </a>
+
+            <div class="footer-title-wrapper">
+                <img class="footer-polygon" src="../assets/svgs/Polygon.svg" />
+                <h6 class="footer-links-title">ZAPRATITE NAS</h6>
+            </div>
+            <div>
+                <a href="@Model.Facebook.Link" class="footer-links">
+                    <img class="footer-social-logo" src="~/assets/images/Facebook.svg" />
+                </a>
+                <a href="@Model.Twitter.Link" class="footer-links">
+                    <img class="footer-social-logo" src="~/assets/Images/Twitter.svg" />
+                </a>
+                <a href="@Model.Instagram.Link" class="footer-links">
+                    <img class="footer-social-logo" src="~/assets/Images/Instagram.svg" />
+                </a>
+            </div>
+            <div class="footer-copyright">
+                @Model.CopyrightText
+            </div>
         </div>
-    }
-    
-      <div class="footer-links-wrapper">
-          <div class="footer-title-wrapper">
-              <img class="footer-polygon" src="../assets/svgs/Polygon.svg" />
-              <h6 class="footer-links-title">KONTAKT</h6>
-          </div>
-          <a href="mailto:@{@Model.ContactEmail}?subject=your title&body=TThe message" class="footer-links">
-              Email:
-              @Model.ContactEmail
-          </a>
-
-          <div class="footer-title-wrapper">
-              <img class="footer-polygon" src="../assets/svgs/Polygon.svg" />
-              <h6 class="footer-links-title">ZAPRATITE NAS</h6>
-          </div>
-          <div>
-              <a href="@Model.Facebook.Link" class="footer-links">
-                  <img class="footer-social-logo" src="~/assets/images/Facebook.svg" />
-              </a>
-              <a href="@Model.Twitter.Link" class="footer-links">
-                  <img class="footer-social-logo" src="~/assets/Images/Twitter.svg" />
-              </a>
-              <a href="@Model.Instagram.Link" class="footer-links">
-                  <img class="footer-social-logo" src="~/assets/Images/Instagram.svg" />
-              </a>
-          </div>
-          <div class="footer-copyright">
-              ©@Model.CopyrightText
-          </div>
-      </div>
-  </div>
+    </div>
 </footer>
-
