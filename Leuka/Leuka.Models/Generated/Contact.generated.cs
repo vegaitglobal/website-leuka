@@ -46,53 +46,11 @@ namespace Leuka.Models.Generated
 		// properties
 
 		///<summary>
-		/// App promo
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("appPromo")]
-		public IEnumerable<AppPromotion> AppPromo => this.Value<IEnumerable<AppPromotion>>("appPromo");
-
-		///<summary>
-		/// Contact us
+		/// Contact Us
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("contactUs")]
 		public IEnumerable<Contactus> ContactUs => this.Value<IEnumerable<Contactus>>("contactUs");
-
-		///<summary>
-		/// MediumTextBlock
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("mediumTextBlock")]
-		public IEnumerable<MediumTextBlock> MediumTextBlock => this.Value<IEnumerable<MediumTextBlock>>("mediumTextBlock");
-
-		///<summary>
-		/// Page description
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("pageDescription")]
-		public string PageDescription => this.Value<string>("pageDescription");
-
-		///<summary>
-		/// Quote
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("quote")]
-		public IEnumerable<Quote> Quote => this.Value<IEnumerable<Quote>>("quote");
-
-		///<summary>
-		/// Title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("title")]
-		public string Title => this.Value<string>("title");
-
-		///<summary>
-		/// Top text block
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("topTextBlock")]
-		public IEnumerable<TitleDescriptionAndButton> TopTextBlock => this.Value<IEnumerable<TitleDescriptionAndButton>>("topTextBlock");
 
 		///<summary>
 		/// App Store URL

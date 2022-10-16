@@ -2,24 +2,7 @@
 
 <header class="header-container-main">
     <div class="header-main-container">
-        <logo>
-            <svg width="230" height="74" viewBox="0 0 230 74" fill="none" xmlns="http://www.w3.org/2000/svg"
-                 xmlns:xlink="http://www.w3.org/1999/xlink">
-                <rect width="66" height="74" fill="url(#pattern0)" />
-                <rect x="49" y="7" width="181" height="67" fill="url(#pattern1)" />
-                <defs>
-                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                        <use xlink:href="#image0_167_9418"
-                             transform="translate(-0.657692 -0.142857) scale(0.00384615 0.00340136)" />
-                    </pattern>
-                    <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
-                        <use xlink:href="#image0_167_9418"
-                             transform="translate(0 -1.46269) scale(0.00160514 0.00433626)" />
-                    </pattern>
-                    <image id="image0_167_9418" width="623" height="623"
-                           xlink:href="@Model.Logo.Url"></image>
-            </svg>
-        </logo>
+        <a href="/"><img src="@Model.Logo.Url" /></a>
         <nav class="nav-container">
             <ul class="header-nav-list">
                 @foreach (var link in Model.NavigationLinks)

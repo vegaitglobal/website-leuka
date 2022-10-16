@@ -60,6 +60,13 @@ namespace Leuka.Models.Generated
 		public IEnumerable<Contactus> ContactUs => this.Value<IEnumerable<Contactus>>("contactUs");
 
 		///<summary>
+		/// HowToHelpParticipate
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("howToHelpParticipate")]
+		public IEnumerable<HowToHelpParticipate> HowToHelpParticipate => this.Value<IEnumerable<HowToHelpParticipate>>("howToHelpParticipate");
+
+		///<summary>
 		/// How to join
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
