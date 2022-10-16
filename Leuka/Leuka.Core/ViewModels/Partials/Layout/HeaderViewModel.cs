@@ -18,11 +18,15 @@ namespace Leuka.Core.ViewModels.Partials.Layout
 			LogoUrl = header.AncestorOrSelf<Home>().Url();
             NavigationLinks = header.Links.Select(link => new LinkViewModel(link));
 			DonationButton = new ButtonViewModel(header.DonationButton.FirstOrDefault());
-        }
+			DonatePopupComponents = header.PopupDonate.Select(x => new DonatePopupViewModel(x));
+			ThankYouPopupComponents = header.ThanksPopup.Select(x => new ThankYouPopupViewModel(x));
+		}
 
 		public ImageViewModel Logo { get; }
 		public string LogoUrl { get; }
         public IEnumerable<LinkViewModel> NavigationLinks { get; }
 		public ButtonViewModel DonationButton { get; }
+		public IEnumerable<DonatePopupViewModel> DonatePopupComponents { get; }
+		public IEnumerable<ThankYouPopupViewModel> ThankYouPopupComponents { get; }
     }
 }

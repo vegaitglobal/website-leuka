@@ -5,9 +5,11 @@
     Html.RenderPartial(Model.Separator.PartialViewPath, Model.Separator);
 }
 
-<div class="gallery page-content-block">
-    @foreach (var row in Model.GalleryRows)
-    {
-        Html.RenderPartial(row.PartialViewPath, row);
-    }
+<div class="gallery page-content-block-padding-top page-content-block-padding-bottom">
+    <div class="gallery-content">
+        @foreach (var row in Model.GalleryRows)
+        {
+            Html.RenderPartial(row.PartialViewPath, row);
+        }
+    </div>
 </div>
