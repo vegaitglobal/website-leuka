@@ -1,0 +1,88 @@
+.angel-section {
+  font-family: Poppins;
+  background-image: url("images/mosaic.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 70px 36px;
+  color: #2b3363;
+  position: relative;
+  overflow-wrap: break-word;
+
+  .container {
+    .angel-img {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    h3 {
+      margin-top: 22px;
+      font-size: 36px;
+      font-weight: 400;
+      color: #2b3363;
+    }
+
+    p {
+      margin-top: 24px;
+      font-size: 20px;
+      color: #2b3363;
+    }
+
+    .heading-button {
+      margin: 30px 0;
+      display: inline-block;
+      color: #03178f;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 29px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .angel-section {
+    height: 730px;
+
+    .container {
+      width: 90%;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+
+      .angel-img {
+        margin-top: 0;
+        text-align: center;
+      }
+
+      .heading-button {
+        padding: 15px 28px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .angel-section {
+    padding: 52px 36px;
+    height: 730px;
+
+    .container {
+      width: 1000px;
+      margin: auto;
+
+      h3 {
+        font-size: 40px;
+      }
+
+      .description {
+        width: 800px;
+        margin: 0 auto;
+      }
+    }
+  }
+}

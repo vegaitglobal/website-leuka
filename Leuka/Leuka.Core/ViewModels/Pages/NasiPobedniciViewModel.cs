@@ -24,6 +24,13 @@ namespace Leuka.Core.ViewModels.Pages
                 var titleDescriptionAndButtonModels = titleDescriptionAndButton.Select(x => new TitleDescriptionAndButtonViewModel(x));
                 Components.AddRange(titleDescriptionAndButtonModels);
             }
+
+            var highlightedArticle = context.Page.HighlightedArticle;
+            if (highlightedArticle != null)
+            {
+                var highlightedArticleModels = highlightedArticle.Select(x => new HighlightedArticleViewModel(x));
+                Components.AddRange(highlightedArticleModels);
+            }
         }
     }
 }

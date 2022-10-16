@@ -46,6 +46,20 @@ namespace Leuka.Models.Generated
 		// properties
 
 		///<summary>
+		/// App promo
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("appPromo")]
+		public IEnumerable<AppPromotion> AppPromo => this.Value<IEnumerable<AppPromotion>>("appPromo");
+
+		///<summary>
+		/// Contact us
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("contactUs")]
+		public IEnumerable<Contactus> ContactUs => this.Value<IEnumerable<Contactus>>("contactUs");
+
+		///<summary>
 		/// Notification
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
@@ -67,11 +81,46 @@ namespace Leuka.Models.Generated
 		public string PagePostDescription => this.Value<string>("pagePostDescription");
 
 		///<summary>
+		/// Quote
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("quote")]
+		public IEnumerable<Quote> Quote => this.Value<IEnumerable<Quote>>("quote");
+
+		///<summary>
+		/// Separator 1
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("separator1")]
+		public IEnumerable<Separator> Separator1 => this.Value<IEnumerable<Separator>>("separator1");
+
+		///<summary>
+		/// Separator 2
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("separator2")]
+		public IEnumerable<Separator> Separator2 => this.Value<IEnumerable<Separator>>("separator2");
+
+		///<summary>
+		/// Separator 3
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("separator3")]
+		public IEnumerable<Separator> Separator3 => this.Value<IEnumerable<Separator>>("separator3");
+
+		///<summary>
 		/// Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("title")]
 		public string Title => this.Value<string>("title");
+
+		///<summary>
+		/// Top text block
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("topTextBlock")]
+		public IEnumerable<TitleDescriptionAndButton> TopTextBlock => this.Value<IEnumerable<TitleDescriptionAndButton>>("topTextBlock");
 
 		///<summary>
 		/// App Store URL
