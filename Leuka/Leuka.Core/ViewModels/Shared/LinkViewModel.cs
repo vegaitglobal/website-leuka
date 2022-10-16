@@ -13,7 +13,7 @@ namespace Leuka.Core.ViewModels.Shared
 			Target = target;
 		}
 
-		public LinkViewModel(Link link) : this(link.Url, link.Name, link.Target)
+		public LinkViewModel(Link link) : this(link?.Url, link?.Name, link?.Target)
 		{ }
 
 		public LinkViewModel(IPage node, string target = null) : this(node.Url(), node.PageTitle, target)
