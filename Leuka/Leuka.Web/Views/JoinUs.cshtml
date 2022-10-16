@@ -6,9 +6,7 @@
 {
     if (component.GetType() == typeof(ContactusViewModel))
     {
-        var contactusViewModel = component as ContactusViewModel;
-
-        if (contactusViewModel != null && contactusViewModel.Enabled)
+        if (component is ContactusViewModel contactusViewModel && contactusViewModel.Enabled)
         {
             Html.RenderPartial(component.PartialViewPath, component);
         }

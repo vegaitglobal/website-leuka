@@ -53,6 +53,13 @@ namespace Leuka.Models.Generated
 		public string Amount => this.Value<string>("amount");
 
 		///<summary>
+		/// Button Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("buttonText")]
+		public string ButtonText => this.Value<string>("buttonText");
+
+		///<summary>
 		/// Company Name
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]

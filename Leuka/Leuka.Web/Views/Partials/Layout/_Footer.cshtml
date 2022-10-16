@@ -1,14 +1,21 @@
-﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Partials.Layout.FooterViewModel>
+﻿@using Leuka.Core.ViewModels.Shared
+@inherits UmbracoViewPage<Leuka.Core.ViewModels.Partials.Layout.FooterViewModel>
+
+@if (Model.Separator != null)
+{
+    Html.RenderPartial(Model.Separator.PartialViewPath, Model.Separator);
+}
+
 <footer class="footer">
     <div class="footer-wrapper">
         <div class="footer-logo-wrapper">
-            <img src="~/assets/images/Logo.svg" class="footer-logo" alt="Logo" />
+            <img src="~/assets/images/Logo.svg" class="footer-logo" alt="Logo"/>
             <div class="footer-store-wrapper">
                 <a href="@Model.AppStore.Link">
-                    <img class="footer-app-store-logo" src="~/assets/images/App Store.svg" alt="App Store" />
+                    <img class="footer-app-store-logo" src="~/assets/images/App Store.svg" alt="App Store"/>
                 </a>
                 <a href="http://google.rs">
-                    <img src="~/assets/images/Play Store.svg" class="footer-play-store-logo" alt="Play Store" />
+                    <img src="~/assets/images/Play Store.svg" class="footer-play-store-logo" alt="Play Store"/>
                 </a>
             </div>
         </div>
@@ -16,10 +23,10 @@
         {
             <div class="footer-links-wrapper">
                 <div class="footer-title-wrapper">
-                    <img class="footer-polygon" src="~/assets/images/Polygon.svg" />
+                    <img class="footer-polygon" src="~/assets/images/Polygon.svg"/>
                     <h6 class="footer-links-title">LINKOVI</h6>
                 </div>
-                @foreach (var link in Model.NavigationLinks)
+                @foreach (LinkViewModel link in Model.NavigationLinks)
                 {
                     <a href="@link.Url" class="footer-links">@link.Content</a>
                 }
@@ -30,10 +37,10 @@
         {
             <div class="footer-links-wrapper">
                 <div class="footer-title-wrapper">
-                    <img class="footer-polygon" src="../assets/svgs/Polygon.svg" />
+                    <img class="footer-polygon" src="../assets/svgs/Polygon.svg"/>
                     <h6 class="footer-links-title">MEDIJI O NAMA</h6>
                 </div>
-                @foreach (var link in Model.MediaLinks)
+                @foreach (LinkViewModel link in Model.MediaLinks)
                 {
                     <a href="@link.Url" class="footer-links">@link.Content</a>
                 }
@@ -42,7 +49,7 @@
 
         <div class="footer-links-wrapper">
             <div class="footer-title-wrapper">
-                <img class="footer-polygon" src="../assets/svgs/Polygon.svg" />
+                <img class="footer-polygon" src="../assets/svgs/Polygon.svg"/>
                 <h6 class="footer-links-title">KONTAKT</h6>
             </div>
             <a href="mailto:@{@Model.ContactEmail}?subject=your title&body=TThe message" class="footer-links">
@@ -51,18 +58,18 @@
             </a>
 
             <div class="footer-title-wrapper">
-                <img class="footer-polygon" src="../assets/svgs/Polygon.svg" />
+                <img class="footer-polygon" src="../assets/svgs/Polygon.svg"/>
                 <h6 class="footer-links-title">ZAPRATITE NAS</h6>
             </div>
             <div>
                 <a href="@Model.Facebook.Link" class="footer-links">
-                    <img class="footer-social-logo" src="~/assets/images/Facebook.svg" />
+                    <img class="footer-social-logo" src="~/assets/images/Facebook.svg"/>
                 </a>
                 <a href="@Model.Twitter.Link" class="footer-links">
-                    <img class="footer-social-logo" src="~/assets/Images/Twitter.svg" />
+                    <img class="footer-social-logo" src="~/assets/Images/Twitter.svg"/>
                 </a>
                 <a href="@Model.Instagram.Link" class="footer-links">
-                    <img class="footer-social-logo" src="~/assets/Images/Instagram.svg" />
+                    <img class="footer-social-logo" src="~/assets/Images/Instagram.svg"/>
                 </a>
             </div>
             <div class="footer-copyright">
