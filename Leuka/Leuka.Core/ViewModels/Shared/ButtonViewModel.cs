@@ -21,6 +21,12 @@ namespace Leuka.Core.ViewModels.Shared
             Text = link?.Name;
         }
 
+        public ButtonViewModel(string text, string url)
+        {
+            Link = url;
+            Text = text;
+        }
+
         public string ButtonColor { get; set; }
 
         public string ButtonStyle { get; set; }
