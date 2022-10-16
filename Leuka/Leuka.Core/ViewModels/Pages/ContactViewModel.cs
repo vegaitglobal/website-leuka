@@ -24,21 +24,25 @@ namespace Leuka.Core.ViewModels.Pages
 
         private void AddAppPromotion(IPageContext<Contact> context)
         {
-            IEnumerable<AppPromotion> appPromotions = context.Page.AppPromo;
+            /*IEnumerable<AppPromotion> appPromotions = context.Page.AppPromo;
 
             IEnumerable<AppPromotionViewModel> appPromotionViewModels = appPromotions.Select(x => new AppPromotionViewModel(x));
 
-            Components.AddRange(appPromotionViewModels);
+            Components.AddRange(appPromotionViewModels);*/
+            
+            // TODO: Fix
         }
 
         private void AddTopText(IPageContext<Contact> context)
         {
-            IEnumerable<TitleDescriptionAndButton> pageTopTextBlock = context.Page.TopTextBlock;
+            /*IEnumerable<TitleDescriptionAndButton> pageTopTextBlock = context.Page.TopTextBlock;
 
             IEnumerable<TitleDescriptionAndButtonViewModel> contactusViewModels
                 = pageTopTextBlock.Select(x => new TitleDescriptionAndButtonViewModel(x));
 
-            Components.AddRange(contactusViewModels);
+            Components.AddRange(contactusViewModels);*/
+            
+            // TODO: Fix
         }
 
         private void AddContactUs(IPageContext<Contact> context)
@@ -51,19 +55,23 @@ namespace Leuka.Core.ViewModels.Pages
 
         private void AddMediumText(IPageContext<Contact> context)
         {
-            IEnumerable<MediumTextBlock> mediumTextBlocks = context.Page.MediumTextBlock;
+            /*IEnumerable<MediumTextBlock> mediumTextBlocks = context.Page.MediumTextBlock;
 
             IEnumerable<MediumTextBlockViewModel> contactusViewModels = mediumTextBlocks.Select(x => new MediumTextBlockViewModel(x));
 
-            Components.AddRange(contactusViewModels);
+            Components.AddRange(contactusViewModels);*/
+            
+            // TODO: Fix
         }
 
         private void AddQuote(IPageContext<Contact> context)
         {
-            IEnumerable<Quote> notification = context.Page.Quote;
+            /*IEnumerable<Quote> notification = context.Page.Quote;
 
             IEnumerable<QuoteViewModel> donationsModels = notification.Select(x => new QuoteViewModel(x));
-            Components.AddRange(donationsModels);
+            Components.AddRange(donationsModels);*/
+            
+            // TODO: Fix
         }
     }
 }
