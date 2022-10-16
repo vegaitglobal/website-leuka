@@ -420,6 +420,9 @@
     <Compile Include="Generated\Article.generated.cs" />
     <Compile Include="Generated\AuthorDetails.generated.cs" />
     <Compile Include="Generated\BlockGrid.generated.cs" />
+    <Compile Include="Generated\BlogCarousel.generated.cs" />
+    <Compile Include="Generated\AuthorDetails.generated.cs" />
+    <Compile Include="Generated\BlockGrid.generated.cs" />
     <Compile Include="Generated\BlogContentList.generated.cs" />
     <Compile Include="Generated\Blogs.generated.cs" />
     <Compile Include="Generated\Button.generated.cs" />
@@ -454,6 +457,7 @@
     </Compile>
     <Compile Include="Generated\IPage.cs" />
     <Compile Include="Generated\JoinUs.generated.cs" />
+    <Compile Include="Generated\JoinUsPreContactPage.generated.cs" />
     <Compile Include="Generated\MediumTextBlock.generated.cs" />
     <Compile Include="Generated\ModelsBuilder.cs">
       <Generator>UmbracoModelsBuilder</Generator>

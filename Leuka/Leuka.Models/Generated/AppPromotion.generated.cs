@@ -60,13 +60,6 @@ namespace Leuka.Models.Generated
 		public Umbraco.Web.Models.Link AppleAppLink => this.Value<Umbraco.Web.Models.Link>("appleAppLink");
 
 		///<summary>
-		/// BackgroundImage
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("backgroundImage")]
-		public Image BackgroundImage => this.Value<Image>("backgroundImage");
-
-		///<summary>
 		/// Description
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
