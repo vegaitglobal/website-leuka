@@ -2,16 +2,44 @@
 
 
 @foreach (var item in Model.Previews)
-            {
-                <div>
-                    @item.Title @item.Description
-                </div>
-            }
+{
+    <div class="blog-grid-item">
+        <div class="blog-topic-card">
+            <div class="blog-topic-card-image">
+                <img src="@item.Image.Url" alt="@item.Image.AlternateText">
+            </div>
+            <div class="blog-topic-card-content">
+                @if (item.Tags.Any())
+                {
+                    <div class="tags">
+                        <div class="tag">
+                            <div class="tag-dot"></div>
+                            @foreach (var tag in item.Tags)
+                            {
+                                <p>@tag</p>
+                            }
+                        </div>
+                    </div>
 
-@if(Model.TotalNumberOfArticles > Model.NumberOfDispalyedArticles)
-            {
-                <button id="loadMoreButton" onclick="GetMoreArticles()">Učitaj još članaka</button>
-            }
+                }
+                <h2 class="blog-title">
+                    @item.Title
+                </h2>
+                <p class="blog-desc">
+                    @item.Description
+                </p>
+                <a class="read-more" href="@item.Link.Url">Pročitaj više</a>
+            </div>
+        </div>
+    </div>
+}
+
+@if (Model.TotalNumberOfArticles > Model.NumberOfDispalyedArticles)
+{
+    <div class="blog-grid-load-more">
+        <a id="loadMoreButton" onclick="GetMoreArticles()" href="#" class="button button-stroked">Učitaj jos članaka</a>
+    </div>
+}
 
 <script>
     numberOfDispalyedArticles = @Model.NumberOfDispalyedArticles;

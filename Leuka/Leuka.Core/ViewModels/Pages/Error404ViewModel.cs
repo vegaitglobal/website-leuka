@@ -23,6 +23,11 @@ namespace Leuka.Core.ViewModels.Pages
 			{
 				Components.Add(new ThankYouPopupViewModel(thankyouPopup));
 			}
+			var errorDescription = context.Page.ErrorDescription.FirstOrDefault();
+			if (donatePopup != null)
+			{
+				Components.Add(new TitleDescriptionAndButtonViewModel(errorDescription));
+			}
 		}
 		public string HomePageLinkDescription { get; set; }
 		public List<IContentViewModel> Components { get; set; }

@@ -1,18 +1,23 @@
 ﻿@inherits UmbracoViewPage<ArticleViewModel>
 
-@if (Model.HeadlineInfo != null)
-{
-    Html.RenderPartial(Model.HeadlineInfo.PartialViewPath, Model.HeadlineInfo);
-}
+<div class="blog-post page-content-block-padding-bottom">
 
-@if (Model.Breadcrumbs.Chain != null)
-{
-    Html.RenderPartial(Model.Breadcrumbs.PartialViewPath, Model.Breadcrumbs);
-}
+    @if (Model.HeadlineInfo != null)
+    {
+        Html.RenderPartial(Model.HeadlineInfo.PartialViewPath, Model.HeadlineInfo);
+    }
 
-@Model.PageDetails
-@if (Model.AuthorDetails != null)
-{
-    Html.RenderPartial(Model.AuthorDetails.PartialViewPath, Model.AuthorDetails);
-}
+    @if (Model.Breadcrumbs.Chain != null)
+    {
+        Html.RenderPartial(Model.Breadcrumbs.PartialViewPath, Model.Breadcrumbs);
+    }
+
+    <div class="blog-post-content" style="margin: 0 auto; padding: 40px 0">@Model.PageDetails</div>
+
+    @if (Model.AuthorDetails != null)
+    {
+        Html.RenderPartial(Model.AuthorDetails.PartialViewPath, Model.AuthorDetails);
+    }
+
+</div>
 
