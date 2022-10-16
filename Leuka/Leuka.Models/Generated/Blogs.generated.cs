@@ -53,6 +53,13 @@ namespace Leuka.Models.Generated
 		public Umbraco.Core.Models.Blocks.BlockListModel BlogContentList => this.Value<Umbraco.Core.Models.Blocks.BlockListModel>("blogContentList");
 
 		///<summary>
+		/// Grid
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("grid")]
+		public IEnumerable<BlockGrid> Grid => this.Value<IEnumerable<BlockGrid>>("grid");
+
+		///<summary>
 		/// Under page title description
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
