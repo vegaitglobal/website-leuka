@@ -74,6 +74,13 @@ namespace Leuka.Models.Generated
 		public IEnumerable<Gallery> Gallery => this.Value<IEnumerable<Gallery>>("gallery");
 
 		///<summary>
+		/// Headline info
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("headlineInfo")]
+		public IEnumerable<TitleDescriptionAndButton> HeadlineInfo => this.Value<IEnumerable<TitleDescriptionAndButton>>("headlineInfo");
+
+		///<summary>
 		/// MediumTextBlock
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
