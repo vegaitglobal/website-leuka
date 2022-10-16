@@ -11,7 +11,9 @@ namespace Leuka.Core.ViewModels.Pages
     {
         public AboutUsViewModel(IPageContext<Generated.AboutUs> context) : base(context)
         {
-            ContactUsModals = context.Page.ContactUs.Select(x => new ContactusViewModel(x));
+            //ContactUsModals = context.Page.ContactUs.Select(x => new ContactusViewModel(x));
+            
+            // TODO: Fix
         }
 
         public IEnumerable<ContactusViewModel> ContactUsModals { get; }

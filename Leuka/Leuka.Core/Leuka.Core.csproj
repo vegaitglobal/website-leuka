@@ -382,6 +382,7 @@
     <Compile Include="ViewModels\Shared\BlockGridViewModel.cs" />
     <Compile Include="ViewModels\Shared\ContactusViewModel.cs" />
     <Compile Include="ViewModels\Shared\HighlightedArticleViewModel.cs" />
+    <Compile Include="ViewModels\Shared\HowToParticipateViewModel.cs" />
     <Compile Include="ViewModels\Shared\OrganizationInfoBanner.cs" />
     <Compile Include="ViewModels\Shared\PreContactField.cs" />
     <Compile Include="ViewModels\Shared\SeparatorViewModel.cs" />

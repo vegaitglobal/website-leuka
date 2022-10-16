@@ -1,0 +1,65 @@
+﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.HowToParticipateViewModel>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8"/>
+
+<div class="participate-wrapper">
+    <div class="participate-content">
+        <div class="participate-header">
+            <h1 class="form-header">@Model.MainTitle</h1>
+            <h6>@Model.MainDescription.</h6>
+        </div>
+        <div class="participate-info">
+            <div class="participate-bg-image"></div>
+            <div class="participate-columns">
+                <div class="participate-column-left">
+                    <div class="participate-column-left-align">
+                        <label class="participate-column-left-header">
+                            @Model.SubTitle
+                        </label> <br>
+                        <label class="participate-column-left-desc">
+                            @Model.SubDescription
+                        </label>
+                    </div>
+                    <div>
+                        <hr class="horisontal-line" style="float: left; margin-right: 10%;"/>
+                        <hr class="horisontal-line"/>
+                    </div>
+
+                    <div class="participate-column-left-checkboxes">
+                        <div>
+                            <input type="checkbox" checked/> <span>@Model.CheckboxText1</span>
+                        </div>
+                        <div>
+                            <input type="checkbox" checked/> <span>@Model.CheckboxText2</span>
+                        </div>
+                        <div>
+                            <input type="checkbox" checked/> <span>@Model.CheckboxText3</span>
+                        </div>
+                        <div>
+                            <input type="checkbox" checked/> <span>@Model.CheckboxText4</span>
+                        </div>
+                        <div>
+                            <input type="checkbox" checked/> <span>@Model.CheckboxText5</span>
+                        </div>
+                        <div>
+                            <input type="checkbox" checked/> <span>@Model.CheckboxText6</span>
+                        </div>
+                    </div>
+                    <div class="contact-us-button" onclick="submitForm()">
+                        <a href="#">Kontaktirajte nas</a>
+                    </div>
+                </div>
+
+                <div class="participate-column-right">
+                    <div class="participate-images">
+                        <img src="/assets/Images/logo-transparent-1.svg"/>
+                        <img src="/assets/Images/logo-transparent-2.png" alt="Leuka"/>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
