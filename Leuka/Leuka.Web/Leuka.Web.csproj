@@ -436,11 +436,16 @@
     <Content Include="assets\images\arrow-left.svg" />
     <Content Include="assets\images\arrow-right.svg" />
     <Content Include="assets\images\author.jpg" />
+    <Content Include="assets\images\Google-header.svg" />
+    <Content Include="assets\images\highlighted-article.png" />
     <Content Include="assets\Images\logo-transparent-1.svg" />
     <Content Include="assets\Images\logo-transparent-2.png" />
     <Content Include="assets\images\mosaic.png" />
     <Content Include="assets\Images\Participate-bg.jpg" />
     <Content Include="assets\images\Ring.svg" />
+    <Content Include="assets\images\socials-instagram.svg" />
+    <Content Include="assets\images\socials-twitter.svg" />
+    <Content Include="assets\images\Whatsapp-header.svg" />
     <Content Include="assets\js\contact.js" />
     <Content Include="assets\js\blogSignUp.js" />
     <Content Include="assets\js\donate-information.js" />
@@ -458,7 +463,6 @@
     <Content Include="assets\svgs\Polygon.svg" />
     <Content Include="assets\svgs\Twitter.svg" />
     <Content Include="assets\triangle-images\Ring.svg" />
-    <Content Include="assets\Images\Ring.svg" />
     <Content Include="assets\scripts\jquery-3.6.1.min.js" />
     <Content Include="config\grid.editors.config.js" />
     <Content Include="config\Lang\cs-CZ.user.xml" />
