@@ -1,0 +1,205 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/fonts.scss';
+@import '../../assets/styles/common.scss';
+@import '../../assets/styles/breakpoints.scss';
+
+.pre-contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .title {
+    font-size: 40px;
+    font-family: $text-font;
+    font-weight: 600;
+    line-height: 37px;
+    margin: 127px auto 0;
+    color: $color-blue;
+  }
+
+  .subtitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    margin: 9px auto 0;
+    color: $color-blue;
+    font-family: $text-font;
+    opacity: 0.5;
+  }
+
+  .button {
+    margin: 28px auto 0;
+    width: 200px;
+    height: 56px;
+    background-color: $color-azureish-white;
+    color: $color-blue;
+  }
+
+  .card-wrapper {
+    margin-top: 52px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .card {
+      width: 31%;
+      height: 380px;
+      background:
+        linear-gradient(#FFF 0 0) padding-box,
+        linear-gradient(to right, #FBBC04, #E23F72) border-box;
+      padding: 10px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      display: inline-block;
+      margin: 75px 1%;
+
+      .card-title {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 28px;
+        color: $color-blue;
+        font-family: $text-font;
+        height: 70px;
+        margin: 22px 20px 0 20px;
+      }
+
+      .description {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 27px;
+        color: $color-blue;
+        font-family: $text-font;
+        margin: 0 20px 0 20px;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .pre-contact-wrapper {
+    width: 100%;
+
+    .title {
+      font-size: 32px;
+      font-family: $text-font;
+      font-weight: 600;
+      line-height: 34px;
+      margin: 120px auto 0;
+      color: $color-blue;
+    }
+
+    .subtitle {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 21px;
+      margin: 6px auto 0;
+    }
+
+    .button {
+      margin: 18px auto 0;
+      width: 160px;
+      height: 45px;
+      font-size: 12px;
+    }
+
+    .card-wrapper {
+      margin-top: 10px;
+
+      .card {
+        width: 31%;
+        height: 380px;
+        padding: 33px 30px 25px;
+
+        background:
+          linear-gradient(#FFF 0 0) padding-box,
+          linear-gradient(to right, #FBBC04, #E23F72) border-box;
+        padding: 10px;
+        border: 1px solid transparent;
+        border-radius: 8px;
+        display: inline-block;
+        margin: 75px 1%;
+
+        .card-title {
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 22px;
+          height: 60px;
+        }
+
+        .description {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .pre-contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    .title {
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 37px;
+      margin: 127px auto 0;
+    }
+
+    .subtitle {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 27px;
+      opacity: 0.5;
+      margin: 9px 25px 0;
+      text-align: center;
+    }
+
+    .button {
+      margin: 28px auto 0;
+      width: 200px;
+      height: 56px;
+    }
+
+    .card-wrapper {
+      margin-top: 52px;
+      display: flex;
+      flex-direction: column;
+
+      .card {
+        width: auto;
+        margin: 0 25px;
+        max-height: 380px;
+        height: auto;
+
+        background:
+          linear-gradient(#FFF 0 0) padding-box,
+          linear-gradient(to right, #FBBC04, #E23F72) border-box;
+        padding: 10px;
+        border: 1px solid transparent;
+        border-radius: 8px;
+        display: inline-block;
+        margin: 25px 25px 0 25px;
+
+        .card-title {
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 28px;
+          height: 70px;
+          margin: 22px 20px 0 20px;
+        }
+
+        .description {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 27px;
+          margin: 0 20px 0 20px;
+        }
+      }
+    }
+  }
+}
