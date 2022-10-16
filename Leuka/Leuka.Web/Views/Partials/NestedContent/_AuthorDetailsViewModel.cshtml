@@ -1,7 +1,5 @@
 ﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.AuthorDetailsViewModel>
 
-@Model.FullName
-
 <div class="blog-post-footer">
     <div class="blog-post-footer-content">
         <div class="socials">
@@ -29,7 +27,7 @@
 
                 }@if (!string.IsNullOrEmpty(Model.WhatsApp))
                 {
-                    <a href="tel:@{Model.WhatsApp} ">
+                    <a href="tel:@Model.WhatsApp ">
                         <img src="images/WhatsApp-header.svg" alt="WhatsApp-header.svg">
 
                     </a>
@@ -65,7 +63,7 @@
 
             }@if (!string.IsNullOrEmpty(Model.WhatsApp))
             {
-                <a href="tel:@{Model.WhatsApp} ">
+                <a href="tel:@Model.WhatsApp ">
                     <img src="images/WhatsApp-header.svg" alt="WhatsApp-header.svg">
 
                 </a>

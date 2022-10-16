@@ -12,7 +12,7 @@ namespace Leuka.Core.ViewModels.Shared
             Image = new ImageViewModel(authorDetails.Image);
             Facebook = new LinkViewModel(authorDetails.FacebookUrl);
             Twitter = new LinkViewModel(authorDetails.TwitterUrl);
-            WhatsApp = authorDetails.WhatsAppInfo;
+            WhatsApp = authorDetails.WhatsAppInfo ?? string.Empty;
             Google = new LinkViewModel(authorDetails.GoogleUrl);
         }
 
