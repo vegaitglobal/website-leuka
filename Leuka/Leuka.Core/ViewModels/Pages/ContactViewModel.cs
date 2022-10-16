@@ -24,21 +24,21 @@ namespace Leuka.Core.ViewModels.Pages
 
         private void AddAppPromotion(IPageContext<Contact> context)
         {
-            IEnumerable<AppPromotion> appPromotions = context.Page.AppPromo;
+            //IEnumerable<AppPromotion> appPromotions = context.Page.AppPromo;
 
-            IEnumerable<AppPromotionViewModel> appPromotionViewModels = appPromotions.Select(x => new AppPromotionViewModel(x));
+            //IEnumerable<AppPromotionViewModel> appPromotionViewModels = appPromotions.Select(x => new AppPromotionViewModel(x));
 
-            Components.AddRange(appPromotionViewModels);
+            //Components.AddRange(appPromotionViewModels);
         }
 
         private void AddTopText(IPageContext<Contact> context)
         {
-            IEnumerable<TitleDescriptionAndButton> pageTopTextBlock = context.Page.TopTextBlock;
+            //IEnumerable<TitleDescriptionAndButton> pageTopTextBlock = context.Page.TopTextBlock;
 
-            IEnumerable<TitleDescriptionAndButtonViewModel> titleDescriptionAndButtonViewModels
-                = pageTopTextBlock.Select(x => new TitleDescriptionAndButtonViewModel(x));
+            //IEnumerable<TitleDescriptionAndButtonViewModel> titleDescriptionAndButtonViewModels
+            //    = pageTopTextBlock.Select(x => new TitleDescriptionAndButtonViewModel(x));
 
-            Components.AddRange(titleDescriptionAndButtonViewModels);
+            //Components.AddRange(titleDescriptionAndButtonViewModels);
         }
 
         private void AddContactUs(IPageContext<Contact> context)
@@ -51,19 +51,19 @@ namespace Leuka.Core.ViewModels.Pages
 
         private void AddMediumText(IPageContext<Contact> context)
         {
-            IEnumerable<MediumTextBlock> mediumTextBlocks = context.Page.MediumTextBlock;
+            //IEnumerable<MediumTextBlock> mediumTextBlocks = context.Page.MediumTextBlock;
 
-            IEnumerable<MediumTextBlockViewModel> contactusViewModels = mediumTextBlocks.Select(x => new MediumTextBlockViewModel(x));
+            //IEnumerable<MediumTextBlockViewModel> contactusViewModels = mediumTextBlocks.Select(x => new MediumTextBlockViewModel(x));
 
-            Components.AddRange(contactusViewModels);
+            //Components.AddRange(contactusViewModels);
         }
 
         private void AddQuote(IPageContext<Contact> context)
         {
-            IEnumerable<Quote> notification = context.Page.Quote;
+            //IEnumerable<Quote> notification = context.Page.Quote;
 
-            IEnumerable<QuoteViewModel> donationsModels = notification.Select(x => new QuoteViewModel(x));
-            Components.AddRange(donationsModels);
+            //IEnumerable<QuoteViewModel> donationsModels = notification.Select(x => new QuoteViewModel(x));
+            //Components.AddRange(donationsModels);
         }
     }
 }

@@ -46,60 +46,32 @@ namespace Leuka.Models.Generated
 		// properties
 
 		///<summary>
-		/// Button
+		/// Buttons
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("button")]
-		public IEnumerable<Button> Button => this.Value<IEnumerable<Button>>("button");
+		[ImplementPropertyType("buttons")]
+		public IEnumerable<Button> Buttons => this.Value<IEnumerable<Button>>("buttons");
 
 		///<summary>
-		/// Description
+		/// Contact Us
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("description")]
-		public IHtmlString Description => this.Value<IHtmlString>("description");
+		[ImplementPropertyType("contactUs")]
+		public IEnumerable<Contactus> ContactUs => this.Value<IEnumerable<Contactus>>("contactUs");
 
 		///<summary>
-		/// Donate
+		/// Highlighted Articles
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("donate")]
-		public IEnumerable<DonatePopup> Donate => this.Value<IEnumerable<DonatePopup>>("donate");
+		[ImplementPropertyType("highlightedArticles")]
+		public IEnumerable<HighlightedArticle> HighlightedArticles => this.Value<IEnumerable<HighlightedArticle>>("highlightedArticles");
 
 		///<summary>
-		/// Image
+		/// Sponsors
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("image")]
-		public Image Image => this.Value<Image>("image");
-
-		///<summary>
-		/// Paragraph
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("richContent")]
-		public IHtmlString RichContent => this.Value<IHtmlString>("richContent");
-
-		///<summary>
-		/// Text List
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("textList")]
-		public IEnumerable<string> TextList => this.Value<IEnumerable<string>>("textList");
-
-		///<summary>
-		/// Thank you popup
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("thankYouPopup")]
-		public IEnumerable<ThankyouPopup> ThankYouPopup => this.Value<IEnumerable<ThankyouPopup>>("thankYouPopup");
-
-		///<summary>
-		/// Title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("title")]
-		public string Title => this.Value<string>("title");
+		[ImplementPropertyType("sponsors")]
+		public IEnumerable<Sponsors> Sponsors => this.Value<IEnumerable<Sponsors>>("sponsors");
 
 		///<summary>
 		/// App Store URL

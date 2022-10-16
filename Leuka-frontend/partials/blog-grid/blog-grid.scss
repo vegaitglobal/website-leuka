@@ -7,6 +7,7 @@
     text-align: left;
     color: $color-blue;
     box-sizing: border-box;
+    margin: 0 auto;
 
     .blog-grid-header {
         margin: 0 25px;
@@ -23,7 +24,7 @@
             align-items: flex-start;
             border-bottom: 0;
 
-            >* {
+            > * {
                 margin: 5px 0;
             }
         }
@@ -48,7 +49,7 @@
                 align-items: flex-start;
                 width: 100%;
 
-                >* {
+                > * {
                     margin: 5px 0;
                 }
             }

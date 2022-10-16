@@ -455,6 +455,7 @@
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
     <Compile Include="Generated\HowToHelp.generated.cs" />
+    <Compile Include="Generated\HowToHelpParticipate.generated.cs" />
     <Compile Include="Generated\Image.cs" />
     <Compile Include="Generated\Image.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
