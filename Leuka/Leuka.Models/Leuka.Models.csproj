@@ -426,6 +426,7 @@
     <Compile Include="Generated\BlogCarousel.generated.cs" />
     <Compile Include="Generated\BlogContentList.generated.cs" />
     <Compile Include="Generated\Blogs.generated.cs" />
+    <Compile Include="Generated\BlogSignUp.generated.cs" />
     <Compile Include="Generated\Button.generated.cs" />
     <Compile Include="Generated\Contact.generated.cs" />
     <Compile Include="Generated\ContactAndHowToHelpNotification.generated.cs" />

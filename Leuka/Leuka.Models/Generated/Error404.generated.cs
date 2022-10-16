@@ -53,6 +53,13 @@ namespace Leuka.Models.Generated
 		public IEnumerable<DonatePopup> DonatePopup => this.Value<IEnumerable<DonatePopup>>("donatePopup");
 
 		///<summary>
+		/// ErrorDescription
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("errorDescription")]
+		public IEnumerable<TitleDescriptionAndButton> ErrorDescription => this.Value<IEnumerable<TitleDescriptionAndButton>>("errorDescription");
+
+		///<summary>
 		/// Home Page Link Description: Link to homepage
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]

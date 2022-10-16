@@ -22,10 +22,14 @@
 
   &-text {
     margin-top: 25px;
-    
+
     .buttons {
       display: flex;
       margin-top: 30px;
+
+      .button-link {
+        margin: 0 20px;
+      }
     }
 
     h3 {
@@ -50,7 +54,7 @@
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     padding: 82px;
 
     .voluntary-donation-container {
@@ -80,7 +84,6 @@
 
   @media (min-width: 1200px) {
     .voluntary-donation-container {
-
       .voluntary-donation-content,
       .voluntary-donation-image {
         padding: 0 50px;
@@ -91,9 +94,8 @@
   &.bg-lighblue {
     background-color: #dbe7fc;
   }
-  
+
   &.bg-white {
     background-color: #fff;
   }
 }
-
