@@ -1,10 +1,27 @@
 ﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.PreContactFieldViewModel>
 
-<p>@Model.BlockTitle</p>
-<p>@Model.BlockDescription</p>
-<p>@Model.FirstFieldTitle</p>
-<p>@Model.FirstFieldDescription</p>
-<p>@Model.SecondFieldTitle</p>
-<p>@Model.SecondFieldDescription</p>
-<p>@Model.ThirdFieldTitle</p>
-<p>@Model.ThirdFieldDescription</p>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta charset="UTF-8" />
+
+<div class="pre-contact-wrapper">
+    <h3 class="title">@Model.BlockTitle</h3>
+    <p class="subtitle">@Model.BlockDescription</p>
+    <button class="button">Kontaktiraj nas</button>
+
+    <div class="card-wrapper">
+        <div class="card">
+            <h4 class="card-title">@Model.FirstFieldTitle</h4>
+            <p class="description">@Model.FirstFieldDescription</p>
+        </div>
+
+        <div class="card">
+            <h4 class="card-title">@Model.SecondFieldTitle</h4>
+            <p class="description">@Model.SecondFieldDescription</p>
+        </div>
+
+        <div class="card">
+            <h4 class="card-title">@Model.ThirdFieldTitle</h4>
+            <p class="description">@Model.ThirdFieldDescription</p>
+        </div>
+    </div>
+</div>
