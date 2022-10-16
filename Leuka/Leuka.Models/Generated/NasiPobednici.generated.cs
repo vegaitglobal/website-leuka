@@ -45,7 +45,12 @@ namespace Leuka.Models.Generated
 
 		// properties
 
-		
+		///<summary>
+		/// BlogSignUp
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("blogSignUp")]
+		public IEnumerable<BlogSignUp> BlogSignUp => this.Value<IEnumerable<BlogSignUp>>("blogSignUp");
 
 		///<summary>
 		/// HighlightedArticle

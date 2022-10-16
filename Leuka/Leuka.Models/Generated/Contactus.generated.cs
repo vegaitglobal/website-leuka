@@ -53,10 +53,38 @@ namespace Leuka.Models.Generated
 		public string BackgroundColor => this.Value<string>("backgroundColor");
 
 		///<summary>
+		/// Button Label
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("buttonLabel")]
+		public string ButtonLabel => this.Value<string>("buttonLabel");
+
+		///<summary>
+		/// CheckBox Label
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("checkBoxLabel")]
+		public string CheckBoxLabel => this.Value<string>("checkBoxLabel");
+
+		///<summary>
 		/// ContactToggle
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("ContactToggle")]
 		public bool ContactToggle => this.Value<bool>("ContactToggle");
+
+		///<summary>
+		/// Description
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("description")]
+		public string Description => this.Value<string>("description");
+
+		///<summary>
+		/// Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("title")]
+		public string Title => this.Value<string>("title");
 	}
 }
