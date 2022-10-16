@@ -8,7 +8,12 @@ namespace Leuka.Core.ViewModels.Pages
         public string Title { get; set; }
         public ContactViewModel(IPageContext<Contact> context) : base(context)
         {
-            Title = context.Page.Title;
+            AddNotificationBanner(context);
+        }
+
+        private void AddNotificationBanner(IPageContext<Contact> context)
+        {
+            context.
         }
     }
 }

@@ -48,7 +48,7 @@ namespace Leuka.Core.ViewModels.Pages
 
         private void AddGallery(IPageContext<JoinUs> context)
         {
-            IEnumerable<Gallery> gallery = context.Page.Gallery;
+            /*IEnumerable<Gallery> gallery = context.Page.Gallery;
 
             if (gallery == null)
             {
@@ -56,7 +56,7 @@ namespace Leuka.Core.ViewModels.Pages
             }
 
             IEnumerable<GalleryViewModel> galleryModels = gallery.Select(x => new GalleryViewModel(x));
-            Components.AddRange(galleryModels);
+            Components.AddRange(galleryModels);*/
         }
     }
 }

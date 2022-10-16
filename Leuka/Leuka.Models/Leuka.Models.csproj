@@ -426,6 +426,7 @@
     <Compile Include="Generated\Blogs.generated.cs" />
     <Compile Include="Generated\Button.generated.cs" />
     <Compile Include="Generated\Contact.generated.cs" />
+    <Compile Include="Generated\ContactAndHowToHelpNotification.generated.cs" />
     <Compile Include="Generated\Contactus.generated.cs" />
     <Compile Include="Generated\DonatePopup.generated.cs" />
     <Compile Include="Generated\Error404.generated.cs">
@@ -445,6 +446,7 @@
     <Compile Include="Generated\Header.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Generated\HighlightedArticle.generated.cs" />
     <Compile Include="Generated\Home.cs" />
     <Compile Include="Generated\Home.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
@@ -462,6 +464,7 @@
       <Generator>UmbracoModelsBuilder</Generator>
     </Compile>
     <Compile Include="Generated\NasiPobednici.generated.cs" />
+    <Compile Include="Generated\OrganizationInfoBanner.generated.cs" />
     <Compile Include="Generated\Page.generated.cs">
       <DependentUpon>ModelsBuilder.cs</DependentUpon>
     </Compile>

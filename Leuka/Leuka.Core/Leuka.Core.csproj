@@ -356,7 +356,6 @@
     <Compile Include="ViewModels\Pages\AboutUsViewModel.cs" />
     <Compile Include="ViewModels\Pages\HowToHelpViewModel.cs" />
     <Compile Include="ViewModels\Pages\JoinUsViewModel.cs" />
-    <Compile Include="ViewModels\Pages\ContactViewModel.cs" />
     <Compile Include="ViewModels\Pages\BlogsViewModel.cs" />
     <Compile Include="ViewModels\Pages\ArticleViewModel.cs" />
     <Compile Include="ViewModels\Pages\ContactViewModel.cs" />
@@ -378,6 +377,7 @@
     <Compile Include="ViewModels\Shared\ArticlePreviewViewModel.cs" />
     <Compile Include="ViewModels\Shared\BlogCarouselViewModel.cs" />
     <Compile Include="ViewModels\Shared\ButtonViewModel.cs" />
+    <Compile Include="ViewModels\Shared\HowToHelpNotificationBannerViewModel.cs" />
     <Compile Include="ViewModels\Shared\ContactusViewModel.cs" />
     <Compile Include="ViewModels\Shared\PreContactField.cs" />
     <Compile Include="ViewModels\Shared\SeparatorViewModel.cs" />
