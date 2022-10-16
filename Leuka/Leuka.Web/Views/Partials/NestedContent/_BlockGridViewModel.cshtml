@@ -1,33 +1,64 @@
 ﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.BlockGridViewModel>
 
-
-
-@Model.Title
-
-<select id="categories">
-    <option value="">Sve kategorije</option>
-    @foreach (var category in Model.Tags)
-    {
-        <option value="@category">@category</option>
-    }
-
-</select>
-
-@foreach (var item in Model.Previews)
-{
-    <div>
-        @item.Title @item.Description
+<div class="blog-grid">
+    <div class="blog-grid-header">
+        <h1>@Model.Title</h1>
+        <div class="filter">
+            <div class="title">Filtriraj po kategorijama:</div>
+            <div class="select-wrapper">
+                <select id="categories" name="filter-categories" onchange="GetNewArticles()">
+                    <option value="" selected="">Sve kategorije</option>
+                    @foreach (var category in Model.Tags)
+                    {
+                        <option value="@category">@category</option>
+                    }
+                </select>
+            </div>
+        </div>
     </div>
-}
+    <div class="blog-grid-items">
+        @foreach (var item in Model.Previews)
+        {
+            <div class="blog-grid-item">
+                <div class="blog-topic-card">
+                    <div class="blog-topic-card-image">
+                        <img src="@item.Image.Url" alt="@item.Image.AlternateText">
+                    </div>
+                    <div class="blog-topic-card-content">
+                        @if (item.Tags.Any())
+                        {
+                            <div class="tags">
+                                <div class="tag">
+                                    <div class="tag-dot"></div>
+                                    @foreach (var tag in item.Tags)
+                                    {
+                                        <p>@tag</p>
+                                    }
+                                </div>
+                            </div>
 
-<div id="loadMoreArticles"></div>
+                        }
+                        <h2 class="blog-title">
+                            @item.Title
+                        </h2>
+                        <p class="blog-desc">
+                            @item.Description
+                        </p>
+                        <a class="read-more" href="@item.Link.Url">Pročitaj više</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div id="loadMoreArticles"></div>
 
-@if (Model.TotalNumberOfArticles > Model.NumberOfDispalyedArticles)
-{
-    <button id="loadMoreButton" onclick="GetMoreArticles()">Učitaj još članaka</button>
-}
-
-
+    @if (Model.TotalNumberOfArticles > Model.NumberOfDispalyedArticles)
+    {
+        <div class="blog-grid-load-more">
+            <a id="loadMoreButton" onclick="GetMoreArticles()" href="#" class="button button-stroked">Učitaj jos članaka</a>
+        </div>
+    }
+</div>
 
 
 
@@ -44,14 +75,34 @@
 
         $.ajax({
             type: "POST",
-            url: "/Blogs",
+            url: "/Blogovi",
             data: data,
             success: function (result) {
-                $("#loadMoreButton").remove();
-                console.log(result);
-                $("#loadMoreArticles").before(result);
+                $(".blog-grid-load-more").remove();
+                $(".blog-grid-items").append(result);
             }
         });
+        console.log("ASD");
 
     }
+
+    function GetNewArticles() {
+        var data = {
+            numberOfDispalyedArticles: 0,
+            path: this.path,
+            filter: $("#categories option:selected").val()
+        }
+
+        $.ajax({
+            type: "POST",
+            url: "/Blogovi",
+            data: data,
+            success: function (result) {
+                $(".blog-grid-items").empty();
+                $(".blog-grid-load-more").remove();
+                $(".blog-grid-items").append(result);
+            }
+        });
+    }
+
 </script>
