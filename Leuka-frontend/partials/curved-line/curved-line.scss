@@ -8,6 +8,26 @@
     z-index: 50;
     position: relative;
 
+    .curved-line-default {
+        @include phone {
+            display: none;
+        }
+    }
+
+    .curved-line-small {
+        display: none;
+
+        @include phone {
+            display: block;
+        }
+
+        @include phone {
+            path {
+                transform: scale(3.2);
+            }
+        }
+    }
+
     .start-color {
         stop-color: #45A4DC;
     }
@@ -42,10 +62,5 @@
         .stop-color {
             stop-color: #DAEDF8;
         }
-    }
-
-    @include phone {
-        transform: scale(3.2);
-        left: 40%;
     }
 }
