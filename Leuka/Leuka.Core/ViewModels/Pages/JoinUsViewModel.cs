@@ -13,7 +13,7 @@ namespace Leuka.Core.ViewModels.Pages
         {
             Components = new List<IContentViewModel>();
 
-            AddGallery(context);
+            AddOrganizationInfoBanner(context);
             AddBeforeContactUsBlock(context);
             AddContactUs(context);
         }
@@ -46,17 +46,17 @@ namespace Leuka.Core.ViewModels.Pages
             Components.AddRange(contactusViewModels);
         }
 
-        private void AddGallery(IPageContext<JoinUs> context)
+        private void AddOrganizationInfoBanner(IPageContext<JoinUs> context)
         {
-            /*IEnumerable<Gallery> gallery = context.Page.Gallery;
+            IEnumerable<OrganizationInfoBanner> banner = context.Page.OrganizationInfoBanner;
 
-            if (gallery == null)
+            if (banner == null)
             {
                 return;
             }
 
-            IEnumerable<GalleryViewModel> galleryModels = gallery.Select(x => new GalleryViewModel(x));
-            Components.AddRange(galleryModels);*/
+            var galleryModels = banner.Select(x => new OrganizationInfoBannerViewModel(x));
+            Components.AddRange(galleryModels);
         }
     }
 }

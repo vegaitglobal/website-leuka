@@ -14,6 +14,10 @@ namespace Leuka.Core.ViewModels.Shared
             Tag = splitBlock.Tag;
             Image = new ImageViewModel(splitBlock.Image);
             Buttons = splitBlock.Button.Select(x => new ButtonViewModel(x));
+            Alignment = splitBlock.Alignment;
+            ComponentClass = splitBlock.BackgroundColor == Colors.Blue
+                ? "bg-lighblue"
+                : string.Empty;
 
             var separator = splitBlock.Separator.FirstOrDefault();
 
@@ -21,11 +25,6 @@ namespace Leuka.Core.ViewModels.Shared
             {
                 Separator = new SeparatorViewModel(separator);
             }
-
-            Alignment = splitBlock.Alignment;
-            ComponentClass = splitBlock.BackgroundColor == Colors.Blue
-                ? "bg-lighblue"
-                : string.Empty;
         }
 
         public string Title { get; }
