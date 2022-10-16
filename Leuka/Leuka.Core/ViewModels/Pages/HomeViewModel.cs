@@ -75,6 +75,13 @@ namespace Leuka.Core.ViewModels.Pages
                 var appPromotionModels = appPromotion.Select(x => new AppPromotionViewModel(x));
                 Components.AddRange(appPromotionModels);
             }
+
+            var contactUs = context.Page.ContactUs;
+            if (contactUs != null)
+            {
+                var contactUsViewModels = contactUs.Select(x => new ContactusViewModel(x));
+                Components.AddRange(contactUsViewModels);
+            }
         }
 
         public List<IContentViewModel> Components { get; set; }
