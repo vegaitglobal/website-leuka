@@ -58,5 +58,12 @@ namespace Leuka.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("ContactToggle")]
 		public bool ContactToggle => this.Value<bool>("ContactToggle");
+
+		///<summary>
+		/// EnableAttachment: Allow user to attach a file
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("enableAttachment")]
+		public bool EnableAttachment => this.Value<bool>("enableAttachment");
 	}
 }

@@ -35,6 +35,14 @@ namespace Leuka.Models.Generated
 		/// <summary>Logo</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		Image Logo { get; }
+
+		/// <summary>PopupDonate</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		IEnumerable<DonatePopup> PopupDonate { get; }
+
+		/// <summary>ThanksPopup</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		IEnumerable<ThankyouPopup> ThanksPopup { get; }
 	}
 
 	/// <summary>Header</summary>
@@ -94,5 +102,27 @@ namespace Leuka.Models.Generated
 		/// <summary>Static getter for Logo</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		public static Image GetLogo(IHeader that) => that.Value<Image>("logo");
+
+		///<summary>
+		/// PopupDonate
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("popupDonate")]
+		public IEnumerable<DonatePopup> PopupDonate => GetPopupDonate(this);
+
+		/// <summary>Static getter for PopupDonate</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static IEnumerable<DonatePopup> GetPopupDonate(IHeader that) => that.Value<IEnumerable<DonatePopup>>("popupDonate");
+
+		///<summary>
+		/// ThanksPopup
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("thanksPopup")]
+		public IEnumerable<ThankyouPopup> ThanksPopup => GetThanksPopup(this);
+
+		/// <summary>Static getter for ThanksPopup</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		public static IEnumerable<ThankyouPopup> GetThanksPopup(IHeader that) => that.Value<IEnumerable<ThankyouPopup>>("thanksPopup");
 	}
 }

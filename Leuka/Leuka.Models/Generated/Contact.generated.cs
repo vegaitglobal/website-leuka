@@ -60,11 +60,11 @@ namespace Leuka.Models.Generated
 		public IEnumerable<Contactus> ContactUs => this.Value<IEnumerable<Contactus>>("contactUs");
 
 		///<summary>
-		/// Notification
+		/// MediumTextBlock
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("notification")]
-		public IEnumerable<ContactAndHowToHelpNotification> Notification => this.Value<IEnumerable<ContactAndHowToHelpNotification>>("notification");
+		[ImplementPropertyType("mediumTextBlock")]
+		public IEnumerable<MediumTextBlock> MediumTextBlock => this.Value<IEnumerable<MediumTextBlock>>("mediumTextBlock");
 
 		///<summary>
 		/// Page description
@@ -74,39 +74,11 @@ namespace Leuka.Models.Generated
 		public string PageDescription => this.Value<string>("pageDescription");
 
 		///<summary>
-		/// Page post description
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("pagePostDescription")]
-		public string PagePostDescription => this.Value<string>("pagePostDescription");
-
-		///<summary>
 		/// Quote
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("quote")]
 		public IEnumerable<Quote> Quote => this.Value<IEnumerable<Quote>>("quote");
-
-		///<summary>
-		/// Separator 1
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("separator1")]
-		public IEnumerable<Separator> Separator1 => this.Value<IEnumerable<Separator>>("separator1");
-
-		///<summary>
-		/// Separator 2
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("separator2")]
-		public IEnumerable<Separator> Separator2 => this.Value<IEnumerable<Separator>>("separator2");
-
-		///<summary>
-		/// Separator 3
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("separator3")]
-		public IEnumerable<Separator> Separator3 => this.Value<IEnumerable<Separator>>("separator3");
 
 		///<summary>
 		/// Title
@@ -212,6 +184,20 @@ namespace Leuka.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("logo")]
 		public Image Logo => Header.GetLogo(this);
+
+		///<summary>
+		/// PopupDonate
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("popupDonate")]
+		public IEnumerable<DonatePopup> PopupDonate => Header.GetPopupDonate(this);
+
+		///<summary>
+		/// ThanksPopup
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("thanksPopup")]
+		public IEnumerable<ThankyouPopup> ThanksPopup => Header.GetThanksPopup(this);
 
 		///<summary>
 		/// Alternate Languages: Language codes (en-US, en-GB etc).

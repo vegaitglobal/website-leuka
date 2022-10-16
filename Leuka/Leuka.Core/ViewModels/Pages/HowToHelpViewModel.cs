@@ -20,13 +20,6 @@ namespace Leuka.Core.ViewModels.Pages
                 Components.AddRange(headlineInfoModels);
             }
 
-            var splitBlocks = context.Page.Separator1;
-            if (splitBlocks != null)
-            {
-                var splitBlocksModels = splitBlocks.Select(x => new SeparatorViewModel(x));
-                Components.AddRange(splitBlocksModels);
-            }
-
             var mediumTextBlocks = context.Page.MiddleText;
             if (mediumTextBlocks != null)
             {
