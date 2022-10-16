@@ -1,0 +1,57 @@
+﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.BlockGridViewModel>
+
+
+
+@Model.Title
+
+<select id="categories">
+    <option value="">Sve kategorije</option>
+    @foreach (var category in Model.Tags)
+    {
+        <option value="@category">@category</option>
+    }
+
+</select>
+
+@foreach (var item in Model.Previews)
+{
+    <div>
+        @item.Title @item.Description
+    </div>
+}
+
+<div id="loadMoreArticles"></div>
+
+@if (Model.TotalNumberOfArticles > Model.NumberOfDispalyedArticles)
+{
+    <button id="loadMoreButton" onclick="GetMoreArticles()">Učitaj još članaka</button>
+}
+
+
+
+
+
+<script>
+    var path = @Model.Path;
+    var numberOfDispalyedArticles = @Model.NumberOfDispalyedArticles;
+
+    function GetMoreArticles() {
+        var data = {
+            numberOfDispalyedArticles : this.numberOfDispalyedArticles,
+            path : this.path,
+            filter: $("#categories option:selected").val()
+        }
+
+        $.ajax({
+            type: "POST",
+            url: "/Blogs",
+            data: data,
+            success: function (result) {
+                $("#loadMoreButton").remove();
+                console.log(result);
+                $("#loadMoreArticles").before(result);
+            }
+        });
+
+    }
+</script>

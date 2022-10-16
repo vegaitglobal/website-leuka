@@ -46,6 +46,13 @@ namespace Leuka.Models.Generated
 		// properties
 
 		///<summary>
+		/// HighlightedArticle
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("highlightedArticle")]
+		public IEnumerable<HighlightedArticle> HighlightedArticle => this.Value<IEnumerable<HighlightedArticle>>("highlightedArticle");
+
+		///<summary>
 		/// Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]

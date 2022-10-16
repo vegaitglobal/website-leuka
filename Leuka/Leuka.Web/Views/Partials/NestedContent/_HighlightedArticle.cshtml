@@ -1,0 +1,19 @@
+﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.HighlightedArticleViewModel>
+@using ContentModels = Leuka.Models.Generated;
+
+@if (Model.Separator != null)
+{
+    Html.RenderPartial(Model.Separator.PartialViewPath, Model.Separator);
+}
+
+<h2>@Model.HighlightTitle</h2>
+<h2>@Model.Category</h2>
+<h2>@Model.Title</h2>
+<h2>@Model.Description</h2>
+
+<img src="@Model.Image.Url" />
+
+@if (Model.Button != null)
+{
+    Html.RenderPartial(Model.Button.PartialViewPath, Model.Button);
+}
