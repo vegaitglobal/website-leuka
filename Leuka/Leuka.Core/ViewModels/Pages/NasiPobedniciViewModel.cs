@@ -31,6 +31,13 @@ namespace Leuka.Core.ViewModels.Pages
                 var highlightedArticleModels = highlightedArticle.Select(x => new HighlightedArticleViewModel(x));
                 Components.AddRange(highlightedArticleModels);
             }
+
+            var blogSignUp = context.Page.BlogSignUp;
+            if (blogSignUp != null)
+            {
+                var blogSignUpModels = blogSignUp.Select(x => new BlogSignUpViewModel(x));
+                Components.AddRange(blogSignUpModels);
+            }
         }
     }
 }
