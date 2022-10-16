@@ -35,10 +35,10 @@ namespace Leuka.Core.ViewModels.Pages
         {
             IEnumerable<TitleDescriptionAndButton> pageTopTextBlock = context.Page.TopTextBlock;
 
-            IEnumerable<TitleDescriptionAndButtonViewModel> titleDescriptionAndButtonViewModels
+            IEnumerable<TitleDescriptionAndButtonViewModel> contactusViewModels
                 = pageTopTextBlock.Select(x => new TitleDescriptionAndButtonViewModel(x));
 
-            Components.AddRange(titleDescriptionAndButtonViewModels);
+            Components.AddRange(contactusViewModels);
         }
 
         private void AddContactUs(IPageContext<Contact> context)
