@@ -46,11 +46,11 @@ namespace Leuka.Models.Generated
 		// properties
 
 		///<summary>
-		/// ContactUs
+		/// BlogSignUp
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
-		[ImplementPropertyType("contactUs")]
-		public IEnumerable<Contactus> ContactUs => this.Value<IEnumerable<Contactus>>("contactUs");
+		[ImplementPropertyType("blogSignUp")]
+		public IEnumerable<BlogSignUp> BlogSignUp => this.Value<IEnumerable<BlogSignUp>>("blogSignUp");
 
 		///<summary>
 		/// HighlightedArticle
@@ -135,6 +135,13 @@ namespace Leuka.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("playStoreURL")]
 		public Umbraco.Web.Models.Link PlayStoreUrl => Footer.GetPlayStoreUrl(this);
+
+		///<summary>
+		/// Separator
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("separator")]
+		public IEnumerable<Separator> Separator => Footer.GetSeparator(this);
 
 		///<summary>
 		/// Twitter URL

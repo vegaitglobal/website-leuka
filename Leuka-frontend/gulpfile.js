@@ -4,6 +4,7 @@ const concat = require("gulp-concat");
 const sass = require("gulp-sass")(require("sass"));
 const del = require("del");
 const image = require("gulp-image");
+
 const browserSync = require("browser-sync").create();
 const cleanCSS = require("gulp-clean-css");
 

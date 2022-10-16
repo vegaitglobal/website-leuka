@@ -1,53 +1,66 @@
-﻿using Leuka.Core.Contexts;
-using Leuka.Core.ViewModels.Shared;
-using Leuka.Models.Generated;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace Leuka.Core.ViewModels.Pages
 {
     public class HowToHelpViewModel : PageViewModel
     {
-        public string Title { get; set; }
-        public HowToHelpViewModel(IPageContext<HowToHelp> context) : base(context)
+        public HowToHelpViewModel(IPageContext<HowToHelp> context)
+            : base(context)
         {
             Components = new List<IContentViewModel>();
 
-            var headlineInfo = context.Page.TopTextBlock;
+            IEnumerable<TitleDescriptionAndButton> headlineInfo = context.Page.TopTextBlock;
+
             if (headlineInfo != null)
             {
-                var headlineInfoModels = headlineInfo.Select(x => new TitleDescriptionAndButtonViewModel(x));
+                IEnumerable<TitleDescriptionAndButtonViewModel> headlineInfoModels
+                    = headlineInfo.Select(x => new TitleDescriptionAndButtonViewModel(x));
                 Components.AddRange(headlineInfoModels);
             }
 
-            var mediumTextBlocks = context.Page.MiddleText;
+            IEnumerable<Separator> splitBlocks = context.Page.Separator;
+
+            if (splitBlocks != null)
+            {
+                IEnumerable<SeparatorViewModel> splitBlocksModels = splitBlocks.Select(x => new SeparatorViewModel(x));
+                Components.AddRange(splitBlocksModels);
+            }
+
+            IEnumerable<MediumTextBlock> mediumTextBlocks = context.Page.MiddleText;
+
             if (mediumTextBlocks != null)
             {
-                var mediumTextBlocksModels = mediumTextBlocks.Select(x => new MediumTextBlockViewModel(x));
+                IEnumerable<MediumTextBlockViewModel> mediumTextBlocksModels = mediumTextBlocks.Select(x => new MediumTextBlockViewModel(x));
                 Components.AddRange(mediumTextBlocksModels);
             }
 
-            var quotes = context.Page.Quote;
+            IEnumerable<Quote> quotes = context.Page.Quote;
+
             if (quotes != null)
             {
-                var quotesModels = quotes.Select(x => new QuoteViewModel(x));
+                IEnumerable<QuoteViewModel> quotesModels = quotes.Select(x => new QuoteViewModel(x));
                 Components.AddRange(quotesModels);
             }
 
-            var appPromotion = context.Page.AppPromo;
+            IEnumerable<AppPromotion> appPromotion = context.Page.AppPromo;
+
             if (appPromotion != null)
             {
-                var appPromotionModels = appPromotion.Select(x => new AppPromotionViewModel(x));
+                IEnumerable<AppPromotionViewModel> appPromotionModels = appPromotion.Select(x => new AppPromotionViewModel(x));
                 Components.AddRange(appPromotionModels);
             }
 
-            var contactUs = context.Page.ContactUs;
+            IEnumerable<Contactus> contactUs = context.Page.ContactUs;
+
             if (contactUs != null)
             {
-                var contactUsViewModels = contactUs.Select(x => new ContactusViewModel(x));
+                IEnumerable<ContactusViewModel> contactUsViewModels = contactUs.Select(x => new ContactusViewModel(x));
                 Components.AddRange(contactUsViewModels);
             }
         }
+
+        public string Title { get; set; }
         public List<IContentViewModel> Components { get; set; }
     }
 }

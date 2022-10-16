@@ -6,14 +6,28 @@
     Html.RenderPartial(Model.Separator.PartialViewPath, Model.Separator);
 }
 
-<h2>@Model.HighlightTitle</h2>
-<h2>@Model.Category</h2>
-<h2>@Model.Title</h2>
-<h2>@Model.Description</h2>
-
-<img src="@Model.Image.Url" />
-
-@if (Model.Button != null)
-{
-    Html.RenderPartial(Model.Button.PartialViewPath, Model.Button);
-}
+<div class="highlighted-article bg-lighblue-1">
+    <div class="highlighted-article-container">
+        <div class="highlighted-article-image">
+            <div>
+                <h3>@Model.HighlightTitle</h3>
+                <img src="@Model.Image.Url" alt="Voluntary Donation" />
+            </div>
+        </div>
+        <div class="highlighted-article-content">
+            <div class="tag">
+                <p>&#x2022; @Model.Category</p>
+            </div>
+            <div class="highlighted-article-text">
+                <h3>@Model.Title</h3>
+                <p>
+                    @Model.Description
+                </p>
+                @if (Model.Button != null)
+                {
+                    Html.RenderPartial(Model.Button.PartialViewPath, Model.Button);
+                }
+            </div>
+        </div>
+    </div>
+</div>

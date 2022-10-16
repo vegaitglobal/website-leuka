@@ -151,6 +151,13 @@ namespace Leuka.Models.Generated
 		public Umbraco.Web.Models.Link PlayStoreUrl => Footer.GetPlayStoreUrl(this);
 
 		///<summary>
+		/// Separator
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("separator")]
+		public IEnumerable<Separator> Separator => Footer.GetSeparator(this);
+
+		///<summary>
 		/// Twitter URL
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]

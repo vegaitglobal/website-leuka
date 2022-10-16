@@ -1,4 +1,9 @@
 ﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.QuoteViewModel>
+
+@if (Model.Separator != null)
+{
+    Html.RenderPartial(Model.Separator.PartialViewPath, Model.Separator);
+}
 <div class="quotes-wrapper">
     <div class="columns">
         <div class="column-left">
