@@ -1,10 +1,10 @@
-﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.SplitBlockViewModel>
+﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.OrganizationInfoBannerViewModel>
 
 @if (Model.Separator != null)
 {
     Html.RenderPartial(Model.Separator.PartialViewPath, Model.Separator);
 }
-<div class="voluntary-donation @Model.ComponentClass">
+@*<div class="voluntary-donation page-content-block @Model.ComponentClass">
     <div class="voluntary-donation-container">
         @if (Model.Alignment == "Left")
         {
@@ -17,4 +17,4 @@
             Html.RenderPartial("~/Views/Partials/NestedContent/_SplitBlockImageContent.cshtml", Model);
         }
     </div>
-</div>
+</div>*@

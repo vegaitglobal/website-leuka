@@ -46,6 +46,27 @@ namespace Leuka.Models.Generated
 		// properties
 
 		///<summary>
+		/// Notification
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("notification")]
+		public IEnumerable<ContactAndHowToHelpNotification> Notification => this.Value<IEnumerable<ContactAndHowToHelpNotification>>("notification");
+
+		///<summary>
+		/// Page description
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("pageDescription")]
+		public string PageDescription => this.Value<string>("pageDescription");
+
+		///<summary>
+		/// Page post description
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("pagePostDescription")]
+		public string PagePostDescription => this.Value<string>("pagePostDescription");
+
+		///<summary>
 		/// Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
