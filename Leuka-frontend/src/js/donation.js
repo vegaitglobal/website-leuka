@@ -1,7 +1,7 @@
 window.onload = () => {
   
   const onDonate = () => {
-    const endpoint = `http://leuka.local/donate`;
+    const endpoint = `http://leuka.local/kontakt`;
 
     const donor = document.getElementById("donor").value;
     const amount = document.getElementById("amount").value;
