@@ -1,7 +1,7 @@
 @import "../../assets/styles/index.scss";
 
 .blog-carousel-section {
-  padding: 130px 30px;
+  padding: 100px 30px;
   background: linear-gradient(
       180deg,
       rgba(126, 214, 210, 0.2) 0%,
@@ -9,7 +9,6 @@
       rgba(218, 237, 248, 0.2) 100%
     ),
     #ffffff;
-  min-height: 650px;
 
   .blog-carousel-heading {
     display: flex;

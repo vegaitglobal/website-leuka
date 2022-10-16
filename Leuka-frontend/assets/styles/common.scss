@@ -77,7 +77,18 @@
     align-items: center;
 }
 
-.page-content-block {
-    padding-top: 60px;
-    padding-bottom: 60px;
+.page-content-block-padding-top {
+    padding-top: 90px;
+
+    @media (max-width: 1440px) {
+        padding-top: 60px;
+    }
+}
+
+.page-content-block-padding-bottom {
+    padding-bottom: 90px;
+
+    @media (max-width: 1440px) {
+        padding-bottom: 60px;
+    }
 }
