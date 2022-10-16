@@ -46,11 +46,46 @@ namespace Leuka.Models.Generated
 		// properties
 
 		///<summary>
+		/// AppPromotion
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("appPromotion")]
+		public IEnumerable<AppPromotion> AppPromotion => this.Value<IEnumerable<AppPromotion>>("appPromotion");
+
+		///<summary>
+		/// Blog Carousel
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("blogCarousel")]
+		public IEnumerable<BlogCarousel> BlogCarousel => this.Value<IEnumerable<BlogCarousel>>("blogCarousel");
+
+		///<summary>
+		/// Contact us
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("contactUs")]
+		public IEnumerable<Contactus> ContactUs => this.Value<IEnumerable<Contactus>>("contactUs");
+
+		///<summary>
+		/// Donations: Information component about donations
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("donations")]
+		public IEnumerable<SplitBlock> Donations => this.Value<IEnumerable<SplitBlock>>("donations");
+
+		///<summary>
 		/// Gallery
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("gallery")]
 		public IEnumerable<Gallery> Gallery => this.Value<IEnumerable<Gallery>>("gallery");
+
+		///<summary>
+		/// Headline info
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("headlineInfo")]
+		public IEnumerable<TitleDescriptionAndButton> HeadlineInfo => this.Value<IEnumerable<TitleDescriptionAndButton>>("headlineInfo");
 
 		///<summary>
 		/// MediumTextBlock
