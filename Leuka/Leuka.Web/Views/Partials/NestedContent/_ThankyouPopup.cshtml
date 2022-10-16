@@ -1,11 +1,57 @@
 ﻿@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.ThankYouPopupViewModel>
-<div class="thankyou-popup">
-    <h2>@Model.Title</h2>
-    <h4>@Model.Subtitle</h4>
-    <h3>@Model.Organization</h3>
-    <h3>@Model.Account</h3>
-    <h3>@Model.ReferenceNumber</h3>
-    <h3>@Model.RegistrationNumber</h3>
-    <button>@Model.ButtonDescription</button>
-    <h5>@Model.Footnote</h5>
+
+<div id="donate-information-modal" class="modal">
+    <div class="modal-content">
+        <div class="donate-information-background">
+            <div class="donate-information-wrapper">
+                <img id="donate-information-close" class="close" src="~/assets/Images/Close.svg" />
+                <img class="donate-information-halo-icon" src="~/assets/Images/Halo.svg" alt="Halo" />
+                <h6 class="donate-information-title">@Model.Title</h6>
+                <p class="donate-information-subtitle">@Model.Subtitle</p>
+
+                <div class="donate-informations-wrapper">
+                    <div class="donate-information-row">
+                        <div class="donate-information-cell">
+                            <label class="donate-information-label">ORGANIZACIJA</label>
+                        </div>
+                        <div class="donate-information-cell">
+                            <p class="donate-information-value">@Model.Organization</p>
+                        </div>
+                    </div>
+
+                    <div class="donate-information-row">
+                        <div class="donate-information-cell">
+                            <label class="donate-information-label">ZIRO-RAČUN</label>
+                        </div>
+                        <div class="donate-information-cell">
+                            <p class="donate-information-value">@Model.Account</p>
+                        </div>
+                    </div>
+
+                    <div class="donate-information-row">
+                        <div class="donate-information-cell">
+                            <label class="donate-information-label">POZIV NA BROJ</label>
+                        </div>
+                        <div class="donate-information-cell">
+
+                            <p class="donate-information-value">@Model.ReferenceNumber</p>
+                        </div>
+                    </div>
+
+                    <div class="donate-information-row">
+                        <div class="donate-information-cell">
+                            <label class="donate-information-label">MATICNI BROJ</label>
+                        </div>
+                        <div class="donate-information-cell">
+                            <p class="donate-information-value">@Model.RegistrationNumber</p>
+                        </div>
+                    </div>
+                    <button id="donate-information-close-button" class="button donate-information-button"
+                            type="button">@Model.ButtonDescription</button>
+
+                    <p class="donate-information-bottom-text">@Model.Footnote</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

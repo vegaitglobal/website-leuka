@@ -19,6 +19,11 @@ namespace Leuka.Core.ViewModels.Shared
             {
                 Button = new ButtonViewModel(highlightedArticle.LinkButton.First());
             }
+
+            if (highlightedArticle.Separator.Any())
+            {
+                Separator = new SeparatorViewModel(highlightedArticle.Separator.First());
+            }
         }
 
 
@@ -28,6 +33,7 @@ namespace Leuka.Core.ViewModels.Shared
         public string Description { get; }
         public ImageViewModel Image { get; }
         public ButtonViewModel Button { get; }
+        public SeparatorViewModel Separator { get; }
 
         public string PartialViewPath => "~/Views/Partials/NestedContent/_HighlightedArticle.cshtml";
     }
