@@ -10,9 +10,12 @@
                 @Model.Description
             </p>
         </div>
-        @if (Model.Button != null)
-        {
-            Html.RenderPartial(Model.Button.PartialViewPath, Model.Button);
-        }
+
+        <div style="display: flex; justify-content: center; margin: 20px 0">
+            @if (Model.Button != null)
+            {
+                Html.RenderPartial(Model.Button.PartialViewPath, Model.Button);
+            }
+        </div>
     </div>
 </div>

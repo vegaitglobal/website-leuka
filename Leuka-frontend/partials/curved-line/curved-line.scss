@@ -2,6 +2,11 @@
 
 .curved-line {
     width: 100%;
+    height: 0;
+    display: flex;
+    align-items: center;
+    z-index: 50;
+    position: relative;
 
     .start-color {
         stop-color: #45A4DC;
