@@ -1,1 +1,6 @@
 $text-font: Poppins;
+
+@font-face {
+    font-family: $text-font;
+    src: URL('../fonts/Poppins-Regular.ttf') format('truetype');
+}

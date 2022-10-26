@@ -428,6 +428,7 @@
       <Link>assets\styles\index.css</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="App_Code\UIHelper.cshtml" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.controller.js" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.html" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.resource.js" />
@@ -435,12 +436,18 @@
     <Content Include="assets\images\arrow-left.svg" />
     <Content Include="assets\images\arrow-right.svg" />
     <Content Include="assets\images\author.jpg" />
+    <Content Include="assets\images\Google-header.svg" />
+    <Content Include="assets\images\highlighted-article.png" />
     <Content Include="assets\Images\logo-transparent-1.svg" />
     <Content Include="assets\Images\logo-transparent-2.png" />
     <Content Include="assets\images\mosaic.png" />
     <Content Include="assets\Images\Participate-bg.jpg" />
     <Content Include="assets\images\Ring.svg" />
+    <Content Include="assets\images\socials-instagram.svg" />
+    <Content Include="assets\images\socials-twitter.svg" />
+    <Content Include="assets\images\Whatsapp-header.svg" />
     <Content Include="assets\js\contact.js" />
+    <Content Include="assets\js\blogSignUp.js" />
     <Content Include="assets\js\donate-information.js" />
     <Content Include="assets\js\donate.js" />
     <Content Include="assets\js\donation.js" />
@@ -456,7 +463,6 @@
     <Content Include="assets\svgs\Polygon.svg" />
     <Content Include="assets\svgs\Twitter.svg" />
     <Content Include="assets\triangle-images\Ring.svg" />
-    <Content Include="assets\Images\Ring.svg" />
     <Content Include="assets\scripts\jquery-3.6.1.min.js" />
     <Content Include="config\grid.editors.config.js" />
     <Content Include="config\Lang\cs-CZ.user.xml" />
@@ -505,7 +511,6 @@
     <Content Include="Views\SearchResults.cshtml" />
     <Content Include="Views\Partials\SearchListing\_Search.cshtml" />
     <Content Include="robots.txt" />
-    <Content Include="App_Code\UIHelper.cshtml" />
     <Content Include="Views\Partials\Layout\_OpenGraph.cshtml" />
     <Content Include="config\imageprocessor\security.config" />
     <Content Include="config\imageprocessor\processing.config" />
@@ -568,6 +573,7 @@
     <Content Include="Views\Partials\NestedContent\AppPromotion.cshtml" />
     <Content Include="Views\Partials\NestedContent\_OrganizationInfoBanner.cshtml" />
     <Content Include="Views\Partials\NestedContent\_HighlightedArticle.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_BlogSignUp.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -600,7 +606,6 @@
       <Name>Leuka.Search</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

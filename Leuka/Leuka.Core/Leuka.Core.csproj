@@ -378,6 +378,7 @@
     <Compile Include="ViewModels\Shared\ArticlePreviewViewModel.cs" />
     <Compile Include="ViewModels\Shared\BlogCarouselViewModel.cs" />
     <Compile Include="ViewModels\Shared\ButtonViewModel.cs" />
+    <Compile Include="ViewModels\Shared\BlogSignUpViewModel.cs" />
     <Compile Include="ViewModels\Shared\HowToHelpNotificationBannerViewModel.cs" />
     <Compile Include="ViewModels\Shared\BlockGridViewModel.cs" />
     <Compile Include="ViewModels\Shared\ContactusViewModel.cs" />
