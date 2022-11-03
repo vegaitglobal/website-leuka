@@ -10,12 +10,12 @@
 	<meta name="description" content="">
 	<meta name="robots" content="noindex, nofollow">
 	<meta name="googlebot" content="noindex, nofollow">
-	<title>TODO: Add title</title>
+	<title>Leuka</title>
 	<link href="favicon.ico" rel="icon" />
 </head>
 
 <body>
-	TODO: Add error message
+	Nešto nije u redu.
 </body>
 
 </html>

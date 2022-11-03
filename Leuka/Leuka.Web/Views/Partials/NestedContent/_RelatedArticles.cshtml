@@ -1,0 +1,43 @@
+﻿@using Leuka.Core.ViewModels.Shared
+@inherits UmbracoViewPage<Leuka.Core.ViewModels.Shared.RelatedArticlesViewModel>
+
+
+<div class="blog-carousel-section">
+    <div class="blog-carousel-heading">
+        <div class="log-carousel-heading-left">
+            <h3>Pročitajte još</h3>
+        </div>
+    </div>
+
+    <div class="blog-grid">
+        <div class="blog-grid-items">
+            @foreach (ArticlePreviewViewModel blogPreview in Model.Articles)
+            {
+                <div class="blog-grid-item">
+                    <div class="blog-topic-card">
+                        <div class="blog-topic-card-image">
+                            <h2 class="blog-topic-card-image-title">Izdvajamo:</h2>
+                            <img src="@blogPreview.Image.Url"
+                                 alt="@blogPreview.Image.AlternateText" />
+                        </div>
+                        <div class="blog-topic-card-content">
+                            <div class="tags">
+                                <div class="tag">
+                                    <div class="tag-dot"></div>
+                                    <p>@blogPreview.Tags</p>
+                                </div>
+                            </div>
+                            <h2 class="blog-title">
+                                @blogPreview.Title
+                            </h2>
+                            <p class="blog-desc">
+                                @blogPreview.Description
+                            </p>
+                            <a class="read-more" href="@blogPreview.Link.Url">Pročitaj više</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

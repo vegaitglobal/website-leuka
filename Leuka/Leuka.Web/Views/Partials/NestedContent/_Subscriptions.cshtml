@@ -6,7 +6,10 @@
 <div class="pre-contact-wrapper">
     <h3 class="title">@Model.BlockTitle</h3>
     <p class="subtitle">@Model.BlockDescription</p>
-    <button class="button">Kontaktiraj nas</button>
+    @if (Model.Button != null)
+    {
+        Html.RenderPartial(Model.Button.PartialViewPath, Model.Button);
+    }
 
     <div class="card-wrapper">
         <div class="card">

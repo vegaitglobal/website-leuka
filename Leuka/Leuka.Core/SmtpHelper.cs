@@ -10,16 +10,24 @@ namespace Leuka.Core
 {
     public static class SmtpHelper
     {
-        public static void SendEmail(EmailSettings emailSettings, string firstName, string lastName, string email, string messageText, bool involveInActions, string formDescription, IEnumerable<HttpPostedFileBase> attachments)
+        public static void SendEmail(EmailSettings emailSettings, string firstName, string lastName, string email, string messageText, bool involveInActions, IEnumerable<HttpPostedFileBase> attachments)
         {
-            var subject = $"Leuka - {formDescription}";
+            var subject = $"Leuka - Kontakt";
             var actions = involveInActions ? "Želim da se priključim akcijama." : "";
-            var body = $"Ime: {firstName}\n Prezime: {lastName}\n Email: {email} \n Poruka: {messageText} \n {actions}";
+            var body = $"Ime: {firstName}\nPrezime: {lastName}\nEmail: {email} \nPoruka: {messageText} \n{actions}";
             
             PerformSending(emailSettings, subject, body, attachments);
         }
 
-        public static void PerformSending(EmailSettings emailSettings, string subject, string body, IEnumerable<HttpPostedFileBase> attachments)
+        public static void SendDonationEmail(EmailSettings emailSettings, string name, string amount, string companyName, string email)
+        {
+            var subject = $"Leuka - Donacija";
+            var body = $"Ime i Prezime: {name}\nIznos: {amount}\nKompanija: {companyName} \nEmail: {email}";
+
+            PerformSending(emailSettings, subject, body, null);
+        }
+
+        private static void PerformSending(EmailSettings emailSettings, string subject, string body, IEnumerable<HttpPostedFileBase> attachments)
         {
             var fromAddress = new MailAddress(emailSettings.SenderEmailAddress);
             var toAddress = new MailAddress(emailSettings.ReceiverEmailAddress);

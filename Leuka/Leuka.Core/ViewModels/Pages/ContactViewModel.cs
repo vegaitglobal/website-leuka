@@ -16,6 +16,7 @@ namespace Leuka.Core.ViewModels.Pages
             Components = new List<IContentViewModel>();
 
             AddTopText(context);
+            AddSeparator(context);
             AddMediumText(context);
             AddQuote(context);
             AddContactUs(context);
@@ -24,25 +25,36 @@ namespace Leuka.Core.ViewModels.Pages
 
         private void AddAppPromotion(IPageContext<Contact> context)
         {
-            /*IEnumerable<AppPromotion> appPromotions = context.Page.AppPromo;
+            IEnumerable<AppPromotion> appPromotion = context.Page.AppPromotion;
 
-            IEnumerable<AppPromotionViewModel> appPromotionViewModels = appPromotions.Select(x => new AppPromotionViewModel(x));
+            if (appPromotion != null)
+            {
+                IEnumerable<AppPromotionViewModel> appPromotionModels = appPromotion.Select(x => new AppPromotionViewModel(x));
+                Components.AddRange(appPromotionModels);
+            }
+        }
 
-            Components.AddRange(appPromotionViewModels);*/
-            
-            // TODO: Fix
+        private void AddSeparator(IPageContext<Contact> context)
+        {
+            IEnumerable<Separator> splitBlocks = context.Page.Separator;
+
+            if (splitBlocks != null)
+            {
+                IEnumerable<SeparatorViewModel> splitBlocksModels = splitBlocks.Select(x => new SeparatorViewModel(x));
+                Components.AddRange(splitBlocksModels);
+            }
         }
 
         private void AddTopText(IPageContext<Contact> context)
         {
-            /*IEnumerable<TitleDescriptionAndButton> pageTopTextBlock = context.Page.TopTextBlock;
+            IEnumerable<TitleDescriptionAndButton> headlineInfo = context.Page.TopTextBlock;
 
-            IEnumerable<TitleDescriptionAndButtonViewModel> contactusViewModels
-                = pageTopTextBlock.Select(x => new TitleDescriptionAndButtonViewModel(x));
-
-            Components.AddRange(contactusViewModels);*/
-            
-            // TODO: Fix
+            if (headlineInfo != null)
+            {
+                IEnumerable<TitleDescriptionAndButtonViewModel> headlineInfoModels
+                    = headlineInfo.Select(x => new TitleDescriptionAndButtonViewModel(x));
+                Components.AddRange(headlineInfoModels);
+            }
         }
 
         private void AddContactUs(IPageContext<Contact> context)
@@ -55,23 +67,24 @@ namespace Leuka.Core.ViewModels.Pages
 
         private void AddMediumText(IPageContext<Contact> context)
         {
-            /*IEnumerable<MediumTextBlock> mediumTextBlocks = context.Page.MediumTextBlock;
+            IEnumerable<MediumTextBlock> mediumTextBlocks = context.Page.MiddleText;
 
-            IEnumerable<MediumTextBlockViewModel> contactusViewModels = mediumTextBlocks.Select(x => new MediumTextBlockViewModel(x));
-
-            Components.AddRange(contactusViewModels);*/
-            
-            // TODO: Fix
+            if (mediumTextBlocks != null)
+            {
+                IEnumerable<MediumTextBlockViewModel> mediumTextBlocksModels = mediumTextBlocks.Select(x => new MediumTextBlockViewModel(x));
+                Components.AddRange(mediumTextBlocksModels);
+            }
         }
 
         private void AddQuote(IPageContext<Contact> context)
         {
-            /*IEnumerable<Quote> notification = context.Page.Quote;
+            IEnumerable<Quote> quotes = context.Page.Quote;
 
-            IEnumerable<QuoteViewModel> donationsModels = notification.Select(x => new QuoteViewModel(x));
-            Components.AddRange(donationsModels);*/
-            
-            // TODO: Fix
+            if (quotes != null)
+            {
+                IEnumerable<QuoteViewModel> quotesModels = quotes.Select(x => new QuoteViewModel(x));
+                Components.AddRange(quotesModels);
+            }
         }
     }
 }

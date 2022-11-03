@@ -15,24 +15,32 @@ namespace Leuka.Core.ViewModels.Pages
         public TitleDescriptionAndButtonViewModel TitleDescriptionAndButton { get; set; }
         public NasiPobedniciViewModel(IPageContext<NasiPobednici> context) : base(context)
         {
-            Title = context.Page.Title;
+            var contextPage = context.Page;
+            Title = contextPage.Title;
 
             Components = new List<IContentViewModel>();
-            var titleDescriptionAndButton = context.Page.TitleDescriptionAndButton;
+            var titleDescriptionAndButton = contextPage.TitleDescriptionAndButton;
             if (titleDescriptionAndButton != null)
             {
                 var titleDescriptionAndButtonModels = titleDescriptionAndButton.Select(x => new TitleDescriptionAndButtonViewModel(x));
                 Components.AddRange(titleDescriptionAndButtonModels);
             }
 
-            var highlightedArticle = context.Page.HighlightedArticle;
+            var highlightedArticle = contextPage.HighlightedArticle;
             if (highlightedArticle != null)
             {
                 var highlightedArticleModels = highlightedArticle.Select(x => new HighlightedArticleViewModel(x));
                 Components.AddRange(highlightedArticleModels);
             }
 
-            var blogSignUp = context.Page.BlogSignUp;
+            var grid = contextPage.BlogsGrid.FirstOrDefault();
+            if (grid != null)
+            {
+                var gridViewModel = new BlockGridViewModel(grid, contextPage);
+                Components.Add(gridViewModel);
+            }
+         
+            var blogSignUp = contextPage.BlogSignUp;
             if (blogSignUp != null)
             {
                 var blogSignUpModels = blogSignUp.Select(x => new BlogSignUpViewModel(x));

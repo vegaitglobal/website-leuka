@@ -74,6 +74,13 @@ namespace Leuka.Models.Generated
 		public string Title => this.Value<string>("title");
 
 		///<summary>
+		/// Top Text Block
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("topTextBlock")]
+		public IEnumerable<TitleDescriptionAndButton> TopTextBlock => this.Value<IEnumerable<TitleDescriptionAndButton>>("topTextBlock");
+
+		///<summary>
 		/// App Store URL
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]

@@ -1,4 +1,5 @@
 ﻿using Leuka.Models.Generated;
+using System.Linq;
 
 namespace Leuka.Core.ViewModels.Shared
 {
@@ -14,6 +15,7 @@ namespace Leuka.Core.ViewModels.Shared
             FirstFieldDescription = joinUsPreContactPage.FirstFieldDescription;
             SecondFieldDescription = joinUsPreContactPage.SecondFieldDescription;
             ThirdFieldDescription = joinUsPreContactPage.ThridFieldDescription;
+            Button = new ButtonViewModel(joinUsPreContactPage.Button.FirstOrDefault());
         }
 
         public string BlockTitle { get; set; }
@@ -31,6 +33,7 @@ namespace Leuka.Core.ViewModels.Shared
         public string SecondFieldDescription { get; set; }
 
         public string ThirdFieldDescription { get; set; }
+        public ButtonViewModel Button { get; set; }
 
         public string PartialViewPath => "~/Views/Partials/NestedContent/_Subscriptions.cshtml";
     }
