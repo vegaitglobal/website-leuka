@@ -24,12 +24,12 @@
 
 	@media only screen and (min-width: 900px) {
 		display: flex;
-		padding-right: 26px;
 
 		.doniraj-button {
 			display: flex;
 			align-items: center;
-			color: white
+			color: white;
+			margin-right: 26px;
 		}
 	}
 }
