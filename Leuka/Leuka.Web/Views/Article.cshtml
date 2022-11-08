@@ -18,6 +18,11 @@
     {
         Html.RenderPartial(Model.AuthorDetails.PartialViewPath, Model.AuthorDetails);
     }
+     
+    @if (Model.RelatedArticles != null)
+    {
+        Html.RenderPartial(Model.RelatedArticles.PartialViewPath, Model.RelatedArticles);
+    }
 
 </div>
 

@@ -81,6 +81,13 @@ namespace Leuka.Models.Generated
 		public string PreviewText => this.Value<string>("previewText");
 
 		///<summary>
+		/// Related Articles
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("relatedArticles")]
+		public IEnumerable<RelatedArticles> RelatedArticles => this.Value<IEnumerable<RelatedArticles>>("relatedArticles");
+
+		///<summary>
 		/// Tags
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]

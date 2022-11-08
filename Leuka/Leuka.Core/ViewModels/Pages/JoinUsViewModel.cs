@@ -13,6 +13,8 @@ namespace Leuka.Core.ViewModels.Pages
         {
             Components = new List<IContentViewModel>();
 
+            AddTopText(context);
+            AddSeparator(context);
             AddOrganizationInfoBanner(context);
             AddBeforeContactUsBlock(context);
             AddContactUs(context);
@@ -31,6 +33,29 @@ namespace Leuka.Core.ViewModels.Pages
 
             IEnumerable<PreContactFieldViewModel> contactusViewModels = preContactField.Select(x => new PreContactFieldViewModel(x));
             Components.AddRange(contactusViewModels);
+        }
+
+        private void AddSeparator(IPageContext<JoinUs> context)
+        {
+            IEnumerable<Separator> splitBlocks = context.Page.Separator;
+
+            if (splitBlocks != null)
+            {
+                IEnumerable<SeparatorViewModel> splitBlocksModels = splitBlocks.Select(x => new SeparatorViewModel(x));
+                Components.AddRange(splitBlocksModels);
+            }
+        }
+
+        private void AddTopText(IPageContext<JoinUs> context)
+        {
+            IEnumerable<TitleDescriptionAndButton> headlineInfo = context.Page.TopTextBlock;
+
+            if (headlineInfo != null)
+            {
+                IEnumerable<TitleDescriptionAndButtonViewModel> headlineInfoModels
+                    = headlineInfo.Select(x => new TitleDescriptionAndButtonViewModel(x));
+                Components.AddRange(headlineInfoModels);
+            }
         }
 
         private void AddContactUs(IPageContext<JoinUs> context)

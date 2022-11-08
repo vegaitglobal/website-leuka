@@ -1,7 +1,7 @@
 window.onload = () => {
   
   const onDonate = () => {
-    const endpoint = `http://leuka.local/kontakt`;
+      const endpoint = `/Umbraco/Surface/Inform/Donate`;
 
     const donor = document.getElementById("donor").value;
     const amount = document.getElementById("amount").value;

@@ -30,11 +30,19 @@ namespace Leuka.Core.ViewModels.Pages
             }
 
             Breadcrumbs = breadcrumbs;
+
+            var relatedArticles = contextPage.RelatedArticles;
+            if (relatedArticles != null)
+            {
+                RelatedArticles = relatedArticles.Select(x => new RelatedArticlesViewModel(x)).FirstOrDefault();
+            }
+
         }
 
         public TitleDescriptionAndButtonViewModel HeadlineInfo { get; }
         public IHtmlString PageDetails { get; }
         public AuthorDetailsViewModel AuthorDetails { get; }
         public BreadcrumbsViewModel Breadcrumbs { get; }
+        public RelatedArticlesViewModel RelatedArticles { get; }
     }
 }

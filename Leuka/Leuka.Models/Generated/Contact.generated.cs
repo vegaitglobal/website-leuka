@@ -46,11 +46,39 @@ namespace Leuka.Models.Generated
 		// properties
 
 		///<summary>
+		/// App Promotion
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("appPromotion")]
+		public IEnumerable<AppPromotion> AppPromotion => this.Value<IEnumerable<AppPromotion>>("appPromotion");
+
+		///<summary>
 		/// Contact Us
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
 		[ImplementPropertyType("contactUs")]
 		public IEnumerable<Contactus> ContactUs => this.Value<IEnumerable<Contactus>>("contactUs");
+
+		///<summary>
+		/// Middle Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("middleText")]
+		public IEnumerable<MediumTextBlock> MiddleText => this.Value<IEnumerable<MediumTextBlock>>("middleText");
+
+		///<summary>
+		/// Quote
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("quote")]
+		public IEnumerable<Quote> Quote => this.Value<IEnumerable<Quote>>("quote");
+
+		///<summary>
+		/// Top Text Block
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("topTextBlock")]
+		public IEnumerable<TitleDescriptionAndButton> TopTextBlock => this.Value<IEnumerable<TitleDescriptionAndButton>>("topTextBlock");
 
 		///<summary>
 		/// App Store URL

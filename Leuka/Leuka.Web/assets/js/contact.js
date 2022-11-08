@@ -1,5 +1,5 @@
 const onContact = () => {
-    const endpoint = `http://leuka.local/kontakt`;
+    const endpoint = `/Umbraco/Surface/Inform/Contact`;
 
     const firstName = document.getElementById("firstName").value;
     const lastName = document.getElementById("lastName").value;

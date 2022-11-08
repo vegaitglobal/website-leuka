@@ -440,6 +440,7 @@
     <Content Include="assets\images\highlighted-article.png" />
     <Content Include="assets\Images\logo-transparent-1.svg" />
     <Content Include="assets\Images\logo-transparent-2.png" />
+    <Content Include="assets\images\mobile-app-preview.png" />
     <Content Include="assets\images\mosaic.png" />
     <Content Include="assets\Images\Participate-bg.jpg" />
     <Content Include="assets\images\Ring.svg" />
@@ -574,6 +575,7 @@
     <Content Include="Views\Partials\NestedContent\_OrganizationInfoBanner.cshtml" />
     <Content Include="Views\Partials\NestedContent\_HighlightedArticle.cshtml" />
     <Content Include="Views\Partials\NestedContent\_BlogSignUp.cshtml" />
+    <Content Include="Views\Partials\NestedContent\_RelatedArticles.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

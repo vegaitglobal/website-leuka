@@ -17,3 +17,9 @@
 {
     Html.RenderPartial(Model.Grid.PartialViewPath, Model.Grid);
 }
+
+@if (Model.AppPromotion != null)
+{
+    Html.RenderPartial(Model.AppPromotion.PartialViewPath, Model.AppPromotion);
+}
+

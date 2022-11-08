@@ -46,6 +46,13 @@ namespace Leuka.Models.Generated
 		// properties
 
 		///<summary>
+		/// App Promotion
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("appPromotion")]
+		public IEnumerable<AppPromotion> AppPromotion => this.Value<IEnumerable<AppPromotion>>("appPromotion");
+
+		///<summary>
 		/// Grid
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]

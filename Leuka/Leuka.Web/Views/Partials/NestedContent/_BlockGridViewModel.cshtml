@@ -21,9 +21,11 @@
         {
             <div class="blog-grid-item">
                 <div class="blog-topic-card">
-                    <div class="blog-topic-card-image">
-                        <img src="@item.Image.Url" alt="@item.Image.AlternateText">
-                    </div>
+                    <a href="@item.Link.Url">
+                        <div class="blog-topic-card-image">
+                            <img src="@item.Image.Url" alt="@item.Image.AlternateText">
+                        </div>
+                    </a>
                     <div class="blog-topic-card-content">
                         @if (item.Tags.Any())
                         {
@@ -55,7 +57,7 @@
     @if (Model.TotalNumberOfArticles > Model.NumberOfDispalyedArticles)
     {
         <div class="blog-grid-load-more">
-            <a id="loadMoreButton" onclick="GetMoreArticles()" href="#" class="button button-stroked">Učitaj jos članaka</a>
+            <a id="loadMoreButton" onclick="GetMoreArticles()" class="button button-stroked">Učitaj jos članaka</a>
         </div>
     }
 </div>
@@ -75,14 +77,13 @@
 
         $.ajax({
             type: "POST",
-            url: "/Blogovi",
+            url: "/Umbraco/Surface/BlogsGrid/Blogs",
             data: data,
             success: function (result) {
                 $(".blog-grid-load-more").remove();
                 $(".blog-grid-items").append(result);
             }
         });
-        console.log("ASD");
 
     }
 
@@ -95,7 +96,7 @@
 
         $.ajax({
             type: "POST",
-            url: "/Blogovi",
+            url: "/Umbraco/Surface/BlogsGrid/Blogs",
             data: data,
             success: function (result) {
                 $(".blog-grid-items").empty();
