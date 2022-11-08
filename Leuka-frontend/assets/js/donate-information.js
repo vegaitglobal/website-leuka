@@ -40,7 +40,7 @@ const onDonate = () => {
   const email = document.getElementById("email").value;
 
   if (!donor || !amount || !email) {
-    alert("Molim Vas da popunite obavezna polja označena znakom *.");
+    alert("Molim Vas da popunite obavezna polja označena *.");
     return;
   }
   openDonateInfomration();

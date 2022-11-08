@@ -1,3 +1,5 @@
+@import '../../assets/styles/colors.scss';
+
 .highlighted-article {
   font-family: Poppins;
   padding: 150px 30px 100px 30px;
@@ -77,6 +79,21 @@
       .highlighted-article-content {
         width: 60%;
         padding: 0 15px;
+
+        .tag {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          .tag-dot {
+            display: inline;
+            width: 6px;
+            height: 6px;
+            margin-right: 5px;
+            background-color: $color-light-blue;
+            border-radius: 50%;
+          }
+        }
       }
 
       .highlighted-article-image {
@@ -90,6 +107,7 @@
 
   @media (min-width: 1200px) {
     .highlighted-article-container {
+
       .highlighted-article-content,
       .highlighted-article-image {
         padding: 0 50px;

@@ -1,11 +1,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta charset="UTF-8" />
 
-<div class="contact-us-wrapper"> 
+<div class="contact-us-wrapper">
     <div class="contact-us-form-wrapper">
         <h1 class="form-header">
             <img src="../images/Halo.svg" class="ring-svg" />
-            Postanite autor na Leuka blogu!        
+            Postanite autor na Leuka blogu!
         </h1>
         <h3 class="form-quote">Predstavite se, podelite sa nama svoje iskustvo sa leukemijom</h3>
 
@@ -13,29 +13,37 @@
             <div class="row">
                 <div>
                     <label for="firstName">IME*</label> <br>
-                    <input type="text" placeholder="Vaše ime" name="firstName" id="firstName"/>
+                    <input type="text" placeholder="Vaše ime" name="firstName" id="firstName" />
                 </div>
                 <div>
                     <label for="lastName">PREZIME*</label><br>
-                    <input type="text" placeholder="Vaše prezime" name="lastName" id="lastName"/>
+                    <input type="text" placeholder="Vaše prezime" name="lastName" id="lastName" />
                 </div>
             </div>
             <div>
                 <label for="email">EMAIL*</label><br>
-                <input type="text" placeholder="Vaš Email" name="email" id="email"/>
+                <input type="text" placeholder="Vaš Email" name="email" id="email" />
             </div>
             <div>
                 <label for="messageText">PORUKA*</label><br>
-                <input type="text" placeholder="Poruka" name="messageText" id="messageText"/>
+                <input type="text" placeholder="Poruka" name="messageText" id="messageText" />
             </div>
             <div>
                 <label>PRILOŽITE DOKUMENT</label><br>
-                <label for="files" class="file-upload-button" >Dodaj Fajl</label>
+                <label for="files" class="file-upload-button">Dodaj Fajl</label>
                 <input type="file" id="files"></input>
+                <br />
+                <label id="fileName"></label>
             </div>
             <div class="contact-us-button" onclick="submitForm()">
-                <a href="#" onclick="submitForm()">Pošalji poruku</a>
+                <a onclick="submitForm()">Pošalji poruku</a>
             </div>
         </form>
     </div>
 </div>
+
+<script>
+    document.getElementById("files").onchange = function () {
+        document.getElementById("fileName").innerHTML = this.value.replace(/.*[\/\\]/, '');
+    };
+</script>
