@@ -12,24 +12,12 @@ namespace Leuka.Core.ViewModels.Pages
 		{
 			Components = new List<IContentViewModel>();
 
-			HomePageLinkDescription = context.Page.HomePageLinkDescription;
-			var donatePopup = context.Page.DonatePopup.FirstOrDefault();
-			if (donatePopup != null)
-			{
-				Components.Add(new DonatePopupViewModel(donatePopup));
-			}
-			var thankyouPopup = context.Page.ThankyouPopup.FirstOrDefault();
-			if (thankyouPopup != null)
-			{
-				Components.Add(new ThankYouPopupViewModel(thankyouPopup));
-			}
 			var errorDescription = context.Page.ErrorDescription.FirstOrDefault();
-			if (donatePopup != null)
+			if (errorDescription != null)
 			{
 				Components.Add(new TitleDescriptionAndButtonViewModel(errorDescription));
 			}
 		}
-		public string HomePageLinkDescription { get; set; }
 		public List<IContentViewModel> Components { get; set; }
 	}
 }

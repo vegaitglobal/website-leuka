@@ -1,4 +1,5 @@
 ﻿using Leuka.Models.Generated;
+using System.Linq;
 
 namespace Leuka.Core.ViewModels.Shared
 {
@@ -16,6 +17,10 @@ namespace Leuka.Core.ViewModels.Shared
             CheckboxText4 = howToHelpParticipate.CheckboxText4;
             CheckboxText5 = howToHelpParticipate.CheckboxText5;
             CheckboxText6 = howToHelpParticipate.CheckboxText6;
+
+            var button = howToHelpParticipate.Button.FirstOrDefault();
+
+            Button = button != null ? new ButtonViewModel(button) : new ButtonViewModel(string.Empty, string.Empty);
         }
 
         public string MainTitle { get; }
@@ -37,6 +42,7 @@ namespace Leuka.Core.ViewModels.Shared
         public string CheckboxText5 { get; }
 
         public string CheckboxText6 { get; }
+        public ButtonViewModel Button { get; }
 
         public string PartialViewPath => "~/Views/Partials/NestedContent/_HowToParticipate.cshtml";
     }

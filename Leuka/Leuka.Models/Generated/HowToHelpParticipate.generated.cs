@@ -46,6 +46,13 @@ namespace Leuka.Models.Generated
 		// properties
 
 		///<summary>
+		/// Button
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]
+		[ImplementPropertyType("button")]
+		public IEnumerable<Button> Button => this.Value<IEnumerable<Button>>("button");
+
+		///<summary>
 		/// CheckboxText1
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.6")]

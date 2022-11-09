@@ -1,1 +1,9 @@
-﻿404
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Error404ViewModel>
+
+@if (Model.Components != null)
+{
+    foreach (var component in Model.Components)
+    {
+        Html.RenderPartial(component.PartialViewPath, component);
+    }
+}
