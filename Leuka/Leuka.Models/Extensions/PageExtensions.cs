@@ -11,7 +11,8 @@ namespace Leuka.Models.Extensions
 
 		public static bool IsHome(this IPage page)
 		{
-			return page.ContentType.Alias == Home.ModelTypeAlias;
+			//return page.ContentType.Alias == Home.ModelTypeAlias;
+			return true;
 		}
 	}
 }

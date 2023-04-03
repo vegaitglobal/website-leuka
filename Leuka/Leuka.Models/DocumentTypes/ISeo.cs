@@ -1,10 +1,9 @@
-﻿using System.Collections.Generic;
-using Umbraco.Core.Models.PublishedContent;
-using Umbraco.Web.Models;
+﻿using Umbraco.Cms.Core.Models;
+using Umbraco.Cms.Core.Models.PublishedContent;
 
 namespace Leuka.Models.DocumentTypes
 {
-	public interface ISeo : IPublishedContent
+    public interface ISeo : IPublishedContent
 	{
 		string SeoTitle { get; }
 		string SeoDescription { get; }

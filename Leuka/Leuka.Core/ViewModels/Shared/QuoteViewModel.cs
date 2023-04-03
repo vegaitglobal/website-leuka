@@ -1,5 +1,4 @@
 ﻿using Leuka.Models.Generated;
-using System.Linq;
 
 namespace Leuka.Core.ViewModels.Shared
 {

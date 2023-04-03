@@ -1,9 +1,8 @@
 ﻿using Leuka.Models.Generated;
-using System.Collections.Generic;
-using System.Linq;
-using Umbraco.Core.Composing;
-using Umbraco.Web;
-using Umbraco.Web.Models;
+using Microsoft.Extensions.DependencyInjection;
+using Umbraco.Cms.Core.Models;
+using Umbraco.Cms.Core.Web;
+using Umbraco.Cms.Web.Common.DependencyInjection;
 
 namespace Leuka.Core.ViewModels.Shared
 {
@@ -16,7 +15,7 @@ namespace Leuka.Core.ViewModels.Shared
 
         private ArticlePreviewViewModel MapToArticlePreview(Link articleLink)
         {
-            var umbracoContextFactory = Current.Factory.GetInstance(typeof(IUmbracoContextFactory)) as IUmbracoContextFactory;
+            var umbracoContextFactory = StaticServiceProvider.Instance.GetRequiredService<IUmbracoContextFactory>();
             using (var contextReference = umbracoContextFactory.EnsureUmbracoContext())
             {
                 var umbracoContext = contextReference.UmbracoContext;

@@ -1,7 +1,4 @@
-﻿using Leuka.Core.ViewModels.Shared;
-using System.Collections.Generic;
-
-namespace Leuka.Core.ViewModels.Shared
+﻿namespace Leuka.Core.ViewModels.Shared
 {
     public class BreadcrumbsViewModel : IContentViewModel
     {

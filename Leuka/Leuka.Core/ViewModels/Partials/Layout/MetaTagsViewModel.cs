@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Umbraco.Web;
-using Leuka.Core.Contexts;
+﻿using Leuka.Core.Contexts;
 using Leuka.Core.ViewModels.Shared;
 using Leuka.Models.DocumentTypes;
 using Leuka.Models.Extensions;
-using Umbraco.Core.Models.PublishedContent;
+using Umbraco.Cms.Core.Models.PublishedContent;
 
 namespace Leuka.Core.ViewModels.Partials.Layout
 {
-	public class MetaTagsViewModel
+    public class MetaTagsViewModel
 	{
 		public MetaTagsViewModel(ISeoContext<ISeo> context)
 		{

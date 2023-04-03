@@ -4,6 +4,6 @@ namespace Leuka.Models.Generated
 {
     public partial class AboutUs : IDomainRoot
     {
-        
+
     }
 }

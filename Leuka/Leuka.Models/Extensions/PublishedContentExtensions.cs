@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Umbraco.Core.Models.PublishedContent;
-using Umbraco.Web;
+﻿using Umbraco.Cms.Core.Models.PublishedContent;
 
 namespace Leuka.Models.Extensions
 {
-	/// <summary>
-	/// <see cref="IPublishedContent"/> extension methods.
-	/// </summary>
-	public static class PublishedContentExtensions
+    /// <summary>
+    /// <see cref="IPublishedContent"/> extension methods.
+    /// </summary>
+    public static class PublishedContentExtensions
 	{
 		/// <summary>
 		/// Checks if <paramref name="source"/> has associated template.

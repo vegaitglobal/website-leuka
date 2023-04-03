@@ -1,16 +1,13 @@
 ﻿using Leuka.Core.Models;
-using System;
-using System.Collections.Generic;
-using System.IO;
+using Microsoft.AspNetCore.Http;
 using System.Net;
 using System.Net.Mail;
-using System.Web;
 
 namespace Leuka.Core
 {
-    public static class SmtpHelper
-    {
-        public static void SendEmail(EmailSettings emailSettings, string firstName, string lastName, string email, string messageText, bool involveInActions, IEnumerable<HttpPostedFileBase> attachments)
+    public static class SmtpHelper 
+    {    
+        public static void SendEmail(EmailSettings emailSettings, string firstName, string lastName, string email, string messageText, bool involveInActions, IEnumerable<IFormFile> attachments)
         {
             var subject = $"Leuka - Kontakt";
             var actions = involveInActions ? "Želim da se priključim akcijama." : "";
@@ -27,7 +24,7 @@ namespace Leuka.Core
             PerformSending(emailSettings, subject, body, null);
         }
 
-        private static void PerformSending(EmailSettings emailSettings, string subject, string body, IEnumerable<HttpPostedFileBase> attachments)
+        private static void PerformSending(EmailSettings emailSettings, string subject, string body, IEnumerable<IFormFile> attachments)
         {
             var fromAddress = new MailAddress(emailSettings.SenderEmailAddress);
             var toAddress = new MailAddress(emailSettings.ReceiverEmailAddress);
@@ -48,15 +45,15 @@ namespace Leuka.Core
                        Body = body
                    })
             {
-                if(attachments != null)
+                if (attachments != null)
                 {
                     foreach (var file in attachments)
                     {
-                        if (file == null || file.ContentLength <= 0) continue;
+                        if (file == null || file.Length <= 0) continue;
                         try
                         {
                             var fileName = Path.GetFileName(file.FileName);
-                            var attachment = new Attachment(file.InputStream, fileName);
+                            var attachment = new Attachment(file.OpenReadStream(), fileName);
                             message.Attachments.Add(attachment);
                         }
                         catch (Exception)

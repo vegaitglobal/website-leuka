@@ -1,13 +1,10 @@
-﻿using System;
-using Umbraco.Core;
-using Umbraco.Web;
-using Leuka.Models.DocumentTypes;
+﻿using Leuka.Models.DocumentTypes;
 using Leuka.Models.Generated;
-using Umbraco.Core.Models.PublishedContent;
+using Umbraco.Cms.Core.Models.PublishedContent;
 
 namespace Leuka.Models.Extensions
 {
-	public static class SeoExtensions
+    public static class SeoExtensions
 	{
 		/// <summary>
 		/// Returns formatted <paramref name="seo"/> SEO title, based on specified <paramref name="format"/>.

@@ -1,8 +1,6 @@
 ﻿using Leuka.Core.Contexts;
 using Leuka.Core.ViewModels.Shared;
 using Leuka.Models.Generated;
-using System.Linq;
-using Umbraco.Web;
 
 namespace Leuka.Core.ViewModels.Pages
 {

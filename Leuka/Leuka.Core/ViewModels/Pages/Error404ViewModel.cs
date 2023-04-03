@@ -1,12 +1,10 @@
 ﻿using Leuka.Core.Contexts;
 using Leuka.Core.ViewModels.Shared;
 using Leuka.Models.Generated;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Leuka.Core.ViewModels.Pages
 {
-	public class Error404ViewModel : PageViewModel
+    public class Error404ViewModel : PageViewModel
 	{
 		public Error404ViewModel(IPageContext<Error404> context) : base(context)
 		{

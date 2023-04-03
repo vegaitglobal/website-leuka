@@ -1,8 +1,10 @@
-﻿@inherits UmbracoViewPage<HomeViewModel>
+﻿@using Leuka.Core.ViewModels.Pages;
+
+@inherits UmbracoViewPage<HomeViewModel>
 
 @if (Model.Components != null)
 {
-    foreach(var component in Model.Components)
+    foreach (var component in Model.Components)
     {
         Html.RenderPartial(component.PartialViewPath, component);
     }

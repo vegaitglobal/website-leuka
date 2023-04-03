@@ -1,10 +1,10 @@
-﻿using Leuka.Models.DocumentTypes;
-using System.Runtime.InteropServices;
+﻿//using Leuka.Models.DocumentTypes;
+//using System.Runtime.InteropServices;
 
-namespace Leuka.Models.Generated
-{
-	public partial class Home : IDomainRoot
-	{
-		
-	}
-}
+//namespace Leuka.Models.Generated
+//{
+//	public partial class Home : IDomainRoot
+//	{
+
+//	}
+//}

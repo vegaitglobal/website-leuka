@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Leuka.Core.Extensions;
+﻿using Leuka.Core.Extensions;
 using Leuka.Core.ViewModels.Shared;
 using Leuka.Models.Generated;
 

@@ -1,8 +1,7 @@
 ﻿using Leuka.Core.Contexts;
 using Leuka.Core.ViewModels.Shared;
 using Leuka.Models.Generated;
-using System.Linq;
-using System.Web;
+using Microsoft.AspNetCore.Html;
 
 namespace Leuka.Core.ViewModels.Pages
 {
@@ -20,7 +19,7 @@ namespace Leuka.Core.ViewModels.Pages
             var pageDetails = contextPage.PageDetails;
             if (pageDetails != null)
             {
-                PageDetails = pageDetails;
+                PageDetails = new HtmlString(pageDetails.ToHtmlString());
             }
 
             var authorDetails = contextPage.AuthorDetails;
@@ -40,7 +39,7 @@ namespace Leuka.Core.ViewModels.Pages
         }
 
         public TitleDescriptionAndButtonViewModel HeadlineInfo { get; }
-        public IHtmlString PageDetails { get; }
+        public HtmlString PageDetails { get; }
         public AuthorDetailsViewModel AuthorDetails { get; }
         public BreadcrumbsViewModel Breadcrumbs { get; }
         public RelatedArticlesViewModel RelatedArticles { get; }

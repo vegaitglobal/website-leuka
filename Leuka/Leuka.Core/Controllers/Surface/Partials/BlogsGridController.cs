@@ -1,11 +1,13 @@
 ﻿using Leuka.Core.ViewModels.Shared;
 using Leuka.Models.Generated;
-using System;
-using System.Linq;
-using System.Web.Mvc;
-using Umbraco.Core.Composing;
-using Umbraco.Core.Models.PublishedContent;
-using Umbraco.Web;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Umbraco.Cms.Core.Cache;
+using Umbraco.Cms.Core.Logging;
+using Umbraco.Cms.Core.Routing;
+using Umbraco.Cms.Core.Services;
+using Umbraco.Cms.Core.Web;
+using Umbraco.Cms.Infrastructure.Persistence;
 
 namespace Leuka.Core.Controllers.Surface.Partials
 {
@@ -13,17 +15,18 @@ namespace Leuka.Core.Controllers.Surface.Partials
     {
         private const int BatchSize = 9;
 
-        [HttpPost]
-        public ActionResult Blogs(int numberOfDispalyedArticles, string filter, string path)
+        public BlogsGridController(IUmbracoContextAccessor umbracoContextAccessor, IUmbracoDatabaseFactory databaseFactory,
+            ServiceContext services, AppCaches appCaches, IProfilingLogger profilingLogger, IPublishedUrlProvider publishedUrlProvider,
+            IHttpContextAccessor httpContextAccessor) 
+            : base(umbracoContextAccessor, databaseFactory, services, appCaches, profilingLogger, publishedUrlProvider, httpContextAccessor)
         {
-            PublishedContentModel page = null;
-            var umbracoContextFactory = Current.Factory.GetInstance(typeof(IUmbracoContextFactory)) as IUmbracoContextFactory;
-            using (var contextReference = umbracoContextFactory.EnsureUmbracoContext())
-            {
-                var umbracoContext = contextReference.UmbracoContext;
-                page = umbracoContext.Content.GetByRoute(path) as PublishedContentModel;
-            }
+        }
 
+        [HttpPost]
+        [IgnoreAntiforgeryToken]
+        public IActionResult Blogs(int numberOfDispalyedArticles, string filter, string path)
+        {
+            var page = UmbracoContext.Content.GetByRoute(path);
             if (page != null)
             {
                 var model = new BlockGridViewModel();

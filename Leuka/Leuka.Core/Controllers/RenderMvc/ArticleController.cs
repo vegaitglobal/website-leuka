@@ -1,25 +1,32 @@
 ﻿using Leuka.Core.ViewModels.Pages;
 using Leuka.Core.ViewModels.Shared;
 using Leuka.Models.Generated;
-using System.Linq;
-using System.Web.Mvc;
-using Umbraco.Core.Models.PublishedContent;
-using Umbraco.Web;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ViewEngines;
+using Microsoft.Extensions.Logging;
+using Umbraco.Cms.Core.Models.PublishedContent;
+using Umbraco.Cms.Core.Web;
+using Umbraco.Cms.Web.Common.Controllers;
 
 namespace Leuka.Core.Controllers.RenderMvc
 {
     public class ArticleController : BasePageController<Article>
     {
-        public ActionResult Index(Article model)
+        public ArticleController(ILogger<RenderController> logger, ICompositeViewEngine compositeViewEngine, IUmbracoContextAccessor umbracoContextAccessor, IHttpContextAccessor httpContextAccessor) : base(logger, compositeViewEngine, umbracoContextAccessor, httpContextAccessor)
         {
-            return View("~/Views/Article.cshtml", new ArticleViewModel(CreatePageContext(model), GetBreadCrumbs(model)));
         }
 
-        private BreadcrumbsViewModel GetBreadCrumbs(Article page)
+        public override IActionResult Index()
         {
-            var rootId = page.Root().Id;
+            return View("~/Views/Article.cshtml", new ArticleViewModel(CreatePageContext(), GetBreadCrumbs()));
+        }
+
+        private BreadcrumbsViewModel GetBreadCrumbs()
+        {
+            var rootId = CurrentPage.Root().Id;
             var breadcrumbs = new BreadcrumbsViewModel();
-            GetItemPath(page, rootId, breadcrumbs);
+            GetItemPath(CurrentPage, rootId, breadcrumbs);
 
             breadcrumbs.Chain = breadcrumbs.Chain.Reverse().ToList();
             return breadcrumbs;

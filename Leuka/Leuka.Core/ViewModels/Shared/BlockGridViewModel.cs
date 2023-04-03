@@ -1,10 +1,5 @@
-﻿using Umbraco.Web;
-using Umbraco.Web.Models;
-using Leuka.Models.Generated;
-using Leuka.Core.Contexts;
-using System.Collections.Generic;
-using System.Linq;
-using Umbraco.Core.Models.PublishedContent;
+﻿using Leuka.Models.Generated;
+using Umbraco.Cms.Core.Models.PublishedContent;
 
 namespace Leuka.Core.ViewModels.Shared
 {

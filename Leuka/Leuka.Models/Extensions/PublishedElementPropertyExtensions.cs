@@ -1,11 +1,9 @@
-﻿using System;
-using System.Runtime.CompilerServices;
-using Umbraco.Core.Models.PublishedContent;
-using Umbraco.Web;
+﻿using System.Runtime.CompilerServices;
+using Umbraco.Cms.Core.Models.PublishedContent;
 
 namespace Leuka.Models.Extensions
 {
-	public static class PublishedElementPropertyExtensions
+    public static class PublishedElementPropertyExtensions
 	{
 		/// <summary>
 		/// Returns value of the property with given <paramref name="propertyName"/> from the <paramref name="source"/>.

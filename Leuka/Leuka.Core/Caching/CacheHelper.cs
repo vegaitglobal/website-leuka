@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Runtime.Caching;
+﻿using System.Runtime.Caching;
 
 namespace Leuka.Core.Caching
 {

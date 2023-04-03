@@ -1,17 +1,15 @@
-﻿using Umbraco.Web;
-using Umbraco.Web.Models;
-using Leuka.Models.Generated;
-using System.Web;
+﻿using Leuka.Models.Generated;
+using Microsoft.AspNetCore.Html;
 
 namespace Leuka.Core.ViewModels.Shared
 {
-	public class TopicDetailsViewModel : IContentViewModel
+    public class TopicDetailsViewModel : IContentViewModel
     {
 		public TopicDetailsViewModel(TopicDetails topicDetails)
 		{
-            TopicContent = topicDetails.TopicContent;
+            TopicContent = new HtmlString(topicDetails.TopicContent.ToHtmlString());
 		}
-        public IHtmlString TopicContent { get; }
+        public HtmlString TopicContent { get; }
 
 		public string PartialViewPath => "~/Views/Partials/NestedContent/_TopicDetails.cshtml";
     }

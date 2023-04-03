@@ -1,12 +1,10 @@
 ﻿using Leuka.Core.Contexts;
 using Leuka.Core.ViewModels.Shared;
 using Leuka.Models.Generated;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Leuka.Core.ViewModels.Pages
 {
-	public class HomeViewModel : PageViewModel
+    public class HomeViewModel : PageViewModel
 	{
 		public HomeViewModel(IPageContext<Home> context) : base(context)
 		{

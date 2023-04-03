@@ -1,10 +1,9 @@
-﻿using Umbraco.Web;
-using Umbraco.Web.Models;
-using Leuka.Models.Generated;
+﻿using Leuka.Models.Generated;
+using Umbraco.Cms.Core.Models;
 
 namespace Leuka.Core.ViewModels.Shared
 {
-	public class LinkViewModel
+    public class LinkViewModel
 	{
 		public LinkViewModel(string url, string content, string target = null)
 		{

@@ -1,9 +1,8 @@
 ﻿using Leuka.Models.Generated;
-using System.Collections.Generic;
 
 namespace Leuka.Core.ViewModels.Shared
 {
-	public class SeparatorViewModel : IContentViewModel
+    public class SeparatorViewModel : IContentViewModel
     {
 		public SeparatorViewModel(Separator separator)
 		{

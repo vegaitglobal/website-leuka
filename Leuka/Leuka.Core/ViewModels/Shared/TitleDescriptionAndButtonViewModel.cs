@@ -1,9 +1,8 @@
 ﻿using Leuka.Models.Generated;
-using System.Linq;
 
 namespace Leuka.Core.ViewModels.Shared
 {
-	public class TitleDescriptionAndButtonViewModel : IContentViewModel
+    public class TitleDescriptionAndButtonViewModel : IContentViewModel
     {
 		public TitleDescriptionAndButtonViewModel(TitleDescriptionAndButton titleDescriptionAndButton)
 		{

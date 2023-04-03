@@ -1,11 +1,8 @@
-﻿using Umbraco.Web;
-using Umbraco.Web.Models;
-using Leuka.Models.Generated;
-using System.Linq;
+﻿using Leuka.Models.Generated;
 
 namespace Leuka.Core.ViewModels.Shared
 {
-	public class HighlightedArticleViewModel : IContentViewModel
+    public class HighlightedArticleViewModel : IContentViewModel
     {
 		public HighlightedArticleViewModel(HighlightedArticle highlightedArticle)
 		{

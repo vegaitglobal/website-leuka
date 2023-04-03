@@ -1,6 +1,5 @@
 ﻿using Leuka.Models.Generated;
-using System;
-using Umbraco.Web.Models;
+using Umbraco.Cms.Core.Models;
 
 namespace Leuka.Core.ViewModels.Shared
 {

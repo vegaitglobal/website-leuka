@@ -1,10 +1,8 @@
 ﻿using Leuka.Models.Generated;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Leuka.Core.ViewModels.Shared
 {
-	public class SponsorsViewModel : IContentViewModel
+    public class SponsorsViewModel : IContentViewModel
     {
         public SponsorsViewModel(Sponsors sponsors)
         {

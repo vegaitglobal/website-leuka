@@ -1,13 +1,21 @@
-﻿using System.Net;
-using System.Web.Mvc;
-using Leuka.Core.ViewModels.Pages;
+﻿using Leuka.Core.ViewModels.Pages;
 using Leuka.Models.Generated;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ViewEngines;
+using Microsoft.Extensions.Logging;
+using Umbraco.Cms.Core.Web;
+using Umbraco.Cms.Web.Common.Controllers;
 
 namespace Leuka.Core.Controllers.RenderMvc
 {
     public class Error404Controller : BasePageController<Error404>
     {
-        public ActionResult Error404(Error404 model)
-            => CurrentTemplate(new Error404ViewModel(CreatePageContext(model)));
+        public Error404Controller(ILogger<RenderController> logger, ICompositeViewEngine compositeViewEngine, IUmbracoContextAccessor umbracoContextAccessor, IHttpContextAccessor httpContextAccessor) : base(logger, compositeViewEngine, umbracoContextAccessor, httpContextAccessor)
+        {
+        }
+
+        public IActionResult Error404()
+            => CurrentTemplate(new Error404ViewModel(CreatePageContext()));
     }
 }

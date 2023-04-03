@@ -1,4 +1,4 @@
-﻿using Umbraco.Core.Models.PublishedContent;
+﻿using Umbraco.Cms.Core.Models.PublishedContent;
 
 namespace Leuka.Models.MediaTypes
 {

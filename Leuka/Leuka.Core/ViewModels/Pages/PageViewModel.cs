@@ -1,12 +1,11 @@
-﻿using System;
-using Leuka.Core.Contexts;
+﻿using Leuka.Core.Contexts;
 using Leuka.Core.Extensions;
 using Leuka.Core.ViewModels.Partials.Layout;
 using Leuka.Models.Generated;
 
 namespace Leuka.Core.ViewModels.Pages
 {
-	public class PageViewModel
+    public class PageViewModel
 	{
 		public PageViewModel(IPageContext<IPage> context)
 		{
