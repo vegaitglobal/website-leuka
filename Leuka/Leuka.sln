@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leuka.Core", "Leuka.Core\Le
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leuka.Common", "Leuka.Common\Leuka.Common.csproj", "{D269BB4D-3996-409D-BF7F-2E775FB949D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leuka.Search", "Leuka.Search\Leuka.Search.csproj", "{E856543C-A2A0-42EA-90BE-99745BC7CBAC}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

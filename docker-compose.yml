@@ -1,0 +1,36 @@
+version: "3.4"
+
+services:
+  api:
+    image: leuka
+    container_name: leuka-umbraco
+    build:
+      context: ./Leuka
+      dockerfile: Dockerfile
+    ports:
+      - "9001:5113"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__umbracoDbDSN=Server=db;Database=leuka;user id=sa;password=${DB_PASSWORD};
+    volumes:
+      - ./data/uploads:/app/uploads
+      - ./data/wwwroot:/app/wwwroot/uploads
+    restart: always
+    env_file:
+      - .env
+  db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: leuka-db
+    user: root
+    ports:
+      - 1433
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=${DB_PASSWORD}
+    volumes:
+      - leuka_db_data:/var/opt/mssql/data
+    restart: always
+    env_file:
+      - .env
+volumes:
+  leuka_db_data:
