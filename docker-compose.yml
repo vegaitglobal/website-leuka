@@ -12,6 +12,9 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ConnectionStrings__umbracoDbDSN=Server=db;Database=leuka;user id=sa;password=${DB_PASSWORD};
+      - Umbraco__CMS__Unattended__UnattendedUserName=${UnattendedUserName}
+      - Umbraco__CMS__Unattended__UnattendedUserEmail=${UnattendedUserEmail}
+      - Umbraco__CMS__Unattended__UnattendedUserPassword=${UnattendedUserPassword}
     volumes:
       - ./data/uploads:/app/uploads
       - ./data/wwwroot:/app/wwwroot/uploads
@@ -19,7 +22,8 @@ services:
     env_file:
       - .env
   db:
-    image: mcr.microsoft.com/mssql/server:2019-latest
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    platform: linux/amd64
     container_name: leuka-db
     user: root
     ports:
