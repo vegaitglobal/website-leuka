@@ -2,7 +2,7 @@ version: "3.4"
 
 services:
   umbraco:
-    image: kostakupresak/leuka:v3
+    image: kostakupresak/leuka:v3-amd64
     container_name: leuka-umbraco
     ports:
       - "9001:5113"
