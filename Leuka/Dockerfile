@@ -13,14 +13,16 @@ COPY . .
 RUN dotnet restore
 
 FROM build AS publish
-RUN dotnet publish -c Release
 
-RUN cp -R Leuka.Web/wwwroot/ Leuka.Web/bin/Release/net6.0/
-RUN cp -R Leuka.Web/Views/ Leuka.Web/bin/Release/net6.0/
+RUN dotnet build -c Release -o /app/build
+RUN dotnet publish -c Release -o /app/publish
+
+RUN cp -R /src/Leuka.Web/wwwroot/ /app/publish/
+RUN cp -R /src/Leuka.Web/Views/ /app/publish/
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /src/Leuka.Web/bin/Release/net6.0 .
+COPY --from=publish /app/publish .
 
 EXPOSE 5113
 ENTRYPOINT ["dotnet", "Leuka.Web.dll"]

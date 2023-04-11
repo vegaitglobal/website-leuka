@@ -2,8 +2,11 @@ version: "3.4"
 
 services:
   umbraco:
-    image: kostakupresak/leuka:v3
+    image: leuka
     container_name: leuka-umbraco
+    build:
+      context: ./Leuka
+      dockerfile: Dockerfile
     ports:
       - "9001:5113"
     environment:
