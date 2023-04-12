@@ -18,6 +18,7 @@ services:
     volumes:
       - ./data/media/:/app/Media
       - ./data/uploads/:/app/uploads
+      - ./data/wwwroot/uploads/:/app/wwwroot/uploads
     restart: always
     env_file:
       - .env
