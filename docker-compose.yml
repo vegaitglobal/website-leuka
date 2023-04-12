@@ -13,9 +13,9 @@ services:
       - Umbraco__CMS__Unattended__UnattendedUserEmail=${UnattendedUserEmail}
       - Umbraco__CMS__Unattended__UnattendedUserPassword=${UnattendedUserPassword}
     volumes:
-      - leuka_media_data:/app/Media
-      - leuka_uploads_data:/app/uploads
-      - leuka_wwwroot_uploads_data:/app/wwwroot/uploads
+      - ./data/media/:/app/Media
+      - ./data/uploads/:/app/uploads
+      - ./data/wwwroot-uploads/:/app/wwwroot/uploads
     restart: always
     env_file:
       - .env
@@ -36,6 +36,3 @@ services:
       - .env
 volumes:
   leuka_db_data:
-  leuka_media_data:
-  leuka_uploads_data:
-  leuka_wwwroot_uploads_data:
