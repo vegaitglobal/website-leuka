@@ -19,6 +19,7 @@ RUN dotnet publish -c Release -o /app/publish
 
 RUN cp -R /src/Leuka.Web/wwwroot/ /app/publish/
 RUN cp -R /src/Leuka.Web/Views/ /app/publish/
+RUN cp -R /src/Leuka.Web/Media/ /app/publish/
 
 FROM base AS final
 WORKDIR /app
